@@ -1,0 +1,459 @@
+[
+			{
+				"particleName": "Proton",
+				"gamosName": "proton",
+				"type": "particle",
+				"particleType": "baryon",
+				"pdg": 2212,
+				"pythia": true,
+				"charge": "positive"
+			},
+			{
+				"particleName": "Antiproton",
+				"gamosName": "anti_proton",
+				"type": "particle",
+				"particleType": "baryon",
+				"pdg": -2212,
+				"pythia": true,
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Neutron",
+				"gamosName": "neutron",
+				"type": "particle",
+				"particleType": "baryon",
+				"pdg": 2112,
+				"pythia": true,
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Antineutron",
+				"gamosName": "anti_neutron",
+				"type": "particle",
+				"particleType": "baryon",
+				"pdg": -2112,
+				"pythia": true,
+				"charge": "neutral"
+				
+			
+			},
+			{
+				"particleName": "Lambda",
+				"gamosName": "lambda",
+				"type": "particle",
+				"pdg": 3122,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Botton lambda",
+				"gamosName": "lambda_b",
+				"type": "particle",
+				"pdg": 5122,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti lambda",
+				"gamosName": "anti_lambda",
+				"type": "particle",
+				"pdg": -3122,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti botton lambda",
+				"gamosName": "anti_lambda_b",
+				"type": "particle",
+				"pdg": -5122,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Charmed Lambda",
+				"gamosName": "lambda_c+",
+				"type": "particle",
+				"pdg": 4122,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Sigma 0",
+				"gamosName": "sigma0",
+				"type": "particle",
+				"pdg": 3212,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Sigma -",
+				"gamosName": "sigma-",
+				"type": "particle",
+				"pdg": 3112,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Charmed sigma ++",
+				"gamosName": "sigma_c++",
+				"type": "particle",
+				"pdg": 4222,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Charmed sigma +",
+				"gamosName": "sigma_c+",
+				"type": "particle",
+				"pdg": 4212,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Charmed sigma 0",
+				"gamosName": "sigma_c0",
+				"type": "particle",
+				"pdg": 4112,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Botton sigma +",
+				"gamosName": "sigma_b+",
+				"type": "particle",
+				"pdg": 5222,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Botton sigma -",
+				"gamosName": "sigma_b-",
+				"type": "particle",
+				"pdg": 5112,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Botton sigma 0",
+				"gamosName": "sigma_b0",
+				"type": "particle",
+				"pdg": 5212,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti sigma 0",
+				"gamosName": "anti_sigma0",
+				"type": "particle",
+				"pdg": -3212,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti sigma -",
+				"gamosName": "anti_sigma-",
+				"type": "particle",
+				"pdg": -3112,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti sigma +",
+				"gamosName": "anti_sigma+",
+				"type": "particle",
+				"pdg": -3222,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Anti Botton sigma  0",
+				"gamosName": "anti_sigma_b0",
+				"type": "particle",
+				"pdg": -5212,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti botton sigma -",
+				"gamosName": "anti_sigma_b-",
+				"type": "particle",
+				"pdg": -5112,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti botton sigma +",
+				"gamosName": "anti_sigma_b+",
+				"type": "particle",
+				"pdg": -5222,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti charmed sigma 0",
+				"gamosName": "anti_sigma_c0",
+				"type": "particle",
+				"pdg": -4112,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti charmed sigma +",
+				"gamosName": "anti_sigma_c+",
+				"type": "particle",
+				"pdg": -4212,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Anti charmed sigma ++",
+				"gamosName": "anti_sigma_c++",
+				"type": "particle",
+				"pdg": -4222,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Xi 0",
+				"gamosName": "xi0",
+				"type": "particle",
+				"pdg": 3322,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Xi -",
+				"gamosName": "xi-",
+				"type": "particle",
+				"pdg": 3312,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Botton xi 0",
+				"gamosName": "xi_b0",
+				"type": "particle",
+				"pdg": 5232,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Botton xi -",
+				"gamosName": "xi_b-",
+				"type": "particle",
+				"pdg": 5132,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Anti xi 0",
+				"gamosName": "anti_xi0",
+				"type": "particle",
+				"pdg": -3322,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti xi -",
+				"gamosName": "anti_xi-",
+				"type": "particle",
+				"pdg": -3312,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti xi botton 0",
+				"gamosName": "anti_xi_b0",
+				"type": "particle",
+				"pdg": -5232,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti xi botton -",
+				"gamosName": "anti_xi_b-",
+				"type": "particle",
+				"pdg": -5132,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti charmed xi +",
+				"gamosName": "anti_xi_c+",
+				"type": "particle",
+				"pdg": -4232,
+				"particleType": "baryon",
+				"charge": "ngative"
+			
+			},
+			{
+				"particleName": "Anti charmed xi 0",
+				"gamosName": "anti_xi_c0",
+				"type": "particle",
+				"pdg": -4132,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Delta 0",
+				"gamosName": "delta0",
+				"type": "particle",
+				"pdg": 2114,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Delta -",
+				"gamosName": "delta-",
+				"type": "particle",
+				"pdg": 1114,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Delta +",
+				"gamosName": "delta+",
+				"type": "particle",
+				"pdg": 2214,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Delta ++",
+				"gamosName": "delta++",
+				"type": "particle",
+				"pdg": 2224,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti delta 0",
+				"gamosName": "anti_delta0",
+				"type": "particle",
+				"pdg": -2114,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti delta -",
+				"gamosName": "anti_delta-",
+				"type": "particle",
+				"pdg": -1114,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti delta +",
+				"gamosName": "anti_delta+",
+				"type": "particle",
+				"pdg": -2214,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Anti delta ++",
+				"gamosName": "anti_delta++",
+				"type": "particle",
+				"pdg": -2224,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Omega -",
+				"gamosName": "omega-",
+				"type": "particle",
+				"pdg": 3334,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Botton omega -",
+				"gamosName": "omega_b-",
+				"type": "particle",
+				"pdg": 5332,
+				"particleType": "baryon",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Charmed omega 0",
+				"gamosName": "omega_c0",
+				"type": "particle",
+				"pdg": 4332,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti omega -",
+				"gamosName": "anti_omega-",
+				"type": "particle",
+				"pdg": -3334,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti botton omega -",
+				"gamosName": "anti_omega_b-",
+				"type": "particle",
+				"pdg": -5332,
+				"particleType": "baryon",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti charmed omega 0",
+				"gamosName": "anti_omega_c0",
+				"type": "particle",
+				"pdg": -4332,
+				"particleType": "baryon",
+				"charge": "neutral"
+			
+			}
+		
+		]
+
+

@@ -1,0 +1,94 @@
+<div ng-show="fitJSON !== null">
+  			<div class="row">
+  				<div class="col-md-12">
+  						<h4> <strong>Fit function: </strong> f(x) = <span ng-bind-html="funcTotal"></span></h4>
+				</div>
+  			</div>
+  			<div class="row">
+ 				<div class="col-md-12">
+ 					<table class="table" >
+ 						 <caption style="text-align: center;">Fit parameters</caption>
+ 						<thead>
+ 							<tr>
+			                    <th style="width: 5%;">#</th>
+			                    <th style="width: 20%;">Function</th>
+			                    <th style="width: 35%;" >Init bin (<span ng-bind-html="drawhistolist[0].unitsX"></span>)</th>
+			                    <th style="width: 35%;" >End bin (<span ng-bind-html="drawhistolist[0].unitsX"></span>)</th>
+	                    	</tr>
+ 						</thead>
+ 						<tbody>
+	             			<tr ng-repeat="f in funclist track by $index">
+								<td>
+									{{$index+1}} 
+								</td>
+								<td>{{f}}</td>
+								<td >
+									<span>{{range[$index][0]}}</span>
+								</td>
+								<td>
+									<span>{{range[$index][1]}}</span>
+								</td>
+							</tr>
+	             		</tbody>
+                </table>
+ 				</div>
+ 			</div>  
+ 			<hr />
+  			<div class="row">
+  				<div class="col-md-12">
+  					<h4><strong>Fit ouput</strong></h4>
+  				</div>
+  			</div>
+  			<div ng-if="!fitJSON.isError">
+  				<div class="row">
+	  				<div class="col-md-12">
+	  					<strong>Chi2:</strong> {{fitJSON.chi2  | number:2}} <br><strong>Ndf: </strong> {{fitJSON.ndf}}
+	  				</div>
+	  			</div>
+	  			<div class="row">
+	  				<div class="col-md-12">
+	  					<table class="table ">
+	  						<thead>
+	  							<tr>
+				                    <th style="width: 20%;">Parameter</th>
+				                    <th style="width: 40%;">Value</th>
+				                    <th style="width: 40%;">Error</th>
+			                    </tr>
+	  						</thead>
+	  						<tbody>
+		  						<tr ng-repeat="(key,p) in fitJSON.totalParameters track by key">
+									<td>[{{key}}]</td>
+									<td>{{p.toExponential(5)}}</td>
+									<td>{{fitJSON.totalErrors[key].toExponential(5)}}</td>
+								</tr>
+			                </tbody>
+		             	</table>
+	  				</div>
+	  			</div>
+	  			
+	  			<div class="row" ng-if="fitJSON.fitFunctions != undefined">
+	  				<div class="col-md-12">
+	  					<span><strong>Partial parameters</strong></span>
+	  					<div class="row" ng-repeat="(nf,func) in fitJSON.fitFunctions track by nf">
+	  						<div class="col-md-2">
+	  							<span><em>#{{nf}} {{func.fitFunction}}</em></span>
+	  						</div>
+	  						<div class="col-md-10">
+	  							<div class="row" ng-repeat="(np,p) in func.partialParameters track by np">
+	  								<div class="col-md-12">
+	  									<span>Parameter[{{np}}]: {{p.toExponential(5)}} &plusmn; {{func.partialErrors[np].toExponential(5)}}</span>
+	  								</div>
+	  							</div>
+	  						</div>
+	  						<hr>
+	  					</div>
+	  				</div>
+	  			</div>
+  			</div><!-- no error -->
+  			
+  			<div ng-if="fitJSON.isError">
+				<h4 class="text-red">Error: {{fitJSON.error}}</h4>  				
+  			</div>
+</div>
+
+

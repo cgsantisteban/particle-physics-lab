@@ -1,0 +1,133 @@
+{
+	"command": "material",
+	"description": "Commands for materials",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "verbose",
+			"route": "/material/",
+			"type": "command",
+			"description": "Set verbose level.",
+			"argList": [
+				{
+					"arg": "verbose-level",
+					"optional": false,
+					"type": "int",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "nist",
+			"description": "Commands for the nist dataBase",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "printElement",
+					"route": "/material/nist/",
+					"type": "command",
+					"description": "print element(s) in dataBase.",
+					"argList": [
+						{
+							"arg": "symbol",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "printElementZ",
+					"route": "/material/nist/",
+					"type": "command",
+					"description": "print element Z in dataBase.",
+					"argList": [
+						{
+							"arg": "Z",
+							"optional": true,
+							"type": "int",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "listMaterials",
+					"route": "/material/nist/",
+					"type": "command",
+					"description": "Materials in Geant4 dataBase.",
+					"argList": [
+						{
+							"arg": "matlist",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						}
+					],
+					"available": ["all"]
+				}
+			
+			]
+		},
+		{
+			"command": "g4",
+			"description": "Commands for G4MaterialTable.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "printElement",
+					"route": "/material/g4/",
+					"type": "command",
+					"description": "print Element from G4ElementTable.",
+					"argList": [
+						{
+							"arg": "elm",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "printMaterial",
+					"route": "/material/g4/",
+					"type": "command",
+					"description": "print Material from G4MaterialTable.",
+					"argList": [
+						{
+							"arg": "pmat",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "printDensityEffParam",
+					"route": "/material/g4/",
+					"type": "command",
+					"description": "print Material from G4DensityEffectData.",
+					"argList": [
+						{
+							"arg": "dmat",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						}
+					],
+					"available": ["all"]
+				}
+			
+			
+			
+			]
+			
+		
+		}
+	
+	]
+}

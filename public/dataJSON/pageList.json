@@ -1,0 +1,75 @@
+{
+		"Main": {
+			"Lab Home": {
+				"url": "/particlelab",
+			   "ico": "fa-home",
+			   "isActive": true,
+			   "isValid": true
+			},
+			"Geometry": {
+				"url": "/geometry",
+          	   	"ico": "fa-object-ungroup",
+          	   	"isActive": false,
+          	   	"isValid": true 
+			},
+			"Sources": {
+				"url": "/sources",
+          	   	"ico": "fa-wifi",
+          	   	"isActive": false,
+          	   	"isValid": true 
+			},
+			"Analysis": { 
+				"url": "/data",
+				"ico": "fa-list",
+          	   	"isActive": false,
+          	   	"isValid": true
+			}
+			
+		},
+		"Addons":{
+			"Console GAMOS/Geant4": {
+				"url": "/console",
+				"ico": "fa-terminal",
+          	   	"isActive": false,
+          	   	"isValid": true
+			}
+		},
+		"Histograms": {
+			"Summary": {
+				"url": "/summary",
+			   "ico": "fa-bar-chart",
+			   "isActive": false,
+			   "isValid": true,
+			   "isVisible": true
+			},
+			"GAMOS Data": {
+				"url": "/gamosDataHistograms",
+          	   	"ico": "fa-bar-chart",
+          	   	"isActive": false,
+          	   	"isValid": true,
+          	   	"isVisible": true
+			},
+			"Scorers": {
+				"url": "/scorerHistograms",
+          	   	"ico": "fa-bar-chart",
+          	   	"isActive": false,
+          	   	"isValid": true,
+          	   	"isVisible": true
+			},
+			"Pythia tree": {
+				"url": "/pythiaTree",
+				"ico": "fa-circle-o-notch",
+          	   	"isActive": false,
+          	   	"isValid": true,
+          	   	"isVisible": true
+			},
+			"Pythia data": {
+				"url": "/pythiaHistograms",
+				"ico": "fa-circle-o-notch",
+          	   	"isActive": false,
+          	   	"isValid": true,
+          	   	"isVisible": true
+			}
+		}
+		
+}

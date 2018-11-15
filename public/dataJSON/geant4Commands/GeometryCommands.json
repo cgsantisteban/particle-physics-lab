@@ -1,0 +1,206 @@
+{
+	"command": "geometry",
+	"description": "Geometry control commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "navigator",
+			"description": "Geometry navigator control setup.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "reset",
+					"route": "/geometry/navigator/",
+					"type": "command",
+					"argList": [],
+					"description": "Reset navigator and navigation history.",
+					"available": ["Idle"]
+				},
+				{
+					"command": "verbose",
+					"route": "/geometry/navigator/",
+					"type": "command",
+					"description": "Set run-time verbosity for the navigator.",
+					"argList": [
+						{
+							"arg": "level",
+							"optional": true,
+							"type": "int",
+							"default": 0
+						}],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "check_mode",
+					"route": "/geometry/navigator/",
+					"type": "command",
+					"description": "Set navigator in -check_mode- state.",
+					"argList": [
+						{
+							"arg": "checkFlag",
+							"optional": true,
+							"type": "int",
+							"default": 0
+						}],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "push_notify",
+					"route": "/geometry/navigator/",
+					"type": "command",
+					"description": "Set navigator verbosity push notifications.",
+					"argList": [
+						{
+							"arg": "pushFlag",
+							"optional": true,
+							"type": "int",
+							"default": 1
+						}],
+					"available": ["Idle"]
+				}
+			]
+		},
+		{
+			"command": "test",
+			"descripiotn": "Geometry verification control setup.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "tolerance",
+					"route": "/geometry/test/",
+					"type": "command",
+					"description": "Define tolerance (in mm) by which overlaps reports",
+					"argList": [
+						{
+							"arg": "Tolerance",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "Unit",
+							"optional": true,
+							"type": "string",
+							"default": "mm",
+							"candidates": ["pc","km","m","cm","mm","um","nm",
+								"Ang","fm","parsec","kilometer","meter","centimeter",
+								"millimeter","micrometer","nanometer","angstrom","fermi"]
+						}
+					],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "verbosity",
+					"route": "/geometry/test/",
+					"type": "command",
+					"description": "Specify if running in verbosity mode or not.",
+					"argList": [
+						{
+							"arg": "verbosity",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["Idle"]
+				},
+				{
+					"command": "resolution",
+					"route": "/geometry/test/",
+					"type": "command",
+					"description": "Set the number of points on surface to be generated forchecking overlaps.",
+					"argList": [
+						{
+							"arg": "resolution",
+							"optional": true,
+							"type": "int",
+							"default": 10000
+						}
+					],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "resolution_start",
+					"route": "/geometry/test/",
+					"type": "command",
+					"description": "Set the initial level in the geometry tree for recursion.",
+					"argList": [
+						{
+							"arg": "initial_level",
+							"optional": true,
+							"type": "int",
+							"default": 0
+						}
+					],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "recursion_depth",
+					"route": "/geometry/test/",
+					"type": "command",
+					"description": "Set the depth in the geometry tree for recursion.",
+					"argList": [
+						{
+							"arg": "recursion_depth",
+							"optional": true,
+							"type": "int",
+							"default": -1
+						}
+					],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "maximum_errors",
+					"route": "/geometry/test/",
+					"type": "command",
+					"description": "Set the maximum number of overlap errors to report for each single volume being checked.",
+					"argList": [
+						{
+							"arg": "maximum_errors",
+							"optional": true,
+							"type": "int",
+							"default": 1
+						}
+					],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "run",
+					"route": "/geometry/test/",
+					"type": "command",
+					"description": "Start running the recursive overlap check.",
+					"argList": [],
+					"available": ["Idle"]
+				}
+			
+			]
+		},
+		{
+			"command": "textInput",
+			"description": "Geometry from text file control commands.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "verbose",
+					"route": "/geometry/textInput/",
+					"type": "command",
+					"description": "Set Verbose level of geometry text input category.",
+					"argList": [
+						{
+							"arg": "level",
+							"optional": false,
+							"type": "int",
+							"default": 0
+						}
+					],
+					"available": ["PreInit","Idle"]
+				}
+			
+			]
+			
+			
+		}
+	
+	]
+	
+}

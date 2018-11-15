@@ -1,0 +1,707 @@
+[
+	{
+		"name": "A-150 tissue",
+		"gamosName": "G4_A-150_TISSUE"
+	},
+	{
+		"name": "Acetone",
+		"gamosName": "G4_ACETONE"
+	},
+	{
+		"name": "Acetylene",
+		"gamosName": "G4_ACETYLENE"
+	},
+	{
+		"name": "Acetylene",
+		"gamosName": "G4_ADENINE"
+	},
+	{
+		"name": "Adipose tissue IRCP",
+		"gamosName": "G4_ADIPOSE_TISSUE_ICRP"
+	},
+	{
+		"name": "Air",
+		"gamosName": "G4_AIR"
+	},
+	{
+		"name": "Alanine",
+		"gamosName": "G4_ALANINE"
+	},
+	{
+		"name": "Aluminum oxide",
+		"gamosName": "G4_ALUMINUM_OXIDE"
+	},
+	{
+		"name": "Amber",
+		"gamosName": "G4_AMBER"
+	},
+	{
+		"name": "Ammonia",
+		"gamosName": "G4_AMMONIA"
+	},
+	{
+		"name": "Aniline",
+		"gamosName": "G4_ANILINE"
+	},
+	{
+		"name": "Anthracene",
+		"gamosName": "G4_ANTHRACENE"
+	},
+	{
+		"name": "B4-100 bone",
+		"gamosName": "G4_B-100_BONE"
+	},
+	{
+		"name": "Bakelite",
+		"gamosName": "G4_BAKELITE"
+	},
+	{
+		"name": "Barium fluoride",
+		"gamosName": "G4_BARIUM_FLUORIDE"
+	},
+	{
+		"name": "Barium sulfate",
+		"gamosName": "G4_BARIUM_SULFATE"
+	},
+	{
+		"name": "Benzene",
+		"gamosName": "G4_BENZENE"
+	},
+	{
+		"name": "Beryllium oxide",
+		"gamosName": "G4_BERYLLIUM_OXIDE"
+	},
+	{
+		"name": "Blood IRCP",
+		"gamosName": "G4_BLOOD_ICRP"
+	},
+	{
+		"name": "Bone compact IRCU",
+		"gamosName": "G4_BONE_COMPACT_ICRU"
+	},
+	{
+		"name": "Bone cortical IRCP",
+		"gamosName": "G4_BONE_CORTICAL_ICRP"
+	},
+	{
+		"name": "Boron carbide",
+		"gamosName": "G4_BORON_CARBIDE"
+	},
+	{
+		"name": "Boron oxide",
+		"gamosName": "G4_BORON_OXIDE"
+	},
+	{
+		"name": "Brain IRCP",
+		"gamosName": "G4_BRAIN_ICRP"
+	},
+	{
+		"name": "Butane",
+		"gamosName": "G4_BUTANE"
+	},
+	{
+		"name": "N-Butyl alcohol",
+		"gamosName": "G4_N-BUTYL_ALCOHOL"
+	},
+	{
+		"name": "Cadmium telluride",
+		"gamosName": "G4_CADMIUM_TELLURIDE"
+	},
+	{
+		"name": "Cadmium tungstate",
+		"gamosName": "G4_CADMIUM_TUNGSTATE"
+	},
+	{
+		"name": "Carbonate",
+		"gamosName": "G4_CARBONATE"
+	},
+	{
+		"name": "Calcium carbonate",
+		"gamosName": "G4_CALCIUM_CARBONATE"
+	},
+	{
+		"name": "Carbon tetrachloride",
+		"gamosName": "G4_CARBON_TETRACHLORIDE"
+	},
+	{
+		"name": "Calcium oxide",
+		"gamosName": "G4_CALCIUM_OXIDE"
+	},
+	{
+		"name": "Calcium sulfate",
+		"gamosName": "G4_CALCIUM_SULFATE"
+	},
+	{
+		"name": "Calcium tunstate",
+		"gamosName": "G4_CALCIUM_TUNSTATE"
+	},
+	{
+		"name": "Carbon dioxide",
+		"gamosName": "G4_CARBON_DIOXIDE"
+	},
+	{
+		"name": "Celluse cellophane",
+		"gamosName": "G4_CELLULOSE_CELLOPHANE"
+	},
+	{
+		"name": "Cellulose butyrate",
+		"gamosName": "G4_CELLULOSE_BUTYRATE"
+	},
+	{
+		"name": "Cellulose nitrate",
+		"gamosName": "G4_CELLULOSE_NITRATE"
+	},
+	{
+		"name": "Cerin sulfate",
+		"gamosName": "G4_CERIC_SULFATE"
+	},
+	{
+		"name": "Cesium fluoride",
+		"gamosName": "G4_CESIUM_FLUORIDE"
+	},
+	{
+		"name": "Cesium iodide",
+		"gamosName": "G4_CESIUM_IODIDE"
+	},
+	{
+		"name": "Chlorobenzene",
+		"gamosName": "G4_CHLOROBENZENE"
+	},
+	{
+		"name": "Chloroform",
+		"gamosName": "G4_CHLOROFORM"
+	},
+	{
+		"name": "Concrete",
+		"gamosName": "G4_CONCRETE"
+	},
+	{
+		"name": "Cyclohexane",
+		"gamosName": "G4_CYCLOHEXANE"
+	},
+	{
+		"name": "1,2-Dichlorobenzene",
+		"gamosName": "G4_1,2-DICHLOROBENZENE"
+	},
+	{
+		"name": "Dichlorodiethyl ether",
+		"gamosName": "G4_DICHLORODIETHYL_ETHER"
+	},
+	{
+		"name": "1,2-Dichloroethane",
+		"gamosName": "G4_1,2-DICHLOROETHANE"
+	},
+	{
+		"name": "Diethyl ether",
+		"gamosName": "G4_DIETHYL_ETHER"
+	},
+	{
+		"name": "N,N-Dimethyl formamide",
+		"gamosName": "G4_N,N-DIMETHYL_FORMAMIDE"
+	},
+	{
+		"name": "Dimethyl sulfoxide",
+		"gamosName": "G4_DIMETHYL_SULFOXIDE"
+	},
+	{
+		"name": "Ethane",
+		"gamosName": "G4_ETHANE"
+	},
+	{
+		"name": "Ethyl alcohol",
+		"gamosName": "G4_ETHYL_ALCOHOL"
+	},
+	{
+		"name": "Ethyl cellulose",
+		"gamosName": "G4_ETHYL_CELLULOSE"
+	},
+	{
+		"name": "Ethylene",
+		"gamosName": "G4_ETHYLENE"
+	},
+	{
+		"name": "Eye lens IRCP",
+		"gamosName": "G4_EYE_LENS_ICRP"
+	},
+	{
+		"name": "Ferric oxide",
+		"gamosName": "G4_FERRIC_OXIDE"
+	},
+	{
+		"name": "Ferroboride",
+		"gamosName": "G4_FERROBORIDE"
+	},
+	{
+		"name": "Ferrous sulfate",
+		"gamosName": "G4_FERROUS_SULFATE"
+	},
+	{
+		"name": "Freon-12",
+		"gamosName": "G4_FREON-12"
+	},
+	{
+		"name": "Freon-12B2",
+		"gamosName": "G4_FREON-12B2"
+	},
+	{
+		"name": "Freon-13",
+		"gamosName": "G4_FREON-13"
+	},
+	{
+		"name": "Freon-13I1",
+		"gamosName": "G4_FREON-13I1"
+	},
+	{
+		"name": "Gadolinium oxysulfide",
+		"gamosName": "G4_GADOLINIUM_OXYSULFIDE"
+	},
+	{
+		"name": "Gallium arsenide",
+		"gamosName": "G4_GALLIUM_ARSENIDE"
+	},
+	{
+		"name": "Photo emulsion",
+		"gamosName": "G4_PHOTO_EMULSION"
+	},
+	{
+		"name": "Pyrex glass",
+		"gamosName": "G4_Pyrex_Glass"
+	},
+	{
+		"name": "Glass lead",
+		"gamosName": "G4_GLASS_LEAD"
+	},
+	{
+		"name": "Glass plate",
+		"gamosName": "G4_GLASS_PLATE"
+	},
+	{
+		"name": "Glutamine",
+		"gamosName": "G4_GLUTAMINE"
+	},
+	{
+		"name": "Glycerol",
+		"gamosName": "G4_GLYCEROL"
+	},
+	{
+		"name": "Graphite",
+		"gamosName": "G4_GRAPHITE"
+	},
+	{
+		"name": "Guanine",
+		"gamosName": "G4_GUANINE"
+	},
+	{
+		"name": "Gypsum",
+		"gamosName": "G4_GYPSUM"
+	},
+	{
+		"name": "N-Heptane",
+		"gamosName": "G4_N-HEPTANE"
+	},
+	{
+		"name": "N-Hexane",
+		"gamosName": "G4_N-HEXANE"
+	},
+	{
+		"name": "Kapton",
+		"gamosName": "G4_KAPTON"
+	},
+	{
+		"name": "Lanthanium oxybromide",
+		"gamosName": "G4_LANTHANUM_OXYBROMIDE"
+	},
+	{
+		"name": "Lanthanium oxysulfide",
+		"gamosName": "G4_LANTHANUM_OXYSULFIDE"
+	},
+	{
+		"name": "Lead oxide",
+		"gamosName": "G4_LEAD_OXIDE"
+	},
+	{
+		"name": "Lithium amide",
+		"gamosName": "G4_LITHIUM_AMIDE"
+	},
+	{
+		"name": "Lithium carbonate",
+		"gamosName": "G4_LITHIUM_CARBONATE"
+	},
+	{
+		"name": "Lithium fluoride",
+		"gamosName": "G4_LITHIUM_FLUORIDE"
+	},
+	{
+		"name": "Lithium hydride",
+		"gamosName": "G4_LITHIUM_HYDRIDE"
+	},
+	{
+		"name": "Lithium iodide",
+		"gamosName": "G4_LITHIUM_IODIDE"
+	},
+	{
+		"name": "Lithium oxide",
+		"gamosName": "G4_LITHIUM_OXIDE"
+	},
+	{
+		"name": "Lithium tetraborate",
+		"gamosName": "G4_LITHIUM_TETRABORATE"
+	},
+	{
+		"name": "Lung IRCP",
+		"gamosName": "G4_LUNG_ICRP"
+	},
+	{
+		"name": "M3 max",
+		"gamosName": "G4_M3_MAX"
+	},
+	{
+		"name": "Magnesium carbonate",
+		"gamosName": "G4_MAGNESIUM_CARBONATE"
+	},
+	{
+		"name": "Magnesium fluoride",
+		"gamosName": "G4_MAGNESIUM_FLUORIDE"
+	},
+	{
+		"name": "Magnesium oxide",
+		"gamosName": "G4_MAGNESIUM_OXIDE"
+	},
+	{
+		"name": "Magnesium tetraborate",
+		"gamosName": "G4_MAGNESIUM_TETRABORATE"
+	},
+	{
+		"name": "Mercuric iodide",
+		"gamosName": "G4_MERCURIC_IODIDE"
+	},
+	{
+		"name": "Methane",
+		"gamosName": "G4_METHANE"
+	},
+	{
+		"name": "Methanol",
+		"gamosName": "G4_METHANOL"
+	},
+	{
+		"name": "Mix D Wax",
+		"gamosName": "G4_MIX_D_WAX"
+	},
+	{
+		"name": "MS20 tissue",
+		"gamosName": "G4_MS20_TISSUE"
+	},
+	{
+		"name": "Muscle skeletal IRCP",
+		"gamosName": "G4_MUSCLE_SKELETAL_ICRP"
+	},
+	{
+		"name": "Muscle striated ICRU",
+		"gamosName": "G4_MUSCLE_STRIATED_ICRU"
+	},
+	{
+		"name": "Muscle whith sucrose",
+		"gamosName": "G4_MUSCLE_WITH_SUCROSE"
+	},
+	{
+		"name": "Muscle without sucrose",
+		"gamosName": "G4_MUSCLE_WITHOUT_SUCROSE"
+	},
+	{
+		"name": "Naphthalene",
+		"gamosName": "G4_NAPHTHALENE"
+	},
+	{
+		"name": "Nitrobenzene",
+		"gamosName": "G4_NITROBENZENE"
+	},
+	{
+		"name": "Nitroues oxide",
+		"gamosName": "G4_NITROUS_OXIDE"
+	},
+	{
+		"name": "Nylon-8062",
+		"gamosName": "G4_NYLON-8062"
+	},
+	{
+		"name": "Nylon-11 rilsan",
+		"gamosName": "G4_NYLON-11_RILSAN"
+	},
+	{
+		"name": "Nylon-6/10",
+		"gamosName": "G4_NYLON-6/10"
+	},
+	{
+		"name": "Octane",
+		"gamosName": "G4_OCTANE"
+	},
+	{
+		"name": "Parafine",
+		"gamosName": "G4_PARAFFIN"
+	},
+	{
+		"name": "N-Pentane",
+		"gamosName": "G4_N-PENTANE"
+	},
+	{
+		"name": "Photo emulsion",
+		"gamosName": "G4_PHOTO_EMULSION"
+	},
+	{
+		"name": "Plastic sc vinyltoluene",
+		"gamosName": "G4_PLASTIC_SC_VINYLTOLUENE"
+	},
+	{
+		"name": "Pluyonium dioxide",
+		"gamosName": "G4_PLUTONIUM_DIOXIDE"
+	},
+	{
+		"name": "Polyacrylonitrile",
+		"gamosName": "G4_POLYACRYLONITRILE"
+	},
+	{
+		"name": "Polycorbonate",
+		"gamosName": "G4_POLYCARBONATE"
+	},
+	{
+		"name": "Polychlorostyrene",
+		"gamosName": "G4_POLYCHLOROSTYRENE"
+	},
+	{
+		"name": "Polyethylene",
+		"gamosName": "G4_POLYETHYLENE"
+	},
+	{
+		"name": "Mylar",
+		"gamosName": "G4_MYLAR"
+	},
+	{
+		"name": "Plexiglass",
+		"gamosName": "G4_PLEXIGLASS"
+	},
+	{
+		"name": "Polyoxymethylene",
+		"gamosName": "G4_POLYOXYMETHYLENE"
+	},
+	{
+		"name": "Polypropylene",
+		"gamosName": "G4_POLYPROPYLENE"
+	},
+	{
+		"name": "Polystyrene",
+		"gamosName": "G4_POLYSTYRENE"
+	},
+	{
+		"name": "Teflon",
+		"gamosName": "G4_TEFLON"
+	},
+	{
+		"name": "Polytrifluorochloroethylene",
+		"gamosName": "G4_POLYTRIFLUOROCHLOROETHYLENE"
+	},
+	{
+		"name": "Polyvinyl acetate",
+		"gamosName": "G4_POLYVINYL_ACETATE"
+	},
+	{
+		"name": "Polyvinyl alcohol",
+		"gamosName": "G4_POLYVINYL_ALCOHOL"
+	},
+	{
+		"name": "Polyvynil butryal",
+		"gamosName": "G4_POLYVINYL_BUTYRAL"
+	},
+	{
+		"name": "Polyvinyl chloride",
+		"gamosName": "G4_POLYVINYL_CHLORIDE"
+	},
+	{
+		"name": "Polyvinylidene chloride",
+		"gamosName": "G4_POLYVINYLIDENE_CHLORIDE"
+	},
+	{
+		"name": "Polyvinylidene fluoride",
+		"gamosName": "G4_POLYVINYLIDENE_FLUORIDE"
+	},
+	{
+		"name": "Polyvinyl pyrrolidone",
+		"gamosName": "G4_POLYVINYL_PYRROLIDONE"
+	},
+	{
+		"name": "Potassium iodide",
+		"gamosName": "G4_POTASSIUM_IODIDE"
+	},
+	{
+		"name": "Polyvinyl pyrrolinode",
+		"gamosName": "G4_POLYVINYL_PYRROLIDONE"
+	},
+	{
+		"name": "Potassium oxide",
+		"gamosName": "G4_POTASSIUM_OXIDE"
+	},
+	{
+		"name": "Propane",
+		"gamosName": "G4_PROPANE"
+	},
+	{
+		"name": "Liquid Propane",
+		"gamosName": "G4_lPROPANE"
+	},
+	{
+		"name": "N-Propyl alcohol",
+		"gamosName": "G4_N-PROPYL_ALCOHOL"
+	},
+	{
+		"name": "Acetylene",
+		"gamosName": "G4_PYRIDINE"
+	},
+	{
+		"name": "Rubber butyl",
+		"gamosName": "G4_RUBBER_BUTYL"
+	},
+	{
+		"name": "Rubber natural",
+		"gamosName": "G4_RUBBER_NATURAL"
+	},
+	{
+		"name": "Rubber neoprene",
+		"gamosName": "G4_RUBBER_NEOPRENE"
+	},
+	{
+		"name": "Silicon dioxide",
+		"gamosName": "G4_SILICON_DIOXIDE"
+	},
+	{
+		"name": "Silver bromide",
+		"gamosName": "G4_SILVER_BROMIDE"
+	},
+	{
+		"name": "Silver chloride",
+		"gamosName": "G4_SILVER_CHLORIDE"
+	},
+	{
+		"name": "Silver halides",
+		"gamosName": "G4_SILVER_HALIDES"
+	},
+	{
+		"name": "Sylver iodide",
+		"gamosName": "G4_SILVER_IODIDE"
+	},
+	{
+		"name": "Skin IRCP",
+		"gamosName": "G4_SKIN_ICRP"
+	},
+	{
+		"name": "Sodium carbonete",
+		"gamosName": "G4_SODIUM_CARBONATE"
+	},
+	{
+		"name": "Sodium iodide",
+		"gamosName": "G4_SODIUM_IODIDE"
+	},
+	{
+		"name": "Sodium monoxide",
+		"gamosName": "G4_SODIUM_MONOXIDE"
+	},
+	{
+		"name": "Sodium nitrate",
+		"gamosName": "G4_SODIUM_NITRATE"
+	},
+	{
+		"name": "Stilbene",
+		"gamosName": "G4_STILBENE"
+	},
+	{
+		"name": "Sucrose",
+		"gamosName": "G4_SUCROSE"
+	},
+	{
+		"name": "Terphenyl",
+		"gamosName": "G4_TERPHENYL"
+	},
+	{
+		"name": "Testes IRCP",
+		"gamosName": "G4_TESTES_ICRP"
+	},
+	{
+		"name": "Tetrachloroethylene",
+		"gamosName": "G4_TETRACHLOROETHYLENE"
+	},
+	{
+		"name": "Thallium chloride",
+		"gamosName": "G4_THALLIUM_CHLORIDE"
+	},
+	{
+		"name": "Tissue soft IRCP",
+		"gamosName": "G4_TISSUE_SOFT_ICRP"
+	},
+	{
+		"name": "Tissue soft ICRU-4",
+		"gamosName": "G4_TISSUE_SOFT_ICRU-4"
+	},
+	{
+		"name": "Tissue methane",
+		"gamosName": "G4_TISSUE-METHANE"
+	},
+	{
+		"name": "Tissue propane",
+		"gamosName": "G4_TISSUE-PROPANE"
+	},
+	{
+		"name": "Titanium dioxide",
+		"gamosName": "G4_TITANIUM_DIOXIDE"
+	},
+	{
+		"name": "Toluene",
+		"gamosName": "G4_TOLUENE"
+	},
+	{
+		"name": "Trichloroethylene",
+		"gamosName": "G4_TRICHLOROETHYLENE"
+	},
+	{
+		"name": "Triethyl phosphate",
+		"gamosName": "G4_TRIETHYL_PHOSPHATE"
+	},
+	{
+		"name": "Tungsten hexafluoride",
+		"gamosName": "G4_TUNGSTEN_HEXAFLUORIDE"
+	},
+	{
+		"name": "Uranium dicarbide",
+		"gamosName": "G4_URANIUM_DICARBIDE"
+	},
+	{
+		"name": "Uranium monocarbide",
+		"gamosName": "G4_URANIUM_MONOCARBIDE"
+	},
+	{
+		"name": "Uranium oxide",
+		"gamosName": "G4_URANIUM_OXIDE"
+	},
+	{
+		"name": "Urea",
+		"gamosName": "G4_UREA"
+	},
+	{
+		"name": "Valine",
+		"gamosName": "G4_VALINE"
+	},
+	{
+		"name": "Viton",
+		"gamosName": "G4_VITON"
+	},
+	{
+		"name": "Water",
+		"gamosName": "G4_WATER"
+	},
+	{
+		"name": "Water vapor",
+		"gamosName": "G4_WATER_VAPOR"
+	},
+	{
+		"name": "Xylene",
+		"gamosName": "G4_XYLENE"
+	}
+	
+]	

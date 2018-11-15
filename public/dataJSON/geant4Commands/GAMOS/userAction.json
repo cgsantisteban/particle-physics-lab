@@ -1,0 +1,62 @@
+{
+	"command": "userAction",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "dumpList",
+			"route": "/gamos/userAction/",
+			"type": "command",
+			"description": "Dump the list of UserActions saying if they are enabled or disabled",
+			"argList": [],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "dumpListON",
+			"route": "/gamos/userAction/",
+			"type": "command",
+			"description": "Dump the list of ENABLED UserActions",
+			"argList": [],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "dumpListOFF",
+			"route": "/gamos/userAction/",
+			"type": "command",
+			"description": "Dump the list of DISABLED UserActions",
+			"argList": [],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "Enable",
+			"route": "/gamos/userAction/",
+			"type": "command",
+			"description": "Enable a User Action by name",
+			"argList": [
+						{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+						}
+					],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "Disable",
+			"route": "/gamos/userAction/",
+			"type": "command",
+			"description": "Disable a User Action by name",
+			"argList": [
+						{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+						}
+					],
+			"available": ["PreInit","Idle"]
+		}
+	
+	]
+}

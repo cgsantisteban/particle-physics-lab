@@ -1,0 +1,21 @@
+{
+	"solidType": "TUBE",
+	"dimensions": {
+		"Inner radius": {
+		"value": 0,
+		"units": "cm",
+		"type": "Radius"
+		},
+		"Outer radius": {
+			"value": 1,
+			"units": "cm",
+			"type": "Radius"
+		},
+		"Length": {
+			"value": 10,
+			"units": "cm",
+			"type": "Length"
+		}
+	}
+	
+}

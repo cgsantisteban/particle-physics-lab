@@ -1,0 +1,514 @@
+{
+	"command": "run",
+	"description": "Run control commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "initialize",
+			"route": "/run/",
+			"type": "command",
+			"description": "Initialize G4 kernel",
+			"argList": [],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "beamOn",
+			"route": "/run/",
+			"type": "command",
+			"description": "Start a Run",
+			"argList": [
+				{
+					"arg": "numberOfEvent",
+					"optional": true,
+					"type": "int",
+					"default": 1
+				},
+				{
+					"arg": "macroFile",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "nSelect",
+					"optional": true,
+					"type": "int",
+					"default": -1
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "verbose",
+			"route": "/run/",
+			"type": "command",
+			"description": "Set the Verbose level of G4RunManager.",
+			"argList": [
+				{
+					"arg": "level",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "numberOfThreads",
+			"route": "/run/",
+			"type": "command",
+			"description": "Set the number of threads to be used.",
+			"argList": [
+				{
+					"arg": "nThreads",
+					"optional": true,
+					"type": "int",
+					"default": 2
+				}
+			],
+			"available": ["PreInit"]
+		},
+		{
+			"command": "useMaximumLogicalCores",
+			"route": "/run/",
+			"type": "command",
+			"description": "Set the number of threads to be the number of available logical cores.",
+			"argList": [],
+			"available": ["PreInit"]
+		},
+		{
+			"command": "pinAffinity",
+			"route": "/run/",
+			"type": "command",
+			"description": "Locks each thread to a specific logical core. Workers are locked in round robin to logical cores.",
+			"argList": [
+				{
+					"arg": "pinAffinity",
+					"optional": true,
+					"type": "int",
+					"default": 1
+				}
+			],
+			"available": ["PreInit"]
+		},
+		{
+			"command": "eventModulo",
+			"route": "/run/",
+			"type": "command",
+			"description": "Set the event modulo for dispatching events to worker threads",
+			"argList": [
+				{
+					"arg": "N",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				},
+				{
+					"arg": "seedOnce",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				}
+			],
+			"available": ["PreInit", "Idle"]
+		},
+		{
+			"command": "dumpRegion",
+			"route": "/run/",
+			"type": "command",
+			"description": "Dump region information.",
+			"argList": [
+				{
+					"arg": "regionName",
+					"optional": true,
+					"type": "string",
+					"default": "**ALL**"
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "dumpCouples",
+			"route": "/run/",
+			"type": "command",
+			"description": "Dump material-cuts-couple information.",
+			"argList": [],
+			"available": ["Idle"]
+		},
+		{
+			"command": "optimizeGeometry",
+			"route": "/run/",
+			"type": "command",
+			"description": "Set the optimization flag for geometry.",
+			"argList": [
+				{
+					"arg": "optimizeFlag",
+					"optional": true,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "breakAtBeginOfEvent",
+			"route": "/run/",
+			"type": "command",
+			"description": "Set a break point at the begining of every event.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": true,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "breakAtEndOfEvent",
+			"route": "/run/",
+			"type": "command",
+			"description": "Set a break point at the end of every event.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": true,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "abort",
+			"route": "/run/",
+			"type": "command",
+			"description": "Abort current run processing.",
+			"argList": [
+				{
+					"arg": "softAbort",
+					"optional": true,
+					"type": "boolean",
+					"default": 0
+				}
+			],
+			"available": ["GeomClosed","EventProc"]
+		},
+		{
+			"command": "abortCurrentEvent",
+			"route": "/run/",
+			"type": "command",
+			"description": "Abort currently processing event.",
+			"argList": [],
+			"available": ["EventProc"]
+		},
+		{
+			"command": "geometryModified",
+			"route": "/run/",
+			"type": "command",
+			"description": "Force geometry to be closed (re-voxellized) again.",
+			"argList": [],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "reinitializeGeometry",
+			"route": "/run/",
+			"type": "command",
+			"description": "Force geometry to be rebuilt once again.",
+			"argList": [
+				{
+					"arg": "destroyFirst",
+					"optional": true,
+					"type": "boolean",
+					"default": 0
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "physicsModified",
+			"route": "/run/",
+			"type": "command",
+			"description": "Force all physics tables recalculated again.",
+			"argList": [],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "constructScoringWorlds",
+			"route": "/run/",
+			"type": "command",
+			"description": "Constrct scoring parallel world(s) if defined.",
+			"argList": [],
+			"available": ["Idle"]
+		},
+		{
+			"command": "storeRndmStatToEvent",
+			"route": "/run/",
+			"type": "command",
+			"description": "Flag to store rndm status to G4Event object.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "setCut",
+			"route": "/run/",
+			"type": "command",
+			"description": "Set default cut value",
+			"argList": [
+				{
+					"arg": "cut",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "mm"
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "setCutForAGivenParticle",
+			"route": "/run/",
+			"type": "command",
+			"description": "Set a cut value to a specific particle",
+			"argList": [
+				{
+					"arg": "particleName",
+					"optional": false,
+					"type": "string",
+					"default": "",
+					"candidates": ["e-","e+","gamma","proton"]
+				},
+				{
+					"arg": "cut",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "unit",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "getCutForAGivenParticle",
+			"route": "/run/",
+			"type": "command",
+			"description": "getCutForAGivenParticle",
+			"argList": [
+				{
+					"arg": "particleName",
+					"optional": false,
+					"type": "string",
+					"default": 0,
+					"candidates": ["e-","e+","gamma","proton"]
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "setCutForRegion",
+			"route": "/run/",
+			"type": "command",
+			"description": "Set cut value for a region",
+			"argList": [
+				{
+					"arg": "Region",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "cut",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "",
+					"candidates": ["pc","km","m","cm","mm","um","nm","Ang","fm","parsec",
+							"kilometer","meter","centimeter","millimeter","micrometer",
+							"nanometer","angstrom","fermi"]
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "particle",
+			"description": "Commands for G4VUserPhysicsList.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "verbose",
+					"route": "/run/particle/",
+					"type": "command",
+					"description": "Set the Verbose level of G4VUserPhysicsList.",
+					"argList": [
+						{
+							"arg": "level",
+							"optional": false,
+							"type": "int",
+							"default": 0
+						}
+					],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "dumpList",
+					"route": "/run/particle/",
+					"type": "command",
+					"description": "Dump List of particles in G4VUserPhysicsList. ",
+					"argList": [],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "addProcManager",
+					"route": "/run/particle/",
+					"type": "command",
+					"description": "add process manager to specified particle type",
+					"argList": [
+						{
+							"arg": "particleType",
+							"optional": true,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": [ "PreInit","Init","Idle","GeomClosed","EventProc"]
+				},
+				{
+					"command": "buildPhysicsTable",
+					"route": "/run/particle/",
+					"type": "command",
+					"description": "build physics table of specified particle type",
+					"argList": [
+						{
+							"arg": "particleType",
+							"optional": true,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": [ "Init","Idle","GeomClosed","EventProc"]
+				},
+				{
+					"command": "storePhysicsTable",
+					"route": "/run/particle/",
+					"type": "command",
+					"description": "Store Physics Table",
+					"argList": [
+						{
+							"arg": "dirName",
+							"optional": true,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["Idle"]
+				},
+				{
+					"command": "retrievePhysicsTable",
+					"route": "/run/particle/",
+					"type": "command",
+					"description": "Retrieve Physics Table",
+					"argList": [
+						{
+							"arg": "dirName",
+							"optional": true,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "setStoredInAscii",
+					"route": "/run/particle/",
+					"type": "command",
+					"description": "Switch on/off ascii mode in store/retreive Physics Table Enter 0(binary) or 1(ascii)",
+					"argList": [
+						{
+							"arg": "ascii",
+							"optional": true,
+							"type": "int",
+							"default": 0
+						}
+					],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "applyCuts",
+					"route": "/run/particle/",
+					"type": "command",
+					"description": "Set applyCuts flag for a particle.",
+					"argList": [
+						{
+							"arg": "flag",
+							"optional": true,
+							"type": "string",
+							"default": "true"
+						},
+						{
+							"arg": "Particle",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						}
+					],
+					"available": ["PreInit", "Init","Idle"]
+				},
+				{
+					"command": "dumpCutValues",
+					"route": "/run/particle/",
+					"type": "command",
+					"description": "Dump a list of production threshold values in range and energy for all registered material-cuts-couples.",
+					"argList": [
+						{
+							"arg": "particle",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						}
+					],
+					"available": ["Idle"]
+				},
+				{
+					"command": "dumpOrderingParam",
+					"route": "/run/particle/",
+					"type": "command",
+					"description": "Dump a list of ordering parameter",
+					"argList": [
+						{
+							"arg": "subtype",
+							"optional": true,
+							"type": "int",
+							"default": -1
+						}
+					],
+					"available": ["PreInit","Init","Idle"]
+				}
+			
+			]
+		}
+	
+	]
+}

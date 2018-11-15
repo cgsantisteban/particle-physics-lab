@@ -1,0 +1,328 @@
+{
+	"command": "particle",
+	"description": "Particle control commands.",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "select",
+			"description": "Select particle",
+			"route": "/particle/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "particle_name",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "list",
+			"description": "List name of particles.",
+			"route": "/particle/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "particle_type",
+					"optional": true,
+					"type": "string",
+					"default": "",
+					"candidates": ["all","lepton","baryon","meson","nucleus","quarks"]
+				}],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "find",
+			"description": "Find particle by encoding",
+			"route": "/particle/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "encoding",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				}],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "createAllIon",
+			"description": "Create All ions (ground state)",
+			"route": "/particle/",
+			"type": "command",
+			"argList": [],
+			"available": ["Idle"]
+		},
+		{
+			"command": "createAllIsomer",
+			"description": "Create All isomers",
+			"route": "/particle/",
+			"type": "command",
+			"argList": [],
+			"available": ["Idle"]
+		},
+		{
+			"command": "verbose",
+			"description": "Set Verbose level of particle table.",
+			"route": "/particle/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "verbose_level",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				}],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "manage",
+			"description": "...Title not available...",
+			"collapsed":true,
+			"children": [
+				{
+					"command": "nuclideTable",
+					"description": "Nuclide table control commands.",
+					"children": [
+						{
+							"command": "min_halflife",
+							"description": "Set Verbose level of particle table.",
+							"route": "/particle/manage/nuclideTable/",
+							"type": "command",
+							"argList": [
+								{
+									"arg": "life",
+									"optional": false,
+									"type": "double",
+									"default": 0
+								},
+								{
+									"arg": "Unit",
+									"optional": true,
+									"type": "string",
+									"default": "ns",
+									"candidates": ["s","ms","mus","ns","ps","second","millisecond",
+										"microsecond","nanosecond","picosecond"]
+								}
+							],
+							"available": ["PreInit","Idle"]
+						},
+						{
+							"command": "level_tolerance",
+							"description": "Set tolerance in level seaching.",
+							"route": "/particle/manage/nuclideTable/",
+							"type": "command",
+							"argList": [
+								{
+									"arg": "lTolerance",
+									"optional": false,
+									"type": "double",
+									"default": 0
+								},
+								{
+									"arg": "Unit",
+									"optional": true,
+									"type": "string",
+									"default": "eV",
+									"candidates": ["MeV","keV","eV"]
+								}
+							],
+							"available": ["PreInit","Idle"]
+						}
+					
+					]
+				}
+			
+			]
+		},
+		{
+			"command": "property",
+			"description": "Paricle Table control commands.",
+			"collapsed":true,
+			"children": [
+				{
+					"command": "dump",
+					"description": "dump particle properties.",
+					"route": "/particle/property/",
+					"type": "command",
+					"argList": [],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "stable",
+					"description": "Set stable flag.",
+					"route": "/particle/property/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "stable",
+							"optional": false,
+							"type": "boolean",
+							"default": ""
+						}
+					],
+					"available": ["PreInit","Idle", "GeomClosed"]
+				},
+				{
+					"command": "lifetime",
+					"description": "Set life time.",
+					"route": "/particle/property/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "life",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "Unit",
+							"optional": true,
+							"type": "string",
+							"default": "ns",
+							"candidates": ["s","ms","ns"]
+						}
+					],
+					"available": ["PreInit","Idle", "GeomClosed"]
+				},
+				{
+					"command": "verbose",
+					"description": "Set life time.",
+					"route": "/particle/property/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "verbose_level",
+							"optional": true,
+							"type": "int",
+							"default": 0
+						}
+					],
+					"available": ["PreInit","Idle", "GeomClosed"]
+				},
+				{
+					"command": "decay",
+					"description": "Decay Table control commands.",
+					"children": [
+						{
+							"command": "select",
+							"description": "Enter index of decay mode.",
+							"route": "/particle/property/decay/",
+							"type": "command",
+							"argList": [
+								{
+									"arg": "mode",
+									"optional": true,
+									"type": "int",
+									"default": 0
+								}
+							],
+							"available": ["PreInit","Idle"]
+						},
+						{
+							"command": "dump",
+							"description": "Dump decay mode information.",
+							"route": "/particle/property/decay/",
+							"type": "command",
+							"argList": [],
+							"available": ["PreInit","Idle"]
+						},
+						{
+							"command": "br",
+							"description": "Set branching ratio.",
+							"route": "/particle/property/decay/",
+							"type": "command",
+							"argList": [
+								{
+									"arg": "br",
+									"optional": false,
+									"type": "double",
+									"default": 0.5
+								}
+							],
+							"available": ["PreInit","Idle"]
+						}
+					]
+				}
+			
+			]
+		},
+		{
+			"command": "process",
+			"description": "Process Manager control commands.",
+			"collapsed":true,
+			"children": [
+				{
+					"command": "dump",
+					"description": "dump process manager or process information",
+					"route": "/particle/process/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "index",
+							"optional": true,
+							"type": "int",
+							"default": -1
+						}
+					],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "verbose",
+					"description": "Set Verbose Level for Process or Process Manager",
+					"route": "/particle/process/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "Verbose",
+							"optional": true,
+							"type": "int",
+							"default": 1
+						},
+						{
+							"arg": "index",
+							"optional": true,
+							"type": "int",
+							"default": -1
+						}
+					],
+					"available": ["PreInit","Idle", "GeomClosed"]
+				},
+				{
+					"command": "activate",
+					"description": "Activate process",
+					"route": "/particle/process/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "index",
+							"optional": false,
+							"type": "int",
+							"default": 0
+						}
+					],
+					"available": ["Idle","GeomClosed","EventProc"]
+				},
+				{
+					"command": "inactivate",
+					"description": "Inactivate process",
+					"route": "/particle/process/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "index",
+							"optional": false,
+							"type": "int",
+							"default": 0
+						}
+					],
+					"available": ["Idle","GeomClosed","EventProc"]
+				}
+			]
+		}
+	
+	
+	
+	]
+}

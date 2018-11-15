@@ -1,0 +1,128 @@
+    <section class="content-header">
+      <h1>
+        Experiment list
+      	<small>Load / delete</small>      
+      </h1>
+      <ol class="breadcrumb">
+        <li class="active"><a href="#!/particlelab"><i class="fa fa-home"></i> Lab Home</a> > Experiment list</li>
+      </ol>
+    </section>
+    <section >
+    	<div class="content">
+	    		<div class="box box-primary">
+	    		  <div class="box-header with-border">
+	                  <h3 class="box-title">Experiment list</h3>
+	              </div><!-- /.box-header -->
+				  <div class="box-body">
+				  
+				  	<form class="form-inline">
+					  	<div class="row">
+					  		<div class="col-md-4">
+					  			
+						  			<div class="form-group">
+									   <label>Show</label>
+					                   <select class="form-control" ng-model="nItem" 
+					                   		   ng-options="i for i in itemList"
+					                   		   ng-change="setItemPerPage(nItem)">
+					                   </select>
+					                </div>
+				           
+					  		</div>
+					  		<div class="col-md-2  col-md-offset-6">
+					  			
+								    <div class="form-group">
+								      <div class="input-group">
+								        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+								        <input type="text" class="form-control" placeholder="Search a experiment" ng-model="searchExp">
+								      </div>      
+								    </div>
+									
+					  		</div>
+					  	</div>
+					  </form>
+					  
+					  <div class="row">
+					  	<div class="col-md-12">
+					  		<table class="table table-hover" ng-show="totalExperiments>0">
+							  <thead>
+							  	<tr>
+							  		<th style="width: 5%;"></th>
+							  		<th style="width: 25%;">
+							  			<a href="javascript:void(0)" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+							            	Name 
+							            	<span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+	        								<span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+							            </a>
+							  		</th>
+								  	<th style="width: 30%;">
+								  		<a href="javascript:void(0)" ng-click="sortType = 'date'; sortReverse = !sortReverse">
+	          								Date
+	          								<span ng-show="sortType == 'date' && !sortReverse" class="fa fa-caret-down"></span>
+	        								<span ng-show="sortType == 'date' && sortReverse" class="fa fa-caret-up"></span>
+	          							</a>
+								  	</th>
+								  	<th style="width: 40%;">
+								  		<a href="javascript:void(0)" >
+								  			Description
+								  			<span ng-show="sortType == 'description' && !sortReverse" class="fa fa-caret-down"></span>
+	        								<span ng-show="sortType == 'description' && sortReverse" class="fa fa-caret-up"></span>
+								  		</a>
+								  	</th>
+							  	</tr>
+							  </thead>
+							  <tbody>
+							  	<!-- <tr ng-repeat="exp in currentExperimentList  | orderBy:sortType:sortReverse | filter:{ name: searchExp }"> -->
+							  	<tr ng-repeat="exp in currentExperimentList">
+							  		<td>
+							  			<div class="btn-group" uib-dropdown>
+									      <button id="split-button" type="button" class="btn btn-default btn-sm btn-flat" uib-dropdown-toggle>
+									      	<i class="fa fa-gear"></i>
+									      	<span class="fa fa-caret-down"></span>
+									      </button>
+									      <ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+									        <li role="menuitem"  >
+									        	<a ng-click="loadExperiment('md',exp)">
+									        		<i class="fa fa-download"></i> Load
+									        	</a>
+									        </li>
+									        <li role="menuitem">
+									        	<a ng-click="delExperiment('md',exp)">
+									        		<i class="fa fa-trash"></i> Delete
+									        	</a>
+									        </li>
+									      </ul>
+									    </div>
+							  		</td>
+							  		<td>
+							  			{{exp.name}} 
+							  		</td>
+							  		<td>
+							  			{{exp.date | date:'yyyy-MM-dd HH:mm:ss Z'}}
+							  		</td>
+							  		<td>
+							  			{{exp.description}}
+							  		</td>
+							  	</tr>
+							  </tbody>
+							</table>
+							<h4 ng-show="currentExperimentList<=0">
+								Experiment not found.
+							</h4>
+					  	</div>
+					  </div>
+		   			</div>
+		   			
+				   	<div class="box-footer clearfix" ng-show="totalExperiments>0">
+		              <ul uib-pagination total-items="totalExperiments" 
+		              	  ng-model="currentPage" ng-change="pageChanged()" 
+		              	  items-per-page="itemsPerPage" class="pull-right" boundary-links="true">
+		              </ul>
+		            </div>
+		   	 </div>
+		</div>  		
+    </section>
+
+
+  
+ 
+

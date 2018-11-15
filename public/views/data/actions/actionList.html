@@ -1,0 +1,188 @@
+<section class="content row" ng-controller="ActionCtrl">
+	<div class="col col-md-12  no-padding">
+		<h4 ng-if="experiment.data.actionList.length<=0">There are no selected GAMOS data</h4>
+		<div class="btn-group" ng-show="actionTypeList.length>0">
+		  <button type="button" class="btn btn-primary btn-flat dropdown-toggle" 
+		  		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+		  		ng-disabled="!isValidAllAction">
+		    New data (when)<span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu">
+		    <li ng-repeat="actionType in actionTypeList">
+		    	<a ng-click="addAction(actionType)">{{actionType}}</a>
+		    </li>
+		  </ul>
+		</div>
+		<hr />
+		<table class="table table-bordered table-hover table-responsive "  ng-show="experiment.data.actionList.length>0">
+			<thead>
+				<tr>
+				  <th style="width: 5%"></th>
+                  <th style="width: 15%">Name</th>
+                  <th style="width: 12%">When</th>
+                  <th style="width: 33%">GAMOS data</th>
+                  <th style="width: 20%">Classifiers</th>
+                  <th style="width: 20%">Filters</th>
+                </tr>
+			</thead>
+			<tfoot>
+			    <tr>
+			      <td colspan="6" ng-show="isValidAllAction && commandList.length>0">
+			      	<button class="btn btn-info btn-flat btn-xs" type="button" data-toggle="collapse" 
+					  		data-target="#collapseMacroGAMOSData" 
+							aria-expanded="false" 
+							aria-controls="collapseData"
+							ng-click="isViewMacro = !isViewMacro">
+						<span ng-show="isViewMacro"><i class="fa fa-code"></i> Show GAMOS instructions</span> 
+						<span ng-show="!isViewMacro"><i class="fa fa-code"></i> Hide GAMOS instructions</span>
+					</button>
+					<hr ng-if="!isViewMacro" />
+			      	<div  class="collapse box box-primary box-solid" id="collapseMacroGAMOSData">
+			      		<div class="box-body">
+			      			<p ng-repeat="line in commandList track by $index">
+				      			<code>{{line}}</code>
+				      		</p>
+			      		</div>
+			      		
+			      	</div>
+			      	
+			      </td>
+			      
+			    </tr>
+			  </tfoot>
+          	<tbody>
+          		<tr ng-repeat="(actionId,action) in experiment.data.actionList">
+                  <td>
+                  	<div class="btn-group" uib-dropdown>
+					      <button id="split-button" type="button" class="btn btn-default btn-sm btn-flat" uib-dropdown-toggle>
+					      	<i class="fa fa-gear"> </i><span class="caret"> </span>
+					      </button>
+					      <ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+					        <li role="menuitem" >
+					        	<a ng-click="addActionData('lg', action.actionType, actionId, -1)"
+					        		ng-if="!isCounter(action.dataList[0].data[0]) && isValidNameList[actionId].isValid">
+					        	<i class="fa fa-bar-chart"></i> Add GAMOS data (plug-in)</a>
+					        </li>
+					        <li role="menuitem" ><a ng-click="delAction(actionId)">
+					        	<i class="fa fa-trash-o"></i> Delete</a>
+					        </li>
+					      </ul>
+					 </div>
+                  
+                   	 <!--  <button type="button" class="btn btn-default"
+                      		  ng-click="delAction(actionId)">
+                      	<i class="fa fa-trash-o"></i> 
+                      </button> -->
+                   </td>
+                  <td>
+                  	<div class="form-group" ng-class="{'has-error':!isValidNameList[actionId].isValid}">
+						<input type="text" class="form-control" id="actionName" 
+						   	  ng-model="action.name"
+						   	  placeholder="action name">
+					</div>
+					<div class="row" ng-if="!isValidNameList[actionId].isValid">
+						<div class="col-md-12">
+							<p class="text-red">
+									<em>{{isValidNameList[actionId].errorMessages}}</em>
+							</p>
+						</div>
+					</div>
+                  </td>
+                  <td>
+                  	<ul class="todo-list">
+		                    <li ">
+		                      <span class="text" >{{action.actionType}}</span>
+		                    </li>
+		             </ul>
+                  </td>
+                  <td>
+	                  <div ng-if="action.dataList.length<=0" >
+	                  		<p class="text-red" >
+								<em>Add a minimum of data</em>
+							</p>
+	                  </div>
+					  <ul class="todo-list">
+		                    <li ng-repeat="(dataId,data) in action.dataList">
+		                      <span class="text" ng-if="data.data[0].type !== 'Counter'">{{data.data[0].name}}</span>
+		                      <span class="text" ng-if="data.data[0].type === 'Counter'">{{data.data[0].particle.particleName}}</span> 
+		                      <span class="text" ng-if="data.dimension==='2D'"> vs {{data.data[1].name}}</span>
+		                     
+		                      <div class="tools">
+		                        <i class="fa fa-edit" ng-click="addActionData('lg', action.actionType, actionId, dataId)"></i>
+		                        <i class="fa fa-trash-o" ng-click="delData(actionId,dataId)"></i>
+		                      </div>
+		                    </li>
+		                </ul>
+		              
+                   </td>
+                   <td>
+                   		<div ng-if="action.actionType === 'Stack'">
+                   			<p class="text-blue">
+                   	 			<em>Disabled</em>
+                   	 		</p>
+                   	 	</div>
+                   	  	<ul class="todo-list">
+                   	 		<li ng-repeat="(clId,cl) in action.classifierList">
+                   	 			<span class="text">{{cl.name}}</span>
+                   	 			<div class="tools">
+			                        <i class="fa fa-trash-o"  ng-click="delElement(action,clId,'classifierList')"></i>
+			                    </div>
+                   	 		</li>
+                   	 	</ul> 
+                   	 	<hr ng-if="action.classifierList.length>0" />
+                   	 	<div class="btn-group" ng-if="action.actionType !== 'Stack' &&
+                   	 						           getElementList(action,'classifierList',initClassifierList).length>0 ">
+						  <button type="button" class="btn btn-primary btn-xs btn-flat dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Add classifier <span class="caret"></span>
+						  </button>
+						  
+						  <ul class="dropdown-menu">
+						    <li ng-repeat="cl in getElementList(action,'classifierList',initClassifierList) ">
+						    	<a ng-click="addElement(action,cl,'classifierList')">{{cl.name}}</a>
+						    </li>
+						  </ul>
+						</div>
+                   </td>
+                   <td>
+                   	 	<div ng-if="action.actionType === 'Stack'">
+                   	 		<p class="text-blue">
+                   	 			<em>Disabled</em>
+                   	 		</p>
+                   	 	</div>
+                   	 	<div ng-model="experiment.data.actionList[actionId].filterList">
+                   	 		<ul class="todo-list">
+                   	 			<li ng-repeat="(filterId,filter) in action.filterList">
+                   	 				<span class="text">{{filter.name}}</span>
+                   	 				<div class="tools">
+			                        	<i class="fa fa-trash-o"  ng-click="delElement(action,filterId,'filterList')"></i>
+			                    	</div>
+                   	 			</li>
+                   	 		</ul>
+						</div>
+                   	 	<hr ng-if="action.filterList.length>0" />
+                   	 	<div class="btn-group" ng-if="experiment.data.filterList.length>0 && action.actionType !== 'Stack' && 
+                   	 									getElementList(action,'filterList',experiment.data.filterList).length>0">
+						  <button type="button" class="btn btn-primary btn-xs btn-flat dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Add filter <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li ng-repeat="f in getElementList(action,'filterList',experiment.data.filterList)">
+						    	<a ng-click="addElement(action,f,'filterList')">{{f.name}}</a>
+						    </li>
+						  </ul>
+						</div>
+						<div ng-if="experiment.data.filterList.length<=0 && action.actionType != 'Stack'">
+							<p class="text-blue">
+								<em>There are no defined filters</em>
+							</p>
+						</div>
+                  	 </td>
+                	</tr>
+          		</tbody>
+          		
+          	</table>
+          
+          
+		</div>
+
+</section>

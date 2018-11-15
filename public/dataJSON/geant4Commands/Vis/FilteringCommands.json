@@ -1,0 +1,239 @@
+{
+	"command": "filtering",
+	"description": "Filtering commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "tracjectories",
+			"description": "Trajectory filtering commands.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "list",
+					"route": "/vis/filtering/trajectories/",
+					"type": "command",
+					"description": "List objects registered with list manager",
+					"argList": [
+						{
+							"arg": "name",
+							"optional": true,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "mode",
+					"route": "/vis/filtering/trajectories/",
+					"type": "command",
+					"description": "Set mode of operation",
+					"argList": [
+						{
+							"arg": "mode",
+							"optional": false,
+							"type": "string",
+							"default": "",
+							"candidates": ["soft","hard"]
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "create",
+					"description": "Create trajectory filters and messengers.",
+					"collapsed": true,
+					"children": [
+						{
+							"command": "chargeFilter",
+							"route": "/vis/filtering/trajectories/create/",
+							"type": "command",
+							"description": "Create a chargeFilter model and associated messengers.",
+							"argList": [
+								{
+									"arg": "model-name",
+									"optional": true,
+									"type": "string",
+									"default": ""
+								}
+							],
+							"available": ["all"]
+						},
+						{
+							"command": "particleFilter",
+							"route": "/vis/filtering/trajectories/create/",
+							"type": "command",
+							"description": "Create a particleFilter model and associated messengers.",
+							"argList": [
+								{
+									"arg": "model-name",
+									"optional": true,
+									"type": "string",
+									"default": ""
+								}
+							],
+							"available": ["all"]
+						},
+						{
+							"command": "originVolumeFilter",
+							"route": "/vis/filtering/trajectories/create/",
+							"type": "command",
+							"description": "Create a originVolumeFilter model and associated messengers.",
+							"argList": [
+								{
+									"arg": "model-name",
+									"optional": true,
+									"type": "string",
+									"default": ""
+								}
+							],
+							"available": ["all"]
+						},
+						{
+							"command": "attributeFilter",
+							"route": "/vis/filtering/trajectories/create/",
+							"type": "command",
+							"description": "Create a attributeFilter model and associated messengers.",
+							"argList": [
+								{
+									"arg": "model-name",
+									"optional": true,
+									"type": "string",
+									"default": ""
+								}
+							],
+							"available": ["all"]
+						}
+					
+					]
+				}
+			
+			]
+		},
+		{
+			"command": "hits",
+			"description": "Hit filtering commands.",
+			"collapsed": true,
+			"children": [
+							{
+								"command": "list",
+								"route": "/vis/filtering/hits/",
+								"type": "command",
+								"description": "List objects registered with list manager",
+								"argList": [
+									{
+										"arg": "name",
+										"optional": true,
+										"type": "string",
+										"default": ""
+									}
+								],
+								"available": ["all"]
+							},
+							{
+								"command": "mode",
+								"route": "/vis/filtering/hits/",
+								"type": "command",
+								"description": "Set mode of operation",
+								"argList": [
+									{
+										"arg": "mode",
+										"optional": false,
+										"type": "string",
+										"default": "",
+										"candidates": ["soft","hard"]
+									}
+								],
+								"available": ["all"]
+							},
+							{
+								"command": "create",
+								"description": "Create hit filters and messengers.",
+								"collapsed": true,
+								"children": [
+									{
+										"command": "attributeFilter",
+										"route": "/vis/filtering/hits/create/",
+										"type": "command",
+										"description": "Create a attributeFilter model and associated messengers.",
+										"argList": [
+											{
+												"arg": "model-name",
+												"optional": true,
+												"type": "string",
+												"default": ""
+											}
+										],
+										"available": ["all"]
+									}
+								
+								]
+							}
+						
+						]
+		},
+		{
+			"command": "digi",
+			"description": "Digi filtering commands.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "list",
+					"route": "/vis/filtering/digi/",
+					"type": "command",
+					"description": "List objects registered with list manager",
+					"argList": [
+						{
+							"arg": "name",
+							"optional": true,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "mode",
+					"route": "/vis/filtering/digi/",
+					"type": "command",
+					"description": "Set mode of operation",
+					"argList": [
+						{
+							"arg": "mode",
+							"optional": true,
+							"type": "string",
+							"default": "",
+							"candidates": ["soft","hard"]
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "create",
+					"description": "Create digi filters and messengers.",
+					"collapsed": true,
+					"children":[
+						{
+							"command": "attributeFilter",
+							"route": "/vis/filtering/digi/create/",
+							"type": "command",
+							"description": "Create a attributeFilter model and associated messengers.",
+							"argList": [
+								{
+									"arg": "model-name",
+									"optional": true,
+									"type": "string",
+									"default": ""
+								}
+							],
+							"available": ["all"]
+						}
+						
+					]
+				}
+			
+			]
+		}
+	
+	]
+}

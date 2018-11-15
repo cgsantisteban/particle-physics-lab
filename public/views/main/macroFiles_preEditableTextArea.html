@@ -1,0 +1,51 @@
+<div class="modal-header">
+	<h3 class="modal-title">Macro and geometry files</h3>
+</div>
+<div class="modal-body">
+	<uib-tabset>
+	    <uib-tab heading="Macro file (macro.in)" >
+	    	
+	    	<section class="content">
+	    		<div class="box box-primary box-solid">
+	    			<div class="box-body">
+			    		<div class="row">
+			    			<div class="col-md-12">
+			    				<textarea class="form-control" rows="3" ng-model="macroFile">
+			    					{{macroFile}}
+			    				</textarea>
+	    						<!-- <p ng-repeat="line in macroFile track by $index">
+	    							<code>{{line}}</code>
+			    				</p> -->	
+	    					</div>
+	    				</div>
+	    			</div>	
+	    		</div>
+	    	</section>
+	    </uib-tab>
+	    <uib-tab heading="Geometry file (geom.geom)">
+	    	<section class="content">
+	    		<div class="box box-primary box-solid">
+		    		<div class="box-body">
+		    			<section class=" row">
+				    		<div class="col-md-12">
+				    			
+				    			<p ng-repeat="line in geomFile track by $index">
+				    				<code>{{line}}</code>
+				    			</p>
+				    		</div>
+				    	</section>
+		    		</div>
+		    	</div>
+	    	</section>
+	    	
+	    	
+	    </uib-tab>
+	   
+	 </uib-tabset>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-primary btn-flat" 
+			ng-click="okFiles()" >Accept
+	</button>
+</div>

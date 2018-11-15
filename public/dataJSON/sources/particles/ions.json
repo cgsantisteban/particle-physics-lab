@@ -1,0 +1,68 @@
+[
+			{
+				"particleName": "He3",
+				"gamosName": "He3",
+				"type": "particle",
+				"particleType": "ion",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti He3",
+				"gamosName": "anti_He3",
+				"type": "particle",
+				"particleType": "ion",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Alpha",
+				"gamosName": "alpha",
+				"type": "particle",
+				"particleType": "ion",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti alpha",
+				"gamosName": "anti_alpha",
+				"type": "particle",
+				"particleType": "ion",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Deuteron",
+				"gamosName": "deuteron",
+				"type": "particle",
+				"particleType": "ion",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti deuteron",
+				"gamosName": "anti_deuteron",
+				"type": "particle",
+				"particleType": "ion",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Triton",
+				"gamosName": "triton",
+				"type": "particle",
+				"particleType": "ion",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Anti triton",
+				"gamosName": "anti_triton",
+				"type": "particle",
+				"particleType": "ion",
+				"charge": "negative"
+			
+			}
+]
+
+

@@ -1,0 +1,260 @@
+{
+	"command": "vis",
+	"description": "Visualization commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "verbose",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Simple graded message scheme - digit or string",
+			"argList": [
+				{
+					"arg": "verbosity",
+					"optional": true,
+					"type": "string",
+					"default": "warnings"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "initialize",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Initialise visualisation manager.",
+			"argList": [],
+			"available": ["all"]
+		},
+		{
+			"command": "abortReviewKeptEvents",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Abort review of kept events.",
+			"argList": [
+				{
+					"arg": "abort",
+					"optional": true,
+					"type": "boolean",
+					"default": 1				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "enable",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Enables/disables visualization system.",
+			"argList": [
+				{
+					"arg": "enabled",
+					"optional": true,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "disable",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Disables visualization system.",
+			"argList": [],
+			"available": ["all"]
+		},
+		{
+			"command": "list",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Lists visualization parameters.",
+			"argList": [
+				{
+					"arg": "verbosity",
+					"optional": true,
+					"type": "string",
+					"default": "warnings"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "reviewKeptEvents",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Review kept events.",
+			"argList": [
+				{
+					"arg": "macro-file-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "drawTree",
+			"route": "/vis/",
+			"type": "command",
+			"description": "(DTREE) Creates a scene consisting of this physical volume and produces a representation of the geometry hieracrhy.",
+			"argList": [
+				{
+					"arg": "physical-volume-name",
+					"optional": true,
+					"type": "string",
+					"default": "world"
+				},
+				{
+					"arg": "system",
+					"optional": true,
+					"type": "string",
+					"default": "ATree"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "drawView",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Draw view from this angle, etc.",
+			"argList": [
+				{
+					"arg": "theta-degrees",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "phi-degrees",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "pan-right",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "pan-up",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "pan-unit",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "zoom-factor",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "dolly",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "dolly-unit",
+					"optional": true,
+					"type": "string",
+					"default": "cm"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "drawVolume",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Creates a scene containing this physical volume and asks the current viewer to draw it.",
+			"argList": [
+				{
+					"arg": "physical-volume-name",
+					"optional": true,
+					"type": "string",
+					"default": "world"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "open",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Creates a scene containing this physical volume and asks the current viewer to draw it.",
+			"argList": [
+				{
+					"arg": "graphics-system-name",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "window-size-hint",
+					"optional": true,
+					"type": "string",
+					"default": "600"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "specify",
+			"route": "/vis/",
+			"type": "command",
+			"description": "Draws logical volume with Boolean components, voxels and readout geometry.",
+			"argList": [
+				{
+					"arg": "logical-volume-name",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "depth-of-descent",
+					"optional": true,
+					"type": "int",
+					"default": 1
+				},
+				{
+					"arg": "booleans-flag",
+					"optional": true,
+					"type": "boolean",
+					"default": 1
+				},
+				{
+					"arg": "voxels-flag",
+					"optional": true,
+					"type": "boolean",
+					"default": 1
+				},
+				{
+					"arg": "readout-flag",
+					"optional": true,
+					"type": "boolean",
+					"default": 1
+				},
+				{
+					"arg": "axes-flag",
+					"optional": true,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		}
+		
+	
+	
+	]
+	
+}

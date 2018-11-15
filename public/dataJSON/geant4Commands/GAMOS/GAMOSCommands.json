@@ -1,0 +1,145 @@
+{
+	
+	"command": "gamos",
+	"description": "...Title not avaible...",
+	"collapsed":true,
+	"children": [
+		
+		{
+			"command": "geometry",
+			"route": "/gamos/",
+			"type": "command",
+			"description": "Select the geometry by its plugin name",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "physicsList",
+			"route": "/gamos/",
+			"type": "command",
+			"description": "Select the physics list by its plugin name",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "generator",
+			"route": "/gamos/",
+			"type": "command",
+			"description": "Select the generator by its plugin name",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "userAction",
+			"route": "/gamos/",
+			"type": "command",
+			"description": "Enable one userAction by its plugin name",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "verbosity",
+			"route": "/gamos/",
+			"type": "command",
+			"description": "Set the verbosity level for a certain verbosity typel (-1,0,1,2,3,4) or (silent,error,warning,info,debug,test)",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "setParam",
+			"route": "/gamos/",
+			"type": "command",
+			"description": "Set Parameter value(s)",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "filter",
+			"route": "/gamos/",
+			"type": "command",
+			"description": "Enable one userAction by its plugin name",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "classifier",
+			"route": "/gamos/",
+			"type": "command",
+			"description": "Create a new classifier assigning parameters to one of the plug-in classifiers",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "distribution",
+			"route": "/gamos/",
+			"type": "command",
+			"description": "Create a new distribution assigning parameters to one of the plug-in distributions",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		}
+	
+	]
+}

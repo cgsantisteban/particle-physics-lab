@@ -1,0 +1,114 @@
+[
+			{
+				"particleName": "Electron",
+				"gamosName": "e-",
+				"type": "particle",
+				"particleType": "lepton",
+				"pdg": 11,
+				"pythia": true,
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Positron",
+				"gamosName": "e+",
+				"type": "particle",
+				"particleType": "lepton",
+				"pdg": -11,
+				"pythia": true,
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Electron neutrino",
+				"gamosName": "nu_e",
+				"type": "particle",
+				"pdg": 12,
+				"particleType": "lepton",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti electron neutrino",
+				"gamosName": "anti_nu_e",
+				"type": "particle",
+				"pdg": -12,
+				"particleType": "lepton",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Muon -",
+				"gamosName": "mu-",
+				"type": "particle",
+				"pdg": 13,
+				"particleType": "lepton",
+				"charge": "negative"
+			
+			},	
+			{
+				"particleName": "Muon +",
+				"gamosName": "mu+",
+				"type": "particle",
+				"pdg": -13,
+				"particleType": "lepton",
+				"charge": "positive"
+			
+			},	
+			{
+				"particleName": "Muon neutrino",
+				"gamosName": "nu_mu",
+				"type": "particle",
+				"pdg": -14,
+				"particleType": "lepton",
+				"charge": "neutral"
+			
+			},	
+			{
+				"particleName": "Anti moun neutrino",
+				"gamosName": "anti_nu_mu",
+				"type": "particle",
+				"pdg": -14,
+				"particleType": "lepton",
+				"charge": "neutral"
+			
+			},	
+			{
+				"particleName": "Tau -",
+				"gamosName": "tau-",
+				"type": "particle",
+				"pdg": 15,
+				"particleType": "lepton",
+				"charge": "negative"
+			
+			},	
+			{
+				"particleName": "Tau +",
+				"gamosName": "tau+",
+				"type": "particle",
+				"pdg": -15,
+				"particleType": "lepton",
+				"charge": "positive"
+			
+			},	
+			{
+				"particleName": "Tau neutrino",
+				"gamosName": "nu_tau",
+				"type": "particle",
+				"pdg": -16,
+				"particleType": "lepton",
+				"charge": "neutral"
+			
+			},	
+			{
+				"particleName": "Anti tau neutrino",
+				"gamosName": "anti_nu_tau",
+				"type": "particle",
+				"pdg": -16,
+				"particleType": "lepton",
+				"charge": "neutral"
+			
+			}
+]
+
+

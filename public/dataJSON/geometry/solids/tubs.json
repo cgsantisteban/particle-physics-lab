@@ -1,0 +1,31 @@
+{
+	"solidType": "TUBS",
+	"dimensions": {
+		"Inner radius": {
+		"value": 0,
+		"units": "cm",
+		"type": "Radius"
+		},
+		"Outer radius": {
+			"value": 1,
+			"units": "cm",
+			"type": "Radius"
+		},
+		"Length": {
+			"value": 10,
+			"units": "cm",
+			"type": "Length"
+		},
+		"Starting phi": {
+			"value": 0,
+			"units": "deg",
+			"type": "Angle"
+		},
+		"Delta phi": {
+			"value": 360,
+			"units": "deg",
+			"type": "Delta"
+		}
+	}
+	
+}

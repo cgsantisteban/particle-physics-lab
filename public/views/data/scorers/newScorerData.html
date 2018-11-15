@@ -1,0 +1,106 @@
+<div class="modal-header">
+	<h3 class="modal-title">{{windowTitle}}</h3>
+</div>
+<div class="modal-body">
+	<section class="content" >
+		
+   		<div class="row">
+   			<div class="col col-md-12">
+   				<form >
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group" ng-class="{'has-error':!isValidScorer.isValidName.isValid}">
+								<label>Name</label>
+								<input type="text" class="form-control" 
+								   	  ng-model="scorer.name"
+								   	  placeholder="scorer name">
+							</div>
+							<div class="row" ng-if="!isValidScorer.isValidName.isValid">
+								<div class="col-md-12">
+									<p class="text-red">
+											<em>{{isValidScorer.isValidName.errorMessages}}</em>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<label>Volume</label>
+			  				 <select class="form-control"
+			  				 		 ng-model="scorer.volume"
+			  				 		 ng-options="v.name as v.name for v in volumeList"
+			  				 		 ng-change="changeVolume(scorerList,scorer.volume)"
+			  				 		>
+		                     </select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+			  				 <label>Scorer type</label>
+			  				 <select class="form-control"
+			  				 		 ng-model="scorerType"
+			  				 		 ng-options="st for st in typeList track by st"
+			  				 		 ng-change="setData(scorerType,scorerList, scorerId)"
+			  				 		>
+		                     </select>
+			  			</div>
+						<div class="col-md-4">
+			  				 <label>Data</label>
+			  				 <select class="form-control"
+			  				 		 ng-model="scorer.data"
+			  				 		 ng-options="d.name for d in dataList track by d.name">
+		                     </select>
+			  			</div>
+		
+						<div ng-if="scorer.data.gamosName === 'GmPSSurfaceFlux'">
+							
+							<div class="col-md-2" >
+								<div class="form-group">
+								   <label>Direction</label>
+			                       <select class="form-control"
+			                       			ng-model="scorer.data.fluxType"
+			                       			ng-options="d for d in fluxTypeList">
+			                       </select>
+			                    </div>
+			                    <div class="row" ng-if="!isValidScorer.isValidSurface.isValid">
+									<div class="col-md-12">
+										<p class="text-red">
+												<em>{{isValidScorer.isValidSurface.errorMessages}}</em>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<label>Surface</label>
+								<div class="row">
+									<div class="col-md-6" 
+										 ng-repeat="s in getSurfaceList(scorer.volume,fluxSurfaceList) track by $index">
+										<div class="checkbox">
+						                        <label>
+						                          <input type="checkbox"
+						                          	ng-checked = "checkSurface(s,scorer.data.surfaceList)"
+						                          	ng-click="addSurface(s,scorer.data.surfaceList)">
+						                         	{{s}}
+						                        </label>
+						                </div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div> <!-- row scorer type -->
+				</form>
+   			</div>
+   		</div>
+	</section> 
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-warning btn-flat pull-left" 
+			ng-click="cancel()"
+			>Cancel
+	</button>
+	<button type="button" class="btn btn-primary btn-flat" 
+			ng-click="addScorer()" 
+			ng-disabled="!isValidAll"
+			>Accept
+	</button>
+</div>

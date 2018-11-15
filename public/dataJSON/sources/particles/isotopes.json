@@ -1,0 +1,162 @@
+[
+	{
+		"particleName": "Am241",
+		"gamosName": "Am241",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Ba133",
+		"gamosName": "Ba133",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Cs134",
+		"gamosName": "Cs134",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Cs137",
+		"gamosName": "Cs137",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Co57",
+		"gamosName": "Co57",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Co58",
+		"gamosName": "Co58",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Co60",
+		"gamosName": "Co60",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Na22",
+		"gamosName": "Na22",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "F18",
+		"gamosName": "F18",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "V48",
+		"gamosName": "V48",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Sc44",
+		"gamosName": "Sc44",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Mn54",
+		"gamosName": "Mn54",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Sb125",
+		"gamosName": "Sb125",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "I125",
+		"gamosName": "I125",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Ga68",
+		"gamosName": "Ga68",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	},
+	{
+		"particleName": "Tc99m",
+		"gamosName": "Tc99m",
+		"parameters": {
+			"activity": {
+				"value": 1000,
+				"units": "Bq"
+			}	
+		}
+	}
+]

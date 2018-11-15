@@ -1,0 +1,303 @@
+[
+	{
+		"name": "NaI(Tl)",
+		"gamosName": "NaI-Tl",
+		"properties": {
+			"density": {
+				"value": 3.62,
+				"units": "g/cm3"
+			},
+			"components": [
+				{
+					"name": "Na",
+					"gamosName": "G4_Na",
+					"proportion": 0.1528
+				},
+				{
+					"name": "I",
+					"gamosName": "G4_I",
+					"proportion": 0.8432
+				},
+				{
+					"name": "Tl",
+					"gamosName": "G4_Tl",
+					"proportion": 0.004
+				}
+			],
+			"scintillationYield": {
+					"value": 3800,
+					"units": "/MeV" 
+			},
+			"resolutionScale": {
+					"value": 1.0,
+					"units": null
+			},
+			"fastTimeConstant": {
+				"value": 1.0,
+				"units": "ns"	
+			},
+			"slowTimeConstant": {
+				"value": 10.0,
+				"units": "ns"
+			},
+			"yieldRatio": {
+				"value": 0.9,
+				"units": null
+			},
+			"fastScintillationRiseTime":{
+				"value": 30,
+				"units": "ps"
+			},
+			"slowScintillationRiseTime": {
+				"value": 3000,
+				"units": "ps"
+			},
+			"energies": {
+				"value": [2.034,2.068,2.103,2.139,2.177,2.216,2.256,2.298,2.341,2.386,2.433,2.481,2.532,
+						 2.585,2.640,2.697,2.757,2.820,2.885,2.954,3.026,3.102,3.181,3.265,3.353,3.446,3.545,
+						 3.649,3.760,3.877,4.002,4.136],
+				"units": "eV"		 
+			},
+			"rIndex": {
+				"value":  [1.766488159,	1.7679973633,1.769572262,1.7712157643,1.772977708,1.7748162458,1.7767350536,
+						   1.7787873582,1.7809299411,1.7832187719,1.7856621319,1.7882152532,1.7909943174,1.7939575559,
+						   1.797116742,1.8004847152,1.804137281,1.8080957536,1.8123177871,1.8169595385,1.8219866195,
+						   1.8275060062,1.8334867877,1.8401328865,1.8474304253,1.8555377073,1.864643371,1.8747742158,
+						   1.8862752549,1.8992321063,1.9141084948,1.9313637927],
+				"units": null
+			}, 
+			"absLength": {
+				"value": [3.448,4.082,6.329,9.174,12.346,13.889,15.152,17.241,18.868,20.000,26.316,35.714,45.455,
+						  47.619,52.632,52.632,55.556,52.632,52.632,47.619,45.455,41.667,37.037,33.333,30.000,28.500,
+						  27.000,24.500,22.000,19.500,17.500,14.500],
+				"units": "m"
+			},
+			"fastComponent": {
+				"value": [0.000134,0.004432,0.053991,0.241971,0.398942,0.000134,0.004432,0.053991,0.241971,0.398942,
+						  0.000134,0.004432,0.053991,0.241971,0.398942,0.000134,0.004432,0.053991,0.241971,0.398942,
+						  0.000134,0.004432,0.053991,0.241971,0.398942,0.000134,0.004432,0.053991,0.241971,0.398942,
+						  0.000134,0.004432],
+				"units": "ns"
+			},
+			"slowComponent": {
+				"value": [0.000010,0.000020,0.000030,0.004000,0.008000,0.005000,0.020000,0.001000,0.000010,0.000020,
+							  0.000030,0.004000,0.008000,0.005000,0.020000,0.001000,0.000010,0.000020,0.000030,0.004000,
+							  0.008000,0.005000,0.020000,0.001000,0.000010,0.000020,0.000030,0.004000,0.008000,0.005000,
+							  0.020000,0.00100],
+				"units": "ns"
+			}
+		
+		}
+		
+	},
+	{
+		"name": "LYSO",
+		"gamosName": "LYSO",
+		"properties": {
+			"density": {
+				"value": 7.10,
+				"units": "g/cm3"
+			},
+			"components": [
+				{
+					"name": "Lu",
+					"gamosName": "G4_Lu",
+					"proportion": 0.7145
+				},
+				{
+					"name": "Y",
+					"gamosName": "G4_Y",
+					"proportion": 0.0403
+				},
+				{
+					"name": "Si",
+					"gamosName": "G4_Si",
+					"proportion": 0.0637
+				},
+				{
+					"name": "O",
+					"gamosName": "G4_O",
+					"proportion": 0.181
+				}
+			],
+			"scintillationYield": {
+					"value": 32000,
+					"units": "/MeV" 
+			},
+			"resolutionScale": {
+					"value": 1.0,
+					"units": null
+			},
+			"fastTimeConstant": {
+				"value": 41.0,
+				"units": "ns"	
+			},
+			"yieldRatio": {
+				"value": 1,
+				"units": null
+			},
+			"fastScintillationRiseTime":{
+				"value": 30,
+				"units": "ps"
+			},
+			"slowScintillationRiseTime": {
+				"value": 3000,
+				"units": "ps"
+			},
+			"energies": {
+				"value": [1.2, 2.94, 2.95, 2.96, 2.97, 6.5 ],
+				"units": "eV"		 
+			},
+			"rIndex": {
+				"value":  [1.81, 1.81, 1.81, 1.81, 1.81, 1.81 ],
+				"units": null
+			},
+			"absLength": {
+				"value": [0.42, 0.42, 0.42, 0.42, 0.42, 0.42],
+				"units": "m"
+			},
+			"fastComponent": {
+				"value": [0, 0, 1.0, 1.0, 0, 0],
+				"units": "ns"
+			}
+		}		
+	},
+	{
+		"name": "LaBr3(Ce)",
+		"gamosName": "LaBr",
+		"properties": {
+			"density": {
+				"value": 5.08,
+				"units": "g/cm3"
+			},
+			"components": [
+				{
+					"name": "La",
+					"gamosName": "G4_La",
+					"proportion": 0.3662
+				},
+				{
+					"name": "Br",
+					"gamosName": "G4_Br",
+					"proportion": 0.6319
+				},
+				{
+					"name": "Ce",
+					"gamosName": "G4_Ce",
+					"proportion": 0.0019
+				}
+			],
+			"scintillationYield": {
+					"value": 63000,
+					"units": "/MeV" 
+			},
+			"resolutionScale": {
+					"value": 1.0,
+					"units": null
+			},
+			"fastTimeConstant": {
+				"value": 16.0,
+				"units": "ns"	
+			},
+			"yieldRatio": {
+				"value": 1.0,
+				"units": null
+			},
+			"fastScintillationRiseTime":{
+				"value": 30,
+				"units": "ps"
+			},
+			"slowScintillationRiseTime": {
+				"value": 3000,
+				"units": "ps"
+			},
+			"energies": {
+				"value": [1.2, 3.25, 3.26, 3.27, 3.28, 6.5],
+				"units": "eV"		 
+			},
+			"rIndex": {
+				"value":  [1.9, 1.9, 1.9, 1.9, 1.9, 1.9],
+				"units": null
+			}, 
+			"absLength": {
+				"value": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+				"units": "m"
+			},
+			"fastComponent": {
+				"value": [0.0, 0.0, 1.0, 1.0, 0.0, 0.0],
+				"units": "ns"
+			}
+		}	
+	},
+	{
+		"name": "BaF2",
+		"gamosName": "BaF",
+		"properties": {
+			"density": {
+				"value": 4.89,
+				"units": "g/cm3"
+			},
+			"components": [
+				{
+					"name": "Ba",
+					"gamosName": "G4_Ba",
+					"proportion": 0.78328
+				},
+				{
+					"name": "F",
+					"gamosName": "G4_F",
+					"proportion": 0.21672
+				}
+			],
+			"scintillationYield": {
+					"value": 11800,
+					"units": "/MeV" 
+			},
+			"resolutionScale": {
+					"value": 1.0,
+					"units": null
+			},
+			"fastTimeConstant": {
+				"value": 0.7,
+				"units": "ns"	
+			},
+			"slowTimeConstant": {
+				"value": 630,
+				"units": "ns"
+			},
+			"yieldRatio": {
+				"value": 0.15,
+				"units": null
+			},
+			"fastScintillationRiseTime":{
+				"value": 30,
+				"units": "ps"
+			},
+			"slowScintillationRiseTime": {
+				"value": 3000,
+				"units": "ps"
+			},
+			"energies": {
+				"value": [1.2, 3.99, 4.00, 4.01, 4.02, 5.63, 5.64, 6.36, 6.37, 6.5],
+				"units": "eV"		 
+			},
+			"rIndex": {
+				"value":  [1.50,   1.50,    1.50,    1.50,    1.50,    1.54,    1.54,    1.54,    1.54,    1.54],
+				"units": null
+			}, 
+			"absLength": {
+				"value": [0.34,  0.34,   0.34,   0.34,   0.34,   0.34,   0.34,   0.34,   0.34,   0.34],
+				"units": "m"
+			},
+			"fastComponent": {
+				"value": [0.0,    0.0,     0.0,     0.0,     0.0,     0.0,     0.67,    0.33,    0.0,     0.0],
+				"units": "ns"
+			},
+			"slowComponent": {
+				"value": [0.0,    0.0,     1.0,     1.0,     0.0,     0.0,     0.0,     0.0,     0.0,     0.0],
+				"units": "ns"
+			}
+		
+		}		
+	}
+]

@@ -1,0 +1,311 @@
+{
+	"command": "geometry",
+	"description": "Operations on vis attributes of Geant4 geometry.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "list",
+			"route": "/vis/geometry/",
+			"type": "command",
+			"description": "Lists vis attributes of logical volume(s).",
+			"argList": [
+				{
+					"arg": "logical-volume-name",
+					"optional": true,
+					"type": "string",
+					"default": "all"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "restore",
+			"route": "/vis/geometry/",
+			"type": "command",
+			"description": "Restores vis attributes of logical volume(s).",
+			"argList": [
+				{
+					"arg": "logical-volume-name",
+					"optional": true,
+					"type": "string",
+					"default": "all"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "set",
+			"description": "Set vis attributes of Geant4 geometry.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "colour",
+					"route": "/vis/geometry/set/",
+					"type": "command",
+					"description": "Sets colour of logical volume(s).",
+					"argList": [
+						{
+							"arg": "logical-volume-name",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						},
+						{
+							"arg": "depth",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "red",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "green",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "blue",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "opacity",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "daughtersInvisible",
+					"route": "/vis/geometry/set/",
+					"type": "command",
+					"description": "Sets colour of logical volume(s).",
+					"argList": [
+						{
+							"arg": "logical-volume-name",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						},
+						{
+							"arg": "depth",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "daughtersInvisible",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "lineStyle",
+					"route": "/vis/geometry/set/",
+					"type": "command",
+					"description": "Sets line style of logical volume(s) drawing.",
+					"argList": [
+						{
+							"arg": "logical-volume-name",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						},
+						{
+							"arg": "depth",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "lineStyle",
+							"optional": true,
+							"type": "string",
+							"default": "unbroken",
+							"candidates": ["unbroken","dashed","dotted"]
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "lineWidth",
+					"route": "/vis/geometry/set/",
+					"type": "command",
+					"description": "Sets line width of logical volume(s) drawing.",
+					"argList": [
+						{
+							"arg": "logical-volume-name",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						},
+						{
+							"arg": "depth",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "lineWidth",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "forceAuxEdgeVisible",
+					"route": "/vis/geometry/set/",
+					"type": "command",
+					"description": "Forces auxiliary (soft) edges of logical volume(s) to be visible, regardless of the view parameters.",
+					"argList": [
+						{
+							"arg": "logical-volume-name",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						},
+						{
+							"arg": "depth",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "forceAuxEdgeVisible",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "forceLineSegmentsPerCircle",
+					"route": "/vis/geometry/set/",
+					"type": "command",
+					"description": "Forces number of line segments per circle",
+					"argList": [
+						{
+							"arg": "logical-volume-name",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						},
+						{
+							"arg": "depth",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "lineSegmentsPerCircle",
+							"optional": true,
+							"type": "double",
+							"default": -1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "forceSolid",
+					"route": "/vis/geometry/set/",
+					"type": "command",
+					"description": "Forces logical volume(s) always to be drawn solid",
+					"argList": [
+						{
+							"arg": "logical-volume-name",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						},
+						{
+							"arg": "depth",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "forceSolid",
+							"optional": true,
+							"type": "boolean",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "forceWireframe",
+					"route": "/vis/geometry/set/",
+					"type": "command",
+					"description": "Forces logical volume(s) always to be drawn as wireframe, regardless of the view parameters.",
+					"argList": [
+						{
+							"arg": "logical-volume-name",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						},
+						{
+							"arg": "depth",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "forceWireframe",
+							"optional": true,
+							"type": "boolean",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "visibility",
+					"route": "/vis/geometry/set/",
+					"type": "command",
+					"description": "Sets visibility of logical volume(s).",
+					"argList": [
+						{
+							"arg": "logical-volume-name",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						},
+						{
+							"arg": "depth",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "visibility",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				}
+			
+			]
+		
+		}
+	
+	]
+	
+
+}

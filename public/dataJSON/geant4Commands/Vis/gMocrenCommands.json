@@ -1,0 +1,195 @@
+{
+	"command": "gMocren",
+	"description": "gMocren commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "setEventNumberSuffix",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "Write separate event files, appended with given suffix.",
+			"argList": [
+				{
+					"arg": "suffix",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "appendGeometry",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "Appends copy of geometry to every event.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "addPointAttributes",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "Adds point attributes to the points of trajectories.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "useSolids",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "Use GMocren Solids, rather than Geant4 Primitives.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setVolumeName",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "detector name for a volume data in gMocren data.",
+			"argList": [
+				{
+					"arg": "kgMocrenVolumeName",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "addHitName",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "hit name for a dose distribution in gMocren data.",
+			"argList": [
+				{
+					"arg": "kgMocrenHitName",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "resetHitNames",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "reset all hit names.",
+			"argList": [],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setScoringMeshName",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "scoring mesh name for a dose distribution in gMocren data.",
+			"argList": [
+				{
+					"arg": "kgMocrenScoringMeshName",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "addHitScorerName",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "hit scorer name for a dose distribution in gMocren data.",
+			"argList": [
+				{
+					"arg": "kgMocrenHitScorerNames",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "resetHitScorerName",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "reset all hit scorer names.",
+			"argList": [],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setNumberOfVoxels",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "set number of voxels.",
+			"argList": [
+				{
+					"arg": "nX",
+					"optional": false,
+					"type": "int",
+					"default": 1
+				},
+				{
+					"arg": "nY",
+					"optional": false,
+					"type": "int",
+					"default": 1
+				},
+				{
+					"arg": "nZ",
+					"optional": false,
+					"type": "int",
+					"default": 1
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "list",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "list gMocren command parameters.",
+			"argList": [],
+			"available": ["Idle"]
+		},
+		{
+			"command": "drawVolumeGrid",
+			"route": "/vis/gMocren/",
+			"type": "command",
+			"description": "Add grid of the volume.",
+			"argList": [
+				{
+					"arg": "kDrawVolumeGrid",
+					"optional": false,
+					"type": "boolean",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		}
+		
+		
+	]
+}

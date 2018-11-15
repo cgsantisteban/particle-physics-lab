@@ -1,0 +1,52 @@
+{
+	"command": "random",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "setSeeds",
+			"route": "/gamos/random/",
+			"type": "command",
+			"description": "Set the global random seeds",
+			"argList": [
+					{
+						"arg": "ion",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "restoreSeeds",
+			"route": "/gamos/random/",
+			"type": "command",
+			"description": "Restore the global random seeds from a file",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "setEngine",
+			"route": "/gamos/random/",
+			"type": "command",
+			"description": "Set the global random engine",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit"]
+		}
+	]
+}

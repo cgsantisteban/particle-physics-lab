@@ -1,0 +1,158 @@
+[
+	{
+		"type": "LINEAR_X",
+		"parameters": {
+			"N copies": {
+				"value": 1,
+				"units": null,
+				"type": "Ncopies"
+			},
+			"Step": {
+				"value": 1,
+				"units": "cm",
+				"type": "Position"
+			},
+			"Offset": {
+				"value": 0,
+				"units": "cm",
+				"type": "Position"
+			}
+		}
+	},
+	{
+		"type": "LINEAR_Y",
+		"parameters": {
+			"N copies": {
+				"value": 1,
+				"units": null,
+				"type": "Ncopies"
+			},
+			"Step": {
+				"value": 1,
+				"units": "cm",
+				"type": "Position"
+			},
+			"Offset": {
+				"value": 0,
+				"units": "cm",
+				"type": "Position"
+			}
+		}
+	},
+	{
+		"type": "LINEAR_Z",
+		"parameters": {
+			"N copies": {
+				"value": 1,
+				"units": null,
+				"type": "Ncopies"
+			},
+			"Step": {
+				"value": 1,
+				"units": "cm",
+				"type": "Position"
+			},
+			"Offset": {
+				"value": 0,
+				"units": "cm",
+				"type": "Position"
+			}
+		}
+	},
+	{
+		"type": "CIRCLE_XY",
+		"parameters": {
+			"N copies": {
+				"value": 1,
+				"units": null,
+				"type": "Ncopies"
+			},
+			"Step": {
+				"value": 1,
+				"units": "deg",
+				"type": "angle"
+			},
+			"Offset": {
+				"value": 0,
+				"units": "deg",
+				"type": "angle"
+			},
+			"Radius": {
+				"value": 10,
+				"units": "cm",
+				"type": "radius"
+			}
+		}
+	},
+	{
+		"type": "CIRCLE_XZ",
+		"parameters": {
+			"N copies": {
+				"value": 1,
+				"units": null,
+				"type": "Ncopies"
+			},
+			"Step": {
+				"value": 1,
+				"units": "deg",
+				"type": "angle"
+			},
+			"Offset": {
+				"value": 0,
+				"units": "deg",
+				"type": "angle"
+			},
+			"Radius": {
+				"value": 10,
+				"units": "cm",
+				"type": "radius"
+			}
+		}
+	},
+	{
+		"type": "CIRCLE_YZ",
+		"parameters": {
+			"N copies": {
+				"value": 1,
+				"units": null,
+				"type": "Ncopies"
+			},
+			"Step": {
+				"value": 1,
+				"units": "deg",
+				"type": "angle"
+			},
+			"Offset": {
+				"value": 0,
+				"units": "deg",
+				"type": "angle"
+			},
+			"Radius": {
+				"value": 10,
+				"units": "cm",
+				"type": "radius"
+			}
+		} 
+	},
+	{
+		"type": "PHANTOM",
+		"parameters": {
+			"N copies X": {
+				"value": 1,
+				"units": null,
+				"type": "Ncopies"
+			},
+			"N copies Y": {
+				"value": 1,
+				"units": null,
+				"type": "Ncopies"
+			},
+			"N copies Z": {
+				"value": 1,
+				"units": null,
+				"type": "Ncopies"
+			}
+		} 
+	}
+]
+

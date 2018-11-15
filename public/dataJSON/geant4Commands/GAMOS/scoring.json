@@ -1,0 +1,159 @@
+{
+	"command": "scoring",
+	"description": "Scoring commands",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "printer",
+			"route": "/gamos/scoring/",
+			"type": "command",
+			"description": "Creates a printer of one of the predefined classs ",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "createMFDetector",
+			"route": "/gamos/scoring/",
+			"type": "command",
+			"description": "Creates a multi functional detector and associates it to one or several logical volumes. It must have as arguments the MFD name and then the list of LV names",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "addScorer2MFD",
+			"route": "/gamos/scoring/",
+			"type": "command",
+			"description": "Creates a scorer of one of the predefined classes (scorer GmScorerFactory plug-in's) and adds it to a multi functional detector",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "addFilter2Scorer",
+			"route": "/gamos/scoring/",
+			"type": "command",
+			"description": "Creates a filter of one of the predefined classs (filter GmFilterFactory plug-in's) and adds it to an score",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "addPrinter2Scorer",
+			"route": "/gamos/scoring/",
+			"type": "command",
+			"description": "Creates a printer of one of the predefined classs (Gmprinter GmScorerPrinter plug-in's) and adds it to an scorer",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "assignClassifier2Scorer",
+			"route": "/gamos/scoring/",
+			"type": "command",
+			"description": "Creates a classifier of one of the predefined classs (GmClassifierFactory plug-in's) and adds it to an scorer",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "useTrackWeight",
+			"route": "/gamos/scoring/",
+			"type": "command",
+			"description": "Selects if track weight is going to be used or not for an scorer. ",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "scoreErrors",
+			"route": "/gamos/scoring/",
+			"type": "command",
+			"description": "Selects if errors are scored for an scorer. It must have as arguments the scorer name TRUE/FLASE",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "printByEvent",
+			"route": "/gamos/scoring/",
+			"type": "command",
+			"description": "Selects if the scores (and errors) are given divided by the total number of events.",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "scorerUnit",
+			"route": "/gamos/scoring/",
+			"type": "command",
+			"description": "Changes the unit of an scorer. It must have as arguments SCORER_NAME UNIT_NAME UNIT_FACTOR",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		}
+	
+	]
+	
+}

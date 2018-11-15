@@ -1,0 +1,409 @@
+[
+				
+	{
+		"subtype": "Charged particles",
+		"gamosName": "GmChargedFilter",
+		"description" : "filtro",
+		"type": "Particles",
+		"parameters": []
+	},
+	{
+		"subtype": "Neutral particles",
+		"gamosName": "GmNeutralFilter",
+		"description" : "filtro",
+		"type": "Particles",
+		"parameters": []
+	},
+	{
+		"subtype": "Particle",
+		"gamosName": "GmParticleFilter",
+		"type": "Particles",
+		"parameters": [
+		         	{
+		         		"name": "particles",
+		         	 	"paramType": "selectParticle",
+		         	 	"validateName": "particle",
+		         	 	"value": null
+		         	}
+		         ]
+	},				
+	{
+		"subtype": "Kinetic energy",
+		"gamosName": "GmKineticEnergyFilter",
+		"type": "Energy",
+		"description" : "filtro",
+		"parameters": [
+			      	{
+			      		"name": "Min. K. Energy",
+			        	"paramType": "Energy",
+			        	"value": 0,
+			        	"units": "MeV"
+			        },
+			       {
+			       		"name": "Max. K. Energy",
+			        	"paramType": "Energy",
+			        	"value": 1,
+			        	"units": "MeV"
+			        }
+		        ]
+	},
+	{
+		"subtype": "Deposited energy",
+		"gamosName": "GmDepositedEnergyFilter",
+		"type": "Energy",
+		"description" : "filtro",
+		"parameters": [
+		        {
+		       		"name": "Min. Depo. Energy",
+		        	"paramType": "Energy",
+		        	"value": 0,
+		        	"units": "MeV"
+		        },
+		        {
+		        	"name": "Max. Depo. Energy",
+		        	"paramType": "Energy",
+		        	"value": 1,
+		        	"units": "MeV"
+		        }
+	        ]
+	},			
+	{
+		"subtype": "Position X",
+		"gamosName": "GmPositionXFilter",
+		"type": "Position",
+		"description" : "filtro",
+		"parameters": [
+	          {
+	         	"name":"Min. X Position",
+	         	"paramType": "Position",
+	         	 "validateName": "minXPos",
+	         	 "value": 0,
+	         	 "units": "cm"
+	         	},
+	           {
+	         	 "name": "Max. X Position",	
+		         "paramType": "Position",
+		         "value": 1,
+		         "units": "cm"
+		        }
+	         ]
+	},
+	{
+		"subtype": "Inital position X",
+		"gamosName": "GmPositionPreXFilter",
+		"type": "Position",
+		"description" : "filtro",
+		"parameters": [
+	           {
+	         	 "name": "Min. init X pos.",
+	         	 "paramType": "Position",
+	         	 "value": 0,
+	         	 "units": "cm"
+	         	},
+	         	{
+	         	 "name": "Max. init X pos.", 
+		         "paramType": "Position",
+		         "value": 1,
+		         "unit": "cm"
+		        }
+	         ]
+		},	
+	{
+		"subtype": "Position Y",
+		"gamosName": "GmPositionYFilter",
+		"type": "Position",
+		"description" : "filtro",
+		"parameters": [
+	         	{
+	         	 "name": "Min. Y Position",
+	         	 "paramType": "Position",
+	         	 "value": 0,
+	         	 "units": "cm"
+	         	},
+	         	{
+	         	 "name": "Max. Y Position",
+		         "paramType": "Position",
+		         "value": 1,
+		         "units": "cm"
+		        }
+	         ]
+		},
+	{
+		"subtype": "Initial position Y",
+		"gamosName": "GmPositionPreYFilter",
+		"type": "Position",
+		"description": "filtro",
+		"parameters": [
+	        	{
+	         	 "name": "Min. init Y pos.",
+	             "paramType": "Position",
+	         	 "value": 0,
+	         	 "units": "cm"
+	         	},
+	         	{
+	         	"name": "Max. init Y pos.",
+	         	"paramType": "Position",
+		        "value": 1,
+		         "units": "cm"
+		        }
+	         ]
+		},
+	{
+		"subtype": "Position Z",
+		"gamosName": "GmPositionZFilter",
+		"type": "Position",
+		"description" : "filtro",
+		"parameters": [
+	         	{
+	         	 "name": "Min. Z Position",
+	         	 "paramType": "Position",
+	         	 "value": 0,
+	         	 "units": "cm"
+	         	},
+	        	{
+	         	 "name": "Max. Z Position",
+		         "paramType": "Position",
+		         "value": 1,
+		         "units": "cm"
+		        }
+	         ]
+		},
+	{
+		"subtype": "Initial position Z",
+		"gamosName": "GmPositionPreZFilter",
+		"type": "Position",
+		"description" : "filtro",
+		"parameters": [
+         	{
+         	 "name": "Min. init Z pos. ",
+         	 "paramType": "Position",
+         	 "value": 0,
+         	 "units": "cm"
+         	},
+         	 {
+         		 "name": "Max. init Z pos",
+	         	 "paramType": "Position",
+	         	 "value": 1,
+	         	 "units": "cm"
+	        }
+         ]
+	},			
+	{
+		"subtype": "Direction phi",
+		"gamosName": "GmDirectionPhiFilter",
+		"type": "Direction",
+		"description" : "filtro",
+		"parameters": [
+         	 	{
+         		 "name": "Min. phi angle",
+	         	 "paramType": "Angle",
+	         	 "value": 0,
+	         	 "units": "deg"
+         		},
+         		{
+         		 "name": "Max. phi angle",
+	         	 "paramType": "Angle",
+	         	 "value": 360,
+	         	 "units": "deg"
+	        	}
+         ]
+	},	
+	{
+		"subtype": "Initial direction phi",
+		"gamosName": "GmDirectionPrePhiFilter",
+		"type": "Direction",
+		"description" : "filtro",
+		"parameters": [
+         	  {
+	         	 "name":"Min. init phi",
+	         	 "paramType": "Angle",
+	         	 "value": 0,
+	         	 "units": "deg"
+         	  },
+         	  {
+         	 	 "name": "Max. init phi",
+	         	 "paramType": "Angle",
+	         	 "value": 360,
+	         	 "units": "deg"
+	          }
+         ]
+			
+	},
+	{
+		"subtype": "Direction theta",
+		"gamosName": "GmDirectionThetaFilter",
+		"type": "Direction",
+		"description" : "filtro",
+		"parameters": [
+	         	{
+	         	 "name": "Min. theta",
+	         	 "paramType": "Angle",
+	         	 "value": 0,
+	         	 "units": "deg"
+	         	},
+	         	{
+	         	 "name": "Max. theta",
+	         	 "paramType": "Angle",
+	         	 "value": 360,
+	         	 "units": "deg"
+	        	}
+        ]
+	},
+	{
+		"subtype": "Initial direction theta",
+		"gamosName": "GmDirectionPreThetaFilter",
+		"type": "Direction",
+		"description" : "filtro",
+		"parameters": [
+	         	 {
+	         		 "name": "Min. init theta",
+		         	 "paramType": "Angle",
+		         	 "value": 0,
+		         	 "units": "deg"
+	         	},
+	         	{
+	         		 "name": "Max. init theta",
+			         "paramType": "Angle",
+			         "value": 180,
+			         "units": "deg"
+		        }
+        ]
+	},		
+	{
+		"subtype": "Primary particles",
+		"gamosName": "GmPrimaryFilter",
+		"type": "Process",
+		"description" : "filtro",
+		"parameters":[]
+	},
+	{
+		"subtype": "Secondary particles",
+		"gamosName": "GmSecondaryFilter",
+		"type": "Process",
+		"description" : "filtro",
+		"parameters": []
+	},
+	{
+		"subtype": "Process",
+		"gamosName": "GmProcessFilter",
+		"type": "Process",
+		"description" : "filtro",
+		"parameters": [
+		        	{
+		       		 "name": "process",
+			         "paramType": "selectProcess",
+			         "value": null
+		        	}
+           ]
+		},
+	{
+		"subtype": "Particle and process",
+		"gamosName": "GmParticleProcessFilter",
+		"type": "Process",
+		"description" : "filtro",
+		"parameters": [
+			   {
+		      	 "name": "particle",
+		         "paramType": "selectParticle",
+		         "value": null
+		        },
+		       {
+		      	 "name": "process",
+		         "paramType": "selectProcess",
+		         "value": null
+		        }
+		     ]
+		},
+	{
+		"subtype": "Creator process",
+		"gamosName": "GmCreatorProcessFilter",
+		"type": "Process",
+		"description" : "filtro",
+		"parameters": [
+	        	{
+	         	 "name": "process",
+	         	 "paramType": "selectProcess",
+	         	 "value": null
+	         	}
+	      ]
+	},			
+	{
+		"subtype":	"In",
+		"gamosName": "GmInLogicalVolumeFilter",
+		"type": "Flux",
+		"description" : "filtro",
+		"parameters": [
+	            {
+	         	 "name": "volume",
+	         	 "paramType": "selectFlux",
+	         	 "value": null
+	         	}
+	         ]
+		},
+	{
+		"subtype": "Enter",
+		"gamosName": "GmEnterLogicalVolumeFilter",
+		"type": "Flux",
+		"description" : "filtro",
+		"parameters": [
+	          {
+	         	"name": "volume",
+	         	"paramType": "selectFlux",
+	         	"value": null
+	         	}
+	         ]
+		},
+		{
+		"subtype": "Exit",
+		"gamosName": "GmExitLogicalVolumeFilter",
+		"type": "Flux",
+		"description" : "filtro",
+		"parameters": [
+	         	{
+		         	"name": "volume",
+		         	"paramType": "selectFlux",
+		         	"value": null
+	         	}
+	         ]
+		},
+		{
+		"subtype": "Traverse",
+		"gamosName": "GmTraverseLogicalVolumeFilter",
+		"type": "Flux",
+		"description" : "filtro",
+		"parameters": [
+	        	{
+		         	"name": "volume",
+		         	"paramType": "selectFlux",
+		         	"value": null
+	         	}
+	         ]
+		},
+		{
+		"subtype": "Start",
+		"gamosName": "GmStartLogicalVolumeFilter",
+		"type": "Flux",
+		"description" : "filtro",
+		"parameters": [
+	           {
+	         	 "name": "volume",
+	         	 "paramType": "selectFlux",
+	         	 "value": null
+	         	}
+	         ]
+		},
+	{
+		"subtype": "End",
+		"gamosName": "GmEndLogicalVolumeFilter",
+		"type": "Flux",
+		"description" : "filtro",
+		"parameters": [
+	            {
+	         	 "name": "volume",
+	         	 "paramType": "selectFlux",
+	         	 "value": null
+	         	}
+	         ]
+		}
+	
+]

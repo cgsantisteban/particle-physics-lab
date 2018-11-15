@@ -1,0 +1,10 @@
+{
+	"nPoints": 100,
+	"fitList" : ["expo","gaus","polynomial","landau"],
+	"outFitFile": "outFit.csv",
+	"outFitPythia": "outFitPythia.csv"
+}
+
+
+
+ 

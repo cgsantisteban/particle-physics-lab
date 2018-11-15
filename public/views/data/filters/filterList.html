@@ -1,0 +1,89 @@
+<section class="content row" ng-controller="FilterCtrl">
+	<div class="col col-md-12">
+		<h4 ng-if="experiment.data.filterList.length<=0">There are no defined filters</h4>
+		<div>
+			<button class="btn btn-primary btn-flat"
+					ng-click="addFilter('lg',-1)">
+					New filter plug-in
+			</button>
+		</div>
+		<hr />
+		<table class="table table-bordered table-hover table-responsive" ng-show="experiment.data.filterList.length>0">
+			<thead>
+				<tr>
+				    <th style="width: 5%"></th>
+				    <th style="width: 30%">Name</th>
+				    <th style="width: 25%">Filter</th>
+				    <th style="width: 35%">Parameters</th>
+		    	</tr>
+		    </thead>
+		    <tfoot>
+			    <tr>
+			      <td colspan="6" ng-show="commandList.length>0">
+			      	<button class="btn btn-info btn-flat btn-xs" type="button" data-toggle="collapse" 
+					  		data-target="#collapseMacroFilter" 
+							aria-expanded="false" 
+							aria-controls="collapseData"
+							ng-click="isViewMacro = !isViewMacro">
+						<span ng-show="isViewMacro"><i class="fa fa-code"></i> Show GAMOS instructions</span> 
+						<span ng-show="!isViewMacro"><i class="fa fa-code"></i> Hide GAMOS instructions</span>
+					</button>
+					<hr ng-if="!isViewMacro" />
+			      	<div  class="collapse box box-primary box-solid" id="collapseMacroFilter">
+			      		<div class="box-body">
+			      			<p ng-repeat="line in commandList track by $index">
+					      		<code>{{line}}</code>
+					      	</p>
+					    </div>
+			      		
+			      	</div>
+			      	
+			      </td>
+			      
+			    </tr>
+			</tfoot>
+		    <tbody>
+		    	<tr ng-repeat="(filterId,filter) in experiment.data.filterList">
+				   
+				    <td>
+				    	<div class="btn-group">
+	                      <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
+	                      	<i class="fa fa-gear"></i> <span class="caret"> </span>
+	                      </button>
+	                      
+	                      <ul class="dropdown-menu" role="menu">
+	                      	<li >
+					      		<a ng-click="addFilter('lg', filterId)">
+					      			<i class="fa fa-edit"></i> Edit filter
+								</a>
+							</li>
+					        <li >
+					        	<a ng-click="delFilter(filterId)">
+					        		<i class="fa fa-trash"></i> Delete filter
+					        	</a>
+					        </li>
+	                        
+	                      </ul>
+	                    </div>
+				    </td>
+				    <td>
+				    	{{filter.name}}
+				    </td>
+				    <td>
+				    	{{filter.subtype}}  
+				    </td>
+				    <td>
+				        <span ng-if="filter.parameters.length === 0"> ---- </span>
+			        	<div ng-repeat="param in filter.parameters">
+			        		<strong>{{param.name}}:</strong> 
+			        		<span ng-if="param.paramType === 'selectParticle'">{{getParticleName("gamosName",param.value,particles)}}</span>
+			        		<span ng-if="param.paramType !== 'selectParticle'">{{param.value}}</span> {{param.units}}
+			        	</div>
+				    </td>
+				</tr>
+		    </tbody>
+		    
+	    </table>
+	    
+    </div>
+</section>

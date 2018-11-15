@@ -1,0 +1,131 @@
+<section class="content row" ng-controller="ScorerCtrl"> 
+<div class="col col-md-12">
+	<h4 ng-if="experiment.data.scorerList.length<=0">There are no defined scorers</h4>
+  	<div>
+		<button class="btn btn-primary btn-flat"
+				ng-click="addScorer('lg',-1)">
+			New scorer
+		</button>
+	</div>
+	<hr />
+	<table class="table table-bordered table-hover table-responsive " ng-show="experiment.data.scorerList.length>0">
+         	<thead>
+         		<tr>
+	                <th style="width: 5%%"></th>
+	                <th style="width: 20%">Name</th>
+	                <th style="width: 20%">Volume</th>
+	                <th style="width: 20%">Data</th>
+	                <th style="width: 15%">Classifiers</th>
+	                <th style="width: 20%">Filters</th>
+            	</tr>
+         	</thead>
+         	<tfoot>
+			    <tr>
+			      <td colspan="6" ng-show="commandList.length>0">
+			      	<button class="btn btn-info btn-flat btn-xs" type="button" data-toggle="collapse" 
+					  		data-target="#collapseMacroScorer" 
+							aria-expanded="false" 
+							aria-controls="collapseData"
+							ng-click="isViewMacro = !isViewMacro">
+						<span ng-show="isViewMacro"><i class="fa fa-code"></i> Show GAMOS instructions</span> 
+						<span ng-show="!isViewMacro"><i class="fa fa-code"></i> Hide GAMOS instructions</span>
+					</button>
+					<hr ng-if="!isViewMacro" />
+			      	<div  class="collapse box box-primary box-solid" id="collapseMacroScorer">
+			      		<div class="box-body">
+			      			<p ng-repeat="line in commandList track by $index">
+					    		<code>{{line}}</code>
+					      	</p>
+					    </div>
+			      		
+			      	</div>
+			      	
+			      </td>
+			      
+			    </tr>
+			</tfoot>
+         	<tbody>
+         		<tr ng-repeat="(scorerId,scorer) in experiment.data.scorerList track by scorerId">
+         		 <td>
+                 	<div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      	<i class="fa fa-gear"></i> <span class="caret"> </span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                      	<li >
+				      		<a ng-click="addScorer('lg', scorerId)"
+							   ><i class="fa fa-edit"></i> Edit scorer
+							</a>
+						</li>
+				        <li >
+				        	<a ng-click="delScorer(scorerId)"> <i class="fa fa-trash"></i> Delete scorer</a>
+				        </li>
+                      </ul>
+                    </div>
+                 </td>
+                 <td>
+                 	{{scorer.name}}
+                 </td>
+                 <td>
+                 	{{scorer.volume}}
+                 </td>
+                 <td>
+                 	{{scorer.data.name}}
+                 </td>
+                <td>
+					<ul class="todo-list">
+                   	 		<li ng-repeat="(clId,cl) in scorer.classifierList">
+                   	 			<span class="text">{{cl.name}}</span>
+                   	 			<div class="tools">
+			                        <i class="fa fa-trash-o"  ng-click="delElement(scorer,clId,'classifierList')"></i>
+			                    </div>
+                   	 		</li>
+                   	</ul> 
+                   	<hr ng-if="scorer.classifierList.length>0"/> 		
+	                <div class="btn-group" ng-show="getElementList(scorer,'classifierList',initClassifierList).length>0">
+						<button type="button" class="btn btn-primary btn-sm btn-flat dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						   Add classifier <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li ng-repeat="cl in getElementList(scorer,'classifierList',initClassifierList) ">
+								<a ng-click="addElement(scorer,cl,'classifierList')">{{cl.name}}</a>
+							</li>
+						</ul>
+					</div>
+					
+                </td>
+                 <td> 
+                 	<div ng-model="experiment.data.scorerList[scorerId].filterList">
+						<ul class="todo-list">
+                   	 		<li ng-repeat="(filterId,filter) in scorer.filterList">
+                   	 			<span class="text">{{filter.name}}</span>
+                   	 			<div class="tools">
+			                        <i class="fa fa-trash-o"  ng-click="delElement(scorer,filterId,'filterList')"></i>
+			                    </div>
+                   	 		</li>
+                   		</ul> 
+					</div>
+					<hr ng-if="scorer.filterList.length>0" />
+                 	<div class="btn-group" ng-if="experiment.data.filterList.length>0 && 
+                 								  getElementList(scorer,'filterList',experiment.data.filterList).length>0">
+						  <button type="button" class="btn btn-primary btn-sm btn-flat dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Add filter <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li ng-repeat="f in getElementList(scorer,'filterList',experiment.data.filterList)">
+						    	<a ng-click="addElement(scorer,f,'filterList')">{{f.name}}</a>
+						    </li>
+						  </ul>
+					</div>
+					<div ng-if="experiment.data.filterList.length<=0">
+						<p class="text-blue">
+							<em>There are no defined filters</em>
+						</p>
+					</div>	
+				 </td>
+                </tr>
+         	</tbody>  
+          </table>
+           
+	</div>
+</section>

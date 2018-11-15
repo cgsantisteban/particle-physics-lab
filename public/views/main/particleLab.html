@@ -1,0 +1,606 @@
+    <section class="content-header">
+      <h1>
+        Particle Physics Laboratory
+        <small>Front-end for <a href="http://fismed.ciemat.es/GAMOS/" target="_blank">GAMOS</a></small>
+      </h1>
+      <ol class="breadcrumb">
+        <li class="active"><a href="#!/particlelab"><i class="fa fa-home"></i> Lab Home</a></li>
+      </ol>
+    </section>
+    <section class="content">
+    	<!-- Physics -->
+    	<div class="row">
+    		<div class="col-md-12">
+    			 <div class="box box-widget">
+		            <div class="box-header with-border">
+		              <div class="user-block">
+		                <img class="img-circle" src="assets/img/number1blue.svg" alt="User Image">
+		                <span class="username"><a href="javascript:void(0)"><strong>Physics</strong></a></span>
+		                <span class="description">Physics list and processes</span>
+		              </div>
+		              <!-- /.user-block -->
+		              <div class="box-tools">
+		                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+		                </button>
+		              </div>
+		              <!-- /.box-tools -->
+		            </div>
+		            <!-- /.box-header -->
+		            <div class="box-body">
+		              <form role="form" >
+                  	<div class="row">
+                  		<div class="col col-md-4">
+                  			<div class="form-group">
+		                      <label>Physics list </label>
+		                      <a href="" ng-click="showProcesses()"><small class="label label-primary">{{showTitle}}</small></a>
+		                      <select class="form-control" ng-model="experiment.physicsLib"
+		                      		  ng-options="p.lib as p.lib for p in initPhysicsList"
+		                      		  ng-change="initProcessRemove()">
+		                      </select>
+		                    </div>
+		                    <div class="alert alert-warning alert-dismissible" ng-if="isSelectProcess">
+				                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				                <h5><i class="icon fa fa-warning"></i> Filters has been removed.</h5>
+				                <ul>
+				                	<li ng-repeat="f in removeFilters">
+				                		{{f}}
+				                	</li>
+				                </ul>
+				            </div>
+                  			<div class="alert alert-warning alert-dismissible" ng-if="removePythiaData">
+				                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				                <h5><i class="icon fa fa-warning"></i> Pythia data has been removed.</h5>
+				                This physics library is not compatible with Pythia.
+					         </div>	
+                  		</div>
+                  		<div class="col-md-8">
+                  			<div >
+								<div class="box box-primary box-solid">
+									<div class="box-body">
+				                		<p ng-bind-html="getPhysicsLibHelp(experiment.physicsLib,initPhysicsList)"></p>
+				                	</div><!-- /.box-body -->
+				            	</div><!-- /.box -->
+							</div>
+                  		</div>
+                  	</div>
+                  	<div class="row"  uib-collapse="isShowProcesses">
+                 		<div class="col-md-12">	
+               				<div class="box box-primary box-solid">
+								<div class="box-body">
+									<div class="row" ng-if="experiment.processRemove.length>0">
+										<div class="col-md-12">
+											<button class="btn btn-md btn-primary btn-flat"
+													ng-click="selectAllProcess()">Select all
+										</button>
+										</div>
+									</div>
+			                		<div class="row" ng-repeat="item in getProcessList(experiment.physicsLib,initPhysicsList)" ng-if="$index%4===0">
+									  <div class="col-md-3" >
+									  	
+									  	<div class="checkbox" >
+									  		<label>
+								    		<input type="checkbox" 
+								    				ng-click="addProcess(getProcessList(experiment.physicsLib,initPhysicsList)[$index])"
+								    				ng-checked="findProcess(getProcessList(experiment.physicsLib,initPhysicsList)[$index])">
+									    	{{getProcessList(experiment.physicsLib,initPhysicsList)[$index]}}
+									    	</label>
+									    </div>
+									  </div>
+									   <div class="col-md-3" ng-show="($index+1)<getProcessList(experiment.physicsLib,initPhysicsList).length">
+									  	<div class="checkbox" >
+									  		<label>
+								    		<input type="checkbox" 
+								    				ng-click="addProcess(getProcessList(experiment.physicsLib,initPhysicsList)[$index+1])"
+								    				ng-checked="findProcess(getProcessList(experiment.physicsLib,initPhysicsList)[$index+1])" >
+									    	{{getProcessList(experiment.physicsLib,initPhysicsList)[$index+1]}}
+									    	</label>
+									    </div>
+									  </div>
+									  <div class="col-md-3" ng-show="($index+2)<getProcessList(experiment.physicsLib,initPhysicsList).length">
+									  	<div class="checkbox" >
+								    		<label>
+								    		<input type="checkbox" 
+								    			   ng-checked="findProcess(getProcessList(experiment.physicsLib,initPhysicsList)[$index+2])" 
+								    			   ng-click="addProcess(getProcessList(experiment.physicsLib,initPhysicsList)[$index+2])">
+									    	{{getProcessList(experiment.physicsLib,initPhysicsList)[$index+2]}}
+									    	</label>
+									    </div>	
+									  </div>
+									  <div class="col-md-3" ng-show="($index+3)<getProcessList(experiment.physicsLib,initPhysicsList).length">
+									  	<div class="checkbox">
+									  		<label>
+								    		<input type="checkbox" 
+								    				ng-click="addProcess(getProcessList(experiment.physicsLib,initPhysicsList)[$index+3])"
+								    				ng-checked="findProcess(getProcessList(experiment.physicsLib,initPhysicsList)[$index+3])">
+									    	{{getProcessList(experiment.physicsLib,initPhysicsList)[$index+3]}}
+									    	</label>
+									    </div>	
+									  </div>  
+									</div>
+			                	</div><!-- /.box-body -->
+	            			</div><!-- /.box -->
+						</div>
+                  			
+                  	</div>
+                  	
+                  </form>
+                  <hr>
+                  <div class="row">
+                  	<div class="col-md-12">
+                  		
+                  		 <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox"
+	                          		 ng-model="experiment.isEMField" 
+							   		 ng-change="setEMField(experiment.isEMField)"
+							   		 >
+	                         	<i class="fa fa-magnet"></i> Electromagnetic fields (optional)
+	                        </label>
+	                      </div>
+                  	</div>
+                  </div>
+                  <form ng-if="experiment.isEMField">
+                  	<h4>Electromagnetic fields</h4>
+                 	<div class="row">
+                 		<!-- electric field -->
+                  		<div class="col col-md-6">
+                  			<div class="box box-primary box-solid">
+								<div class="box-body">
+									<h4>Uniform magnetic and electric fields (laboratory room)</h4>
+		                  			<div class="row">
+		                  				<div class="col-md-4" ng-repeat="(field,i) in electricField" 
+											 ng-class="{'has-error':!isValidField.electric[field].isValid}">
+											<label class="control-label">{{field}}</label>
+									    	<div class="input-group">
+									    		<input type="number" 
+										         ng-model="experiment.emField.electric[field].value"
+										         class="form-control">
+										        <div class="input-group-addon">
+													{{electricField[field].units}}
+												</div>
+									        </div>
+									        <p class="text-red" ng-if="!isValidField.electric[field].isValid">
+												<em>{{isValidField.electric[field].errorMessages}}</em>
+											</p>
+										</div>
+		                  				
+									</div>
+									<br />
+		                  			<div class="row">
+		                  				<div class="col-md-4" ng-repeat="(field,i) in magneticField" 
+											 ng-class="{'has-error':!isValidField.magnetic[field].isValid}">
+											<label class="control-label">{{field}}</label>
+									    	<div class="input-group">
+									    		<input type="number" 
+										         ng-model="experiment.emField.magnetic[field].value"
+										         class="form-control">
+										        <div class="input-group-addon">
+													{{magneticField[field].units}}
+												</div>
+									        </div>
+									        <p class="text-red" ng-if="!isValidField.magnetic[field].isValid">
+												<em>{{isValidField.magnetic[field].errorMessages}}</em>
+											</p>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+                  		</div><!-- end electric -->
+                  		<!-- Magnetic field -->
+                  		<div class="col col-md-6">
+                  			<div class="box box-primary box-solid">
+								<div class="box-body">
+									<h4>Local magnetic field (individual volumes)</h4>
+		                  			<div class="row">
+		                  				<div class="col-md-4" ng-repeat="(field,i) in magneticField" 
+											 ng-class="{'has-error':!isValidLocalField.magnetic[field].isValid}">
+											<label class="control-label">{{field}}</label>
+									    	<div class="input-group">
+									    		<input type="number" 
+										         ng-model="experiment.localField.magnetic[field].value"
+										         class="form-control">
+										        <div class="input-group-addon">
+													{{magneticField[field].units}}
+												</div>
+									        </div>
+									        <p class="text-red" ng-if="!isValidLocalField.magnetic[field].isValid">
+												<em>{{isValidLocalField.magnetic[field].errorMessages}}</em>
+											</p>
+										</div>
+										
+									</div>
+								
+								</div>
+							</div>
+                  			
+                  		</div><!-- end magnetic -->
+                  	</div>
+	              </form>
+	             
+		          </div>
+		          <!-- /.box-body -->
+		    	</div>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-6"><!-- Geometry and sources-->
+    			<div class="box box-widget">
+		            <div class="box-header with-border">
+		              <div class="user-block">
+		                <img class="img-circle" src="assets/img/number2blue.svg" >
+		                <span class="username"><a href="#!/geometry"><strong>Geometry and sources</strong></a></span>
+		                <span class="description">Volumes and sources</span>
+		              </div><!-- /.user-block -->
+		              
+		              <div class="box-tools">
+		                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+		                </button>
+		                
+		              </div><!-- /.box-tools -->
+		            </div> <!-- /.box-header -->
+		           
+		            <div class="box-body">
+		              	<uib-tabset active="active">
+						    <uib-tab index="0" >
+						    	<uib-tab-heading>
+							       	<span>Volume list </span>
+							    </uib-tab-heading>
+						    	<div class="row">
+			                  		<div class="col col-md-12">
+			                  			<div ng-show="experiment.geometry.volumeList.length<=0">
+			                  				<h4 >
+			                  					There are no defined volumes
+			                  				</h4>
+			                  			</div>
+			                  			<table class="table table-hover" ng-show="experiment.geometry.volumeList.length>0">
+			                  				<thead>
+			                  					<tr>
+							                      <th style="width: 5%">#</th>
+							                      <th>Name</th>
+							                      <th>Type</th>
+							                      <th>Material</th>
+							                    </tr>
+			                  				</thead>
+						                    <tbody>
+						                    	<tr ng-repeat="(idVolume,v) in experiment.geometry.volumeList">
+							                      <td>{{idVolume+1}}</td>
+							                      <td>{{v.name}}</td>
+							                      <td>
+							                        {{v.solid.solidType}}
+							                      </td>
+							                      <td>{{v.material.name}}</td>
+							                    </tr>
+							                </tbody>
+						                  </table>
+						                  <hr />
+						                  <a href="#!/geometry">Go to volumes</a>	
+			                  		</div>
+			                  		
+			                  	</div>
+						    </uib-tab>
+						    <uib-tab index="1">
+						    	<uib-tab-heading>
+							       	<span>Source list 
+							       		<i ng-if="!isValidExperiment.isValidPythiaProcess || !isValidExperiment.isValidPythiaBeam" 
+							       			class="fa fa-exclamation-circle text-red" ></i>
+							       	</span>
+							       	
+								</uib-tab-heading>
+								
+						    	<div class="row">
+						    		<div class="col col-md-12">
+			                  			<div ng-show="experiment.sourceList.length<=0 && !experiment.isPythia">
+			                  				<h4 >
+			                  					There are no defined sources. You must define at least one source. 
+			                  				</h4>
+			                  			</div>
+			                  			<div ng-if="experiment.isPythia && isValidExperiment.isValidPythiaProcess && isValidExperiment.isValidPythiaBeam">
+			                  				
+			                  						<h4>Pythia generator</h4>
+					                  				<!-- <div ng-bind-html="pythiaText"></div>	 -->
+					                  				<p>
+					                  					<strong>Collision: </strong><span>{{textBeamA}} + {{textBeamB}}</span> 
+					                  				</p>
+					                  				<p ng-bind-html="textEnergy"></p>
+			                  			</div> 
+			                  			
+			                  			<table class="table table-hover" ng-show="experiment.sourceList.length>0">
+			                  				
+			                  				<thead>
+			                  					<tr>
+							                      <th style="width: 5%">#</th>
+							                      <th>Name</th>
+							                      <th>Source</th>
+							                    </tr>
+			                  				</thead>
+						                    <tbody>
+						                    	<tr ng-repeat="(idSource,s) in experiment.sourceList">
+							                      <td>{{idSource+1}}</td>
+							                      <td>{{s.name}}</td>
+							                      <td>
+							                        {{s.particle.particleName}}
+							                      </td>
+							                    </tr>
+							                </tbody>
+						                  </table>
+						                 <hr>
+			                  			<a href="#!/sources">Go to sources</a>
+			                  		</div>
+						    	</div>
+						    </uib-tab>
+						</uib-tabset>
+		            </div><!-- /.box-body -->
+		          </div><!-- box-widget -->
+    		</div><!-- end geometry -->
+    		<div class="col-md-6"><!-- data -->
+    			<div class="box box-widget">
+		            <div class="box-header with-border">
+		              <div class="user-block">
+		                <img class="img-circle" src="assets/img/number3blue.svg" >
+		                <span class="username"><a href="#!/data">Analysis (extracting data)</a></span>
+		                <span class="description">GAMOS data, scorer and filter plug-in</span>
+		              </div><!-- /.user-block -->
+		              
+		              <div class="box-tools">
+		                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+		                </button>
+		              </div><!-- /.box-tools -->
+		            </div> <!-- /.box-header -->
+		            <div class="box-body">
+		            	<uib-tabset >
+						    <uib-tab index="0">
+						    	<uib-tab-heading>
+							       	<span>GAMOS data  
+							       		<i ng-if="!isValidExperiment.isValidActions"
+							       			class="fa fa-exclamation-circle text-red" ></i>
+							       	</span>
+								</uib-tab-heading>
+						    	<div class="row">
+						    		<div class="col-md-12">
+						    			<div ng-show="experiment.data.actionList.length<=0">
+			                  				<h4 >
+			                  					There are no selected GAMOS data
+			                  				</h4>
+			                  				
+			                  			</div>
+						    			<table class="table table-hover" ng-show="experiment.data.actionList.length>0">
+			                  				<thead>
+						                		<tr>
+						                			<th style="width: 5%">#</th>
+						                			<th >Name</th>
+						                   			<th >Data</th>
+						                		</tr>
+						                   </thead>
+						                   <tbody>
+						                   		<tr ng-repeat="action in experiment.data.actionList">
+						                   			<td>{{$index+1}}</td>
+						                   			<td>{{action.name}}</td>
+						                   			<td>
+						                   				<span class="text-red" ng-if="action.dataList.length<=0">
+															<em>No data selected</em>
+														</span> 
+						                   				<ul>
+						                   					<li ng-repeat="d in action.dataList">{{d.data[0].name}}</li>
+						                   				</ul>
+						                   				
+						                   			</td>
+						                   		</tr>
+						                   </tbody>
+						                   
+						                </table>
+						                <hr />
+						               	<a href="#!/data?tab=actions">Go to GAMOS data (plug-in)</a>	
+						               
+						    		</div>
+						    	</div>
+						    </uib-tab>
+						    <uib-tab index="1" heading="Scorer list">
+						    	<div class="row">
+						    		<div class="col-md-12">
+						    			<div ng-show="experiment.data.scorerList.length<=0">
+			                  				<h4 >
+			                  					There are no defined scorers
+			                  				</h4>
+			                  				
+			                  			</div>
+						    			<table class="table table-hover" ng-show="experiment.data.scorerList.length>0">
+			                  				<thead>
+						                		<tr>
+						                			<th style="width: 5%">#</th>
+						                			<th>Name</th>
+						                   			<th>Data</th>
+						                		</tr>
+						                   </thead>
+						                   <tbody>
+						                   		<tr ng-repeat="scorer in experiment.data.scorerList">
+						                   			<td>{{$index +1}}</td>
+						                   			<td>{{scorer.name}}</td>
+						                   			<td>
+						                   				{{scorer.data.name}}
+						                   			</td>
+						                   		</tr>
+						                   </tbody>
+						                   
+						                </table>
+						                <hr />
+						                <a href="#!/data?tab=scorers">Go to scorers</a>	
+						    		</div>
+						    	</div>
+						    </uib-tab>
+						    <uib-tab index="2" heading="Filter list">
+						    	
+						    	<div class="row">
+						    		<div class="col-md-12">
+						    			<div ng-show="experiment.data.filterList.length<=0">
+			                  				<h4 >
+			                  					There are no defined filters
+			                  				</h4>
+			                  				
+			                  			</div>
+						    			<table class="table table-hover" ng-show="experiment.data.filterList.length>0">
+			                  				<thead>
+						                		<tr>
+						                			<th style="width: 5%">#</th>
+						                			<th>Name</th>
+						                   			<th>Type</th>
+						                		</tr>
+						                   </thead>
+						                   <tbody>
+						                   		<tr ng-repeat="filter in experiment.data.filterList">
+						                   			<td>#{{$index + 1}}</td>
+						                   			<td>{{filter.name}}</td>
+						                   			<td>
+						                   				{{filter.type}}
+						                   			</td>
+						                   		</tr>
+						                   </tbody>
+						                   
+						                </table>
+						                <hr>
+						                <a href="#!/data?tab=filters">Go to filters</a>	
+						    		</div>
+						    	</div>
+						    </uib-tab>
+						</uib-tabset>
+		            </div><!-- /.box-body -->
+		          </div><!-- box-widget -->
+    		</div>
+    	</div><!-- end data -->
+    	<div class="row"><!-- Run, resume -->
+    		<div class="col-md-6">
+    			<div class="box box-widget">
+	            <div class="box-header with-border">
+	              <div class="user-block">
+	                <img class="img-circle" src="assets/img/number4blue.svg" >
+	                <span class="username"><a href="javascript:void(0)"><strong>Run the experiment.</a></strong></span>
+	              </div><!-- /.user-block -->
+	            </div> <!-- /.box-header -->
+	            <div class="box-body">
+	            	<form role="form" class="form-inline">
+	            		<!-- <div class="row" ng-if="!isValidExperiment.isValidFolder">
+              				<div class="col-md-12">
+              					<div class="alert alert-danger">
+					                <h4><i class="icon fa fa-warning"></i> Error</h4>
+					                <p> Error creating experiment folder.</p>
+					                <p> Please, reload the page.</p> 
+					            </div>
+              				</div>
+              			</div> -->
+	          			<div class="row">
+                 					<div class="col-md-12">
+                 						<div class="form-group" ng-class="{'has-error':!isValidBeams.isValid}">
+				                      <label >Number of beams</label>
+				                      <input type="number" class="form-control" min="1" max="maxEvent"
+				                      		 ng-model="experiment.nBeams"
+				                      		 placeholder="Number of beams">
+				                      		 
+				                      <button class="btn btn-primary btn-flat" ng-click="runExperiment('md')"
+					                      		  ng-disabled="!isValidAll || (experiment.sourceList.length<=0 && !experiment.isPythia)"
+					                      			>
+					                      		<i class="fa fa-play"></i> Run 
+					               	  </button>
+				                    </div>
+				                    
+				            	</div>
+                 			</div>
+                 			<div class="row" ng-if="!isValidBeams.isValid">
+								<div class="col-md-12">
+									<p class="text-red">
+											<em ng-bind-html="isValidBeams.errorMessages"></em><em>{{maxBeams}}</em>
+									</p>
+								</div>
+						</div>
+						<hr />
+						<div class="row" ng-if="experiment.isVisualization">
+                 					<div class="col-md-12">
+                 						<span class="text-orange"><i class="icon fa fa-warning"></i> The size of the WRL file may become very large.</span>
+                 					</div>
+                 			</div>
+                 			<div class="row">
+                 					<div class="col-md-12">
+                 						<div class="form-group">
+						                 <div class="checkbox">
+					                        <label>
+					                          <input type="checkbox"
+					                          		 ng-model="experiment.isVisualization" >
+					                         	<strong>
+					                         		Visualization (wrl format) 
+						                        </strong>
+					                        </label>
+					                      </div>
+				                   	</div>
+				                </div>
+                 			</div>
+                 			
+                 			<hr />
+                 			<div class="row" ng-if="isValidAll">
+			              	<div class="col-md-12">
+			              		<a href="" ng-click="showMacroFiles('lg')">Show GAMOS files</a>
+			            	</div>
+			            	
+              			</div>
+	              			
+				    </form>
+				    </div>
+				    </div>
+	            </div><!-- col run-->
+	            <div class="col-md-6"  ng-show="showSummary"> 
+	            	<div class="box box-widget">
+			            <div class="box-header with-border">
+			              <div class="user-block">
+			                <img class="img-circle" src="assets/img/number5blue.svg" >
+			                <span class="username"><a href="javascript:void(0)"><strong>Summary.</a></strong></span>
+			              </div><!-- /.user-block -->
+			            </div> <!-- /.box-header -->
+		           
+			            <div class="box-body">
+			           		<div class="row">
+		      					<div class="col-md-12">
+		      						<span><strong>Total events:</strong> {{experimentSummary.nEvent}}</span><br />
+		      						<span><strong>Real time:</strong> {{experimentSummary.time.realTime}}, <strong>User time:</strong> {{experimentSummary.time.userTime}}</span>
+		      					</div>
+		      				</div>
+		      				<hr />
+		      				<div class="row" ng-if="isVisibleSummary || isVisiblePythiaTree || isVisiblePythiaHistogram || isVisibleActionHisto || isVisibleScorerHisto">
+		      					<div class="col-md-12">
+		      						<h4>Histograms</h4>
+		      						<ul>
+		      							<a href="#!/summary" ng-if="isVisibleSummary"><li><b>Summary histograms</b></li></a>
+		      							<a href="#!/pythiaTree" ng-if="isVisiblePythiaTree"><li><b>Pythia tree</b></li></a>
+		      							<a href="#!/pythiaHistograms" ng-if="isVisiblePythiaHistogram"><li><b>Pythia histograms</b></li></a>
+		      							<a href="#!/gamosDataHistograms" ng-if="isVisibleActionHisto"><li><b>GAMOS Data histograms</b></li></a>
+		      							<a href="#!/scorerHistograms" ng-if="isVisibleScorerHisto"><li><b>Scorer histograms</b></li></a>
+		      						</ul>
+		      						<div ng-if="showErrorFile">
+		      							<div ng-repeat="e in errorList.errorFile track by $index">
+		      								<span ng-if="e.dataType === 'gamos-data'" class="text-green">
+		      									<i class="fa fa-info-circle"></i> There are no GAMOS data histogram files
+		      								</span>
+		      								<span ng-if="e.dataType === 'scorer'" class="text-green">
+		      									<i class="fa fa-info-circle"></i> There are no scorer histogram files
+		      								</span>
+		      							</div>
+		      						</div>
+		      						
+		      					</div>
+		      				</div>
+		      				<hr />
+		      				<div class="row">
+		      					<div class="col-md-6">
+			            			<button class="btn btn-md btn-flat btn-primary"
+			            				ng-click="getExperimentFiles()">
+			            				<i class="fa fa-flask"></i> Download experiment files
+			            			</button>
+			            		</div>
+			            	</div>
+			            </div><!-- /.box-body -->
+		          </div><!-- box-widget -->
+	    		</div><!-- col resume -->
+	          </div><!-- row run resume-->
+    </section>
+
+
+  
+ 
+

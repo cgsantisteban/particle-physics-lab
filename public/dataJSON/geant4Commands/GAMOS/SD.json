@@ -1,0 +1,67 @@
+{
+	"command": "SD",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "digitizer",
+			"route": "/gamos/SD/",
+			"type": "command",
+			"description": "Add a digitizer for a given sensitive detector type",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "recHitBuilder",
+			"route": "/gamos/SD/",
+			"type": "command",
+			"description": "Add a rechit builder for a given sensitive detector type",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "assocSD2LogVol",
+			"route": "/gamos/SD/",
+			"type": "command",
+			"description": "Associate a Sensitive Detector to a Logical Volume",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "digitizer",
+			"route": "/gamos/SD/",
+			"type": "command",
+			"description": "Add a digitizer for a given sensitive detector type",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		}
+	]
+}

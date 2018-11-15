@@ -1,0 +1,192 @@
+{
+	"command": "heprep",
+	"description": "HepRep commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "setFileDir",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Set directory for output.",
+			"argList": [
+				{
+					"arg": "directory",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setFileName",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Set file name for output.",
+			"argList": [
+				{
+					"arg": "directory",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setOverwrite",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Set true to write all output to exact same file name.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setCullInvisibles",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Remove invisible objects from output file.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "renderCylAsPolygons",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Render cylinders and cones as polygons.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "scale",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Render cylinders and cones as polygons.",
+			"argList": [
+				{
+					"arg": "Scale",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "center",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Re-Center coordinates.",
+			"argList": [
+				{
+					"arg": "CenterX",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "CenterY",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "CenterZ",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "m"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "setEventNumberSuffix",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Write separate event files, appended with given suffix.",
+			"argList": [
+				{
+					"arg": "suffix",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "appendGeometry",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Appends copy of geometry to every event.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "addPointAttributes",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Adds point attributes to the points of trajectories.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "useSolids",
+			"route": "/vis/heprep/",
+			"type": "command",
+			"description": "Use HepRep Solids, rather than Geant4 Primitives.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["Idle"]
+		}
+	
+	]
+	
+}

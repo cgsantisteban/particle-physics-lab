@@ -1,0 +1,9 @@
+{
+		"pythiaBeam" : null,
+		"processList": [],
+		"pythiaFile" : "myPythia",
+		"pythiaOutEventFile" : "pythiaOutEvent.csv",
+		"pythiaOutDataFile" : "pythiaOutData.data",
+		"pythiaOutHistogramFile": "pythiaHistogram",
+		"pythiaHistograms": []
+}

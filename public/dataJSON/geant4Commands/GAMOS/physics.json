@@ -1,0 +1,393 @@
+{
+	"command": "physics",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "applyCutsForAllProcesses",
+			"route": "/gamos/physics/",
+			"type": "command",
+			"description": "Apply production cuts to all processes",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": false,
+						"type": "boolean",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "addParallelProcess",
+			"route": "/gamos/physics/",
+			"type": "command",
+			"description": "Apply production cuts to all processes",
+			"argList": [],
+			"available": ["Idle"]
+		},
+		{
+			"command": "addPhysics",
+			"route": "/gamos/physics/",
+			"type": "command",
+			"description": "Add new physics: decay, radioactiveDecay, opticalphoton, etc.",
+			"argList": [
+					{
+						"arg": "physics",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "removeProcessesByType",
+			"route": "/gamos/physics/",
+			"type": "command",
+			"description": "Remove processes of given types: NotDefined, Transportation, Electromagnetic, etc.",
+			"argList": [
+					{
+						"arg": "processes",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "removeProcessesByName",
+			"route": "/gamos/physics/",
+			"type": "command",
+			"description": "Remove processes of given name for given particles",
+			"argList": [
+					{
+						"arg": "partricle_process",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "replacePhysics",
+			"route": "/gamos/physics/",
+			"type": "command",
+			"description": "Replace process model: gamma-standard gamma-lowener gamma-penelope electron-standard electron-lowener electron-penelope",
+			"argList": [
+					{
+						"arg": "physics",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "replaceProcessModel",
+			"route": "/gamos/physics/",
+			"type": "command",
+			"description": "Replace process model: gamma-standard gamma-lowener gamma-penelope electron-standard electron-lowener electron-penelope",
+			"argList": [
+					{
+						"arg": "process",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setCuts",
+			"route": "/gamos/physics/",
+			"type": "command",
+			"description": "Creates a Region from one of various logical volumes",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "prodCutsEnergyLimits",
+			"route": "/gamos/physics/",
+			"type": "command",
+			"description": "Changes the default values: MIN (1 keV) and MAX (100 GeV) for the limits of production cuts tables ",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit"]
+		},
+		{
+			"command": "VR",
+			"description": "...Title not available...",
+			"children": [
+				{
+					"command": "XSBiasing",
+					"route": "/gamos/physics/VR/",
+					"type": "command",
+					"description": "Deprecated command",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": false,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "importanceSampling",
+					"route": "/gamos/physics/VR/",
+					"type": "command",
+					"description": "Sets on importance sampling",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["Idle"]
+				}
+			
+			]
+		},
+		{
+			"command": "userLimits",
+			"description": "...Title not available...",
+			"children": [
+				{
+					"command": "setUserLimits",
+					"route": "/gamos/physics/userLimits/",
+					"type": "command",
+					"description": "Creates a G4UserLimits with the five limits.",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "setMaxStep",
+					"route": "/gamos/physics/userLimits/",
+					"type": "command",
+					"description": "Creates a G4UserLimits with maximum step size limit. ",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "setMaxTrkLen",
+					"route": "/gamos/physics/userLimits/",
+					"type": "command",
+					"description": "Creates a G4UserLimits with maximum track length limit.",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "setMaxTOF",
+					"route": "/gamos/physics/userLimits/",
+					"type": "command",
+					"description": "Creates a G4UserLimits with the maximum time of flight limit.",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "setMinEKin",
+					"route": "/gamos/physics/userLimits/",
+					"type": "command",
+					"description": "Creates a G4UserLimits with minimum kinetic energy limit.",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "setMinEKinByRange",
+					"route": "/gamos/physics/userLimits/",
+					"type": "command",
+					"description": "Creates a G4UserLimits with minimum kinetic energy limit.",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "setMinRange",
+					"route": "/gamos/physics/userLimits/",
+					"type": "command",
+					"description": "Creates a G4UserLimits with minimum remaining range limit. ",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "addLVAndParticle",
+					"route": "/gamos/physics/userLimits/",
+					"type": "command",
+					"description": "Add a logical volume / particles to an existing G4UserLimits.",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "print",
+					"route": "/gamos/physics/userLimits/",
+					"type": "command",
+					"description": "Print list of user limits for each logical volume and particle",
+					"argList": [],
+					"available": ["Idle"]
+				}
+			
+			
+			]
+		},
+		{
+			"command": "biasing",
+			"description": "...Title not available...",
+			"children": [
+				{
+					"command": "createOperator",
+					"route": "/gamos/physics/biasing/",
+					"type": "command",
+					"description": "Creates a Geant4 biasing operator.",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["PreInit"]
+				},
+				{
+					"command": "associateOper2LogVol",
+					"route": "/gamos/physics/biasing/",
+					"type": "command",
+					"description": "Associate a logical volume to a biasing operator",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "addProcesses2Oper",
+					"route": "/gamos/physics/biasing/",
+					"type": "command",
+					"description": "Add a process to be biased to an operator",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["PreInit"]
+				},
+				{
+					"command": "addParticles2Oper",
+					"route": "/gamos/physics/biasing/",
+					"type": "command",
+					"description": "Add a particle to be biased (all processes plus NonPhysicsBias) to an operator",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["PreInit"]
+				},
+				{
+					"command": "addParticleProcesses2Oper",
+					"route": "/gamos/physics/biasing/",
+					"type": "command",
+					"description": "Add a process of a particle to be biased to an operator",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "string",
+								"default": "" 
+							}
+						],
+					"available": ["PreInit"]
+				}
+			]
+		
+		}
+		
+		
+	]
+
+}

@@ -1,0 +1,98 @@
+{
+	"command": "geometry",
+	"description": "Commands to control geometry",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "copyParallelToMassGeom",
+			"route": "/gamos/geometry/",
+			"type": "command",
+			"description": "Copy a set of volumes from parallel to mass geometry",
+			"argList": [
+					{
+						"arg": "volumeList",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setRefractionIndex",
+			"route": "/gamos/geometry/",
+			"type": "command",
+			"description": "Set refraction index for a material:MATERIAL_NAME ENERGY_1 REFRACTION_INDEX_1 ENERGY_2 REFRACTION_INDEX_2 ... ",
+			"argList": [
+					{
+						"arg": "list",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "printTouchables",
+			"route": "/gamos/geometry/",
+			"type": "command",
+			"description": "Print touchable information",
+			"argList": [
+					{
+						"arg": "list",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "printVolumeTree",
+			"route": "/gamos/geometry/",
+			"type": "command",
+			"description": "Print touchable information",
+			"argList": [
+					{
+						"arg": "list",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "printMaterials",
+			"route": "/gamos/geometry/",
+			"type": "command",
+			"description": "Print materials",
+			"argList": [
+					{
+						"arg": "list",
+						"optional": false,
+						"type": "int",
+						"default": 0 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "createRegion",
+			"route": "/gamos/geometry/",
+			"type": "command",
+			"description": "Creates a Region from one of various logical volumes",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit"]
+		}
+	]
+	
+}

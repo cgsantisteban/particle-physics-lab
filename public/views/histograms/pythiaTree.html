@@ -1,0 +1,108 @@
+    <section class="content-header">
+      <h1>
+       	Data analysis
+       	<small>Output data</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#/particlelab"><i class="fa fa-home"></i> Lab Home</a></li>
+        <li class="active">Pythia tree</li>
+    </ol>
+    </section>
+    <section>
+    	<div class="content">
+	    		<div class="box box-primary">
+	    		  <div class="box-header with-border">
+	                  <h3 class="box-title">
+	                  	Pythia event tree.  
+	                  	<strong>Collision: </strong> {{textBeamA}} + {{textBeamB}}. <span ng-bind-html="textEnergy"></span>
+	                  </h3>
+	              </div><!-- /.box-header -->
+				  <div class="box-body">
+				  	
+		  			<div class="row">
+		  				<div class="col-md-12" draw-pythia-tree margin="lgMargin" eventjson="histograms.pythiaTree" pythiastatus="pythiaStatus" id="tree"></div>
+			   		</div>
+			   		<div class="row">
+							<div class="col-md-12">
+								<button class="btn btn-primary btn-flat" type="button" data-toggle="collapse" 
+								  		data-target="#collapseData" 
+										aria-expanded="false" 
+										aria-controls="collapseData"
+										ng-click="isViewData = !isViewData">
+									<span ng-show="isViewData">View data</span> <span ng-show="!isViewData">Hide data</span>
+								</button>
+							</div>
+						</div>
+					
+						<div class="row">
+				   			<div class="col-md-12">
+				   				<div  class="collapse" id="collapseData">
+				   				<div class="table-responsive">
+				   					<table class="table table-hover">
+						   				<thead>
+						   					<tr>
+										 		<td>
+										 			<strong>N.</strong>
+										 		</td>
+										 		<td>
+										 			<strong>Pdg</strong>
+										 		</td>
+										 		<td>
+										 			<strong>Name</strong>
+										 		</td>
+										 		<td>
+										 			<strong>Status</strong>
+										 		</td>
+										 		<td>
+										 			<strong>Mothers</strong>
+										 		</td>
+										 		<td>
+										 			<strong>Daughters</strong>
+										 		</td>
+										 		<td>
+										 			<strong>Colour</strong>
+										 		</td>
+										 		<td>
+										 			<strong>Acolour</strong>
+										 		</td>
+										 		<td>
+										 			<strong>Momentum (GeV/c)</strong>
+										 		</td>
+										 		<td>
+										 			<strong>Energy (GeV)</strong>
+										 		</td>
+										 		<td>
+										 			<strong>Mass (GeV)</strong>
+										 		</td>
+										 	</tr>
+						   				</thead>
+						   				<tbody>
+						   					<tr ng-repeat="node in histograms.pythiaTree.nodes">
+						   						<td>{{node.nEvent}}</td>
+						   						<td>{{node.idParticle}}</td>
+						   						<td>{{node.name}}</td>
+						   						<td>{{node.status}}</td>
+						   						<td>{{node.mothers[0]}} {{node.mothers[1]}}</td>
+						   						<td>{{node.daughters[0]}} {{node.daughters[1]}}</td>
+						   						<td>{{node.colour}}</td>
+						   						<td>{{node.acolour}}</td>
+						   						<td>({{node.p[0]}}, {{node.p[1]}}, {{node.p[2]}})</td>
+						   						<td>{{node.e}}</td>
+						   						<td>{{node.m}}</td>
+						   					</tr>
+						   				</tbody>
+						   			</table>
+				   				</div>
+				   				
+					   			</div>
+				   			</div>
+				   			
+				   		</div>
+					
+			   		
+				  </div><!-- end box-body -->
+				</div>	
+	    </div>
+    </section>
+
+

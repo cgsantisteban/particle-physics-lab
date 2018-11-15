@@ -1,0 +1,88 @@
+{
+	"command": "event",
+	"description": "EventManager control commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "abort",
+			"route": "/event/",
+			"type": "command",
+			"description": "Abort current event.",
+			"argList": [],
+			"available": ["EventProc"]
+		},
+		{
+			"command": "verbose",
+			"route": "/event/",
+			"type": "command",
+			"description": "Set Verbose level of event management category.",
+			"argList": [
+				{
+					"arg": "level",
+					"optional": false,
+					"type": "int",
+					"default": 0
+				}
+			
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "keepCurrentEvent",
+			"route": "/event/",
+			"type": "command",
+			"description": "Store the current event to G4Run object instead of deleting it at the end of event.",
+			"argList": [],
+			"available": ["EventProc"]
+		},
+		{
+			"command": "stack",
+			"description": "Stack control commands.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "status",
+					"route": "/event/stack/",
+					"type": "command",
+					"description": "List current status of the stack.",
+					"argList": [],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "clear",
+					"route": "/event/stack/",
+					"type": "command",
+					"description": "List current status of the stack.",
+					"argList": [
+						{
+							"arg": "level",
+							"optional": true,
+							"type": "int",
+							"default": 0
+						}
+					],
+					"available": ["GeomClosed","EventProc"]
+				},
+				{
+					"command": "verbose",
+					"route": "/event/stack/",
+					"type": "command",
+					"description": "Set verbose level for G4StackManager",
+					"argList": [
+						{
+							"arg": "level",
+							"optional": false,
+							"type": "int",
+							"default": 0
+						}
+					],
+					"available": ["PreInit","Idle"]
+				}
+			
+			]
+			
+		}
+	
+	]
+
+}

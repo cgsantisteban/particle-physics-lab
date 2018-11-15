@@ -1,0 +1,12 @@
+[
+ 	{
+ 		"name": "GAMOS/Geant4",
+ 		"description": "Event generator GAMOS",
+ 		"isPythia": false
+ 	},
+ 	{
+ 		"name": "Pythia (high energy physics)",
+ 		"description": "High energy experiments. For example Higgs boson generation",
+ 		"isPythia": true
+ 	}
+ ]

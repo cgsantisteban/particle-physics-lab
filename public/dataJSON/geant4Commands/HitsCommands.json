@@ -1,0 +1,61 @@
+{
+	"command": "hits",
+	"description": "Sensitive detectors and Hits",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "list",
+			"route": "/hits/",
+			"type": "command",
+			"description": "List sensitive detector tree.",
+			"argList": [],
+			"available": ["all"]
+		},
+		{
+			"command": "activate",
+			"route": "/hits/",
+			"type": "command",
+			"description": "Activate sensitive detector(s).",
+			"argList": [
+				{
+					"arg": "detector",
+					"optional": true,
+					"type": "string",
+					"default": "/"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "inactivate",
+			"route": "/hits/",
+			"type": "command",
+			"description": "Inactivate sensitive detector(s).",
+			"argList": [
+				{
+					"arg": "detector",
+					"optional": true,
+					"type": "string",
+					"default": "/"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "verbose",
+			"route": "/hits/",
+			"type": "command",
+			"description": "Set the Verbose level.",
+			"argList": [
+				{
+					"arg": "level",
+					"optional": false,
+					"type": "int",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		}
+	
+	]
+}

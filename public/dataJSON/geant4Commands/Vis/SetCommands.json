@@ -1,0 +1,135 @@
+{
+	"command": "set",
+	"description": "Set quantities for use in future commands where appropriate.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "colour",
+			"route": "/vis/set/",
+			"type": "command",
+			"description": "Defines colour and opacity for future /vis/scene/add/ commands.",
+			"argList": [
+				{
+					"arg": "red",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "green",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "blue",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "alpha",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "lineWidth",
+			"route": "/vis/set/",
+			"type": "command",
+			"description": "Defines line width for future /vis/scene/add/ commands.",
+			"argList": [
+				{
+					"arg": "lineWidth",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "textColour",
+			"route": "/vis/set/",
+			"type": "command",
+			"description": "Defines colour and opacity for future /vis/scene/add/text commands.",
+			"argList": [
+				{
+					"arg": "red",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "green",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "blue",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "alpha",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "textLayout",
+			"route": "/vis/set/",
+			"type": "command",
+			"description": "Defines layout future /vis/scene/add/text commands.",
+			"argList": [
+				{
+					"arg": "layout",
+					"optional": true,
+					"type": "string",
+					"default": "left",
+					"candidates": ["left","centre","center","right"]
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "textSize",
+			"route": "/vis/set/",
+			"type": "command",
+			"description": "Defines text size (pixels) for future /vis/scene/add/ commands.",
+			"argList": [
+				{
+					"arg": "textSize",
+					"optional": true,
+					"type": "double",
+					"default": 12
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "touchable",
+			"route": "/vis/set/",
+			"type": "command",
+			"description": "Defines touchable for future /vis/touchable/set/ commands.",
+			"argList": [
+				{
+					"arg": "list",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		}
+	
+	]
+}

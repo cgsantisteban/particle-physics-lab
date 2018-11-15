@@ -1,0 +1,20 @@
+{
+	"solidType": "BOX",
+	"dimensions": {
+		"Length X": {
+			"value": 1,
+			"units": "cm",
+			"type": "Length"
+		},
+		"Length Y": {
+				"value": 1,
+				"units": "cm",
+				"type": "Length"
+			},
+		"Length Z": {
+				"value": 1,
+				"units": "cm",
+				"type": "Length"
+			}
+	}
+}

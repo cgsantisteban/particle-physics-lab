@@ -1,0 +1,86 @@
+<div class="modal-header">
+	<h3 class="modal-title">Run experiment</h3>
+</div>
+<div class="modal-body">
+	<div class="row">
+ 		<div class="form-group has-success col-md-12">
+ 			<div ng-if="buildGeom">
+ 				<label ><i class="fa fa-check" ></i> Geometry created.</label>	
+ 			</div> 
+			<div ng-if="buildMacro">
+				<label ><i class="fa fa-check"></i> Macro created.</label>	
+			</div>
+			<div ng-if="!errorPythiaRun.isError">
+				<div ng-if="beginPythiaRun && !endPythiaRun">
+					<label ><i class="fa fa-gear"></i> Running Pythia... : {{nPythiaEvent}} / {{nBeams}} event</label>	
+				</div>
+				<div ng-if="endPythiaRun">
+					<label ><i class="fa fa-check"></i> Pythia simulation completed </label>	
+				</div>
+			</div>
+			<div  ng-if="errorPythiaRun.isError" class="alert alert-danger">
+                <h4><i class="icon fa fa-warning"></i> Error</h4>
+                {{errorPythiaRun.description}}.<br />
+               	View console for more datails.
+            </div>
+			
+			<div ng-if="beginSimulation && !endRun">
+				<label >
+					<i class="fa fa-gear"></i> Running simulation (GAMOS) ... <span ng-if="!experiment.isPythia">: {{nEvent}} / {{nBeams}} event </span>
+				</label>
+			</div>
+			
+			<div  ng-if="errorList.errorGAMOS.isError" class="alert alert-danger">
+                <h4><i class="icon fa fa-warning"></i> Error</h4>
+                <span ng-repeat="l in errorList.errorGAMOS.description track by $index">
+                	{{l}}<br />
+                </span>
+            </div>
+            <div  ng-if="errorList.errorFolder.isError" class="alert alert-danger">
+                <h4><i class="icon fa fa-warning"></i> Error</h4>
+                <span >
+                	{{errorList.errorFolder.description}}<br />
+                </span>
+            </div>
+			<div ng-if="endRun && !errorList.errorGAMOS.isError">
+				<label ><i class="fa fa-check" ></i> Simulation completed.</label><br>
+			</div>
+		</div>	
+ 	</div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">
+				<span class=" fa fa-plus" ng-if="!isCollapsed"></span>
+				<span class=" fa fa-minus" ng-if="isCollapsed"></span>
+				<span ng-if="!isCollapsed">Show console</span>
+				<span ng-if="isCollapsed">Hide console</span>
+			</button>
+		</div>
+		
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-md-12">
+			<div uib-collapse="!isCollapsed">
+				<div class="well well-lg" style="height: 250px; overflow-y: scroll;">
+					<span ng-repeat="line in outExperiment track by $index">
+						{{line}}<br>
+					</span>
+					
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-warning btn-flat" 
+			ng-if="!endRun && !errorPythiaRun.isError && !errorList.errorGAMOS.isError && !errorList.errorFolder.isError"
+			ng-click="stopExperiment()" >Cancel
+	</button>
+	<button type="button" class="btn btn-primary btn-flat" 
+			ng-if="(!errorRun && endRun) || outPythia.isError || errorList.errorGAMOS.isError" 
+			ng-click="okRun(okRunExperiment)" >Accept
+	</button>
+</div>

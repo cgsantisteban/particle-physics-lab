@@ -1,0 +1,206 @@
+<div class="modal-header">
+	<h3 class="modal-title">Import experiment</h3>
+</div>
+
+<div class="modal-body">
+	
+	<div  class="row" >
+		<div class="col-md-6">
+			<form >
+				<label > Experiment file (JSON format)
+				    <input type="file"  onchange="angular.element(this).scope().fileExpChanged(this)" class="form-control">
+				</label>
+			</form>
+		</div>
+	</div> 
+	<div class="row">
+		<div class="col-md-12">
+			<ul>
+				<li ng-repeat="e in isValidLoad.errorList">
+					<span class="text-red">{{e}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div ng-if="isValidFile">
+		<div class="row" >
+			<div class="col-md-12">
+				<h4><b>Experiment:</b> {{expLoad.name}}</h4>
+			</div>
+		</div>
+		<div class="row"> 
+			<div class="col-md-12">
+				<h5><b>Description</b></h5>
+				<span>{{expLoad.description}}</span>
+				<span ng-if="!expLoad.description">No description</span>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-md-12">
+				<h5><b>Volumes</b></h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table table-hover" >
+			                  				
+              		<thead>
+	              		<tr>
+	                      <th style="width: 5%">#</th>
+	                      <th>Name</th>
+	                      <th>Type</th>
+	                      <th>Material</th>
+	                    </tr>
+              		</thead>
+                   <tbody>
+                   	<tr ng-repeat="(idVolume,v) in expLoad.geometry.volumeList">
+	                      <td>{{idVolume+1}}</td>
+	                      <td>{{v.name}}</td>
+	                      <td>
+	                        {{v.solid.solidType}}
+	                      </td>
+	                      <td>{{v.material.name}}</td>
+	                    </tr>
+	               	 </tbody>
+                 </table>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-md-12">
+				<h5><b>Sources</b></h5>
+			</div>
+		</div>
+		<div class="row" ng-if="expLoad.isPythia">
+			<div class="col-md-6" >
+				<h5>Pythia generator</h5>
+				<div ng-bind-html="getPythiaData(expLoad.pythiaData)"></div>	
+			</div>
+			<div class="col-md-6" ng-if="expLoad.pythiaData.pythiaHistograms.length>0">
+				<h5>Pythia data</h5>
+				<table class="table">
+					<thead>
+						<tr>
+						   <th>Particle</th>
+		           		   <th>Data</th>
+		                 </tr>
+					</thead>	
+	           		<tbody>
+	           			<tr ng-repeat="(histoId,pythiaHistogram) in expLoad.pythiaData.pythiaHistograms">
+	           				<td>
+           					   {{pythiaHistogram.particle.particleName}}
+	           				</td>
+	           				<td>
+	           					{{pythiaHistogram.data.name}}
+	           				</td>
+	           			</tr>
+	           		</tbody>
+	             </table>
+			</div>
+		</div>
+		<div class="row" ng-if="!expLoad.isPythia">
+			<div class="col-md-12" >
+				<table class="table table-hover" >
+			                  				
+               		<thead>
+               			<tr>
+	                      <th style="width: 5%">#</th>
+	                      <th>Name</th>
+	                      <th>Source</th>
+	                    </tr>
+               		</thead>
+                    <tbody>
+                    	<tr ng-repeat="(idSource,s) in expLoad.sourceList">
+	                      <td>{{idSource+1}}</td>
+	                      <td>{{s.name}}</td>
+	                      <td>
+	                        {{s.particle.particleName}}
+	                      </td>
+	                    </tr>
+	                </tbody>
+                  </table>
+			</div>
+		</div>
+		<div ng-if="expLoad.data.actionList.length>0">
+			<hr />
+			<div class="row">
+			<div class="col-md-12">
+				<h5><b>Actions</b></h5>
+			</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-hover" >
+	               				<thead>
+			                		<tr>
+			                			<th style="width: 5%">#</th>
+			                			<th >Name</th>
+			                   			<th >Data</th>
+			                		</tr>
+			                   </thead>
+			                   <tbody>
+			                   		<tr ng-repeat="action in expLoad.data.actionList">
+			                   			<td>{{$index+1}}</td>
+			                   			<td>{{action.name}}</td>
+			                   			<td>
+			                   				
+			                   				<ul>
+			                   					<li ng-repeat="d in action.dataList">{{d.data[0].name}}</li>
+			                   				</ul>
+			                   				
+			                   			</td>
+			                   		</tr>
+			                  </tbody>
+	                   
+	                </table>
+				</div>
+			</div>	
+		</div> <!--  actions -->
+	
+		<div ng-if="expLoad.data.scorerList.length>0">
+			<div class="row">
+				<div class="col-md-12">
+					<h5><b>Scorers</b></h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-hover">
+		           		<thead>
+		              		<tr>
+		              			<th style="width: 5%">#</th>
+		              			<th>Name</th>
+		                 			<th>Data</th>
+		              		</tr>
+		                 </thead>
+		                 <tbody>
+		                 		<tr ng-repeat="scorer in expLoad.data.scorerList">
+		                 			<td>{{$index +1}}</td>
+		                 			<td>{{scorer.name}}</td>
+		                 			<td>
+		                 				{{scorer.data.name}}
+		                 			</td>
+		                 		</tr>
+		                 </tbody>
+		           </table>	
+				</div>
+			</div>
+		</div><!-- scorers -->	
+	</div>
+	
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-warning btn-flat pull-left" 
+			ng-click="cancel()">
+		Cancel
+	</button>
+	<button type="button" class="btn btn-primary btn-flat" 
+			ng-disabled="!isValidFile"
+			ng-click="importExperiment(expLoad)"">
+		Import
+	</button>
+</div>  
+  

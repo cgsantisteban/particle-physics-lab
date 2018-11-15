@@ -1,0 +1,28 @@
+<div class="modal-header">
+	<h3 class="modal-title">Del experiment</h3>
+</div>
+<div class="modal-body">
+	
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Are you sure you want to delete {{expDel.name}} <span ng-if="expDel._id === experiment._id">(current experiment)</span>?.</h4>
+			</div>
+		</div>
+	 	<div class="row" ng-if="expDel._id === experiment._id">
+	 		<div class="col-md-12">
+	 			<em>(A new experiment will be built.)</em>
+	 		</div>
+	 	</div>
+		
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-warning btn-flat pull-left" 
+			ng-click="cancel()">
+		Cancel
+	</button>
+	<button type="button" class="btn btn-primary btn-flat" 
+			ng-click="delExperiment(expDel._id)">
+		Accept
+	</button>
+</div>

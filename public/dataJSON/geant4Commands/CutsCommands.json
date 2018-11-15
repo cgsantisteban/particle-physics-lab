@@ -1,0 +1,102 @@
+{
+	"command": "cuts",
+	"description": "Commands for G4VUserPhysicsList.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "verbose",
+			"route": "/cuts/",
+			"type": "command",
+			"description": "Set the Verbose level of G4ProductionCutsTable.",
+			"argList": [
+				{
+					"arg": "level",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				}
+			
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "setLowEdge",
+			"route": "/cuts/",
+			"type": "command",
+			"description": "Set low edge energy value",
+			"argList": [
+				{
+					"arg": "edge",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "KeV",
+					"candidates": ["eV","keV","MeV","GeV","TeV","PeV","J"]
+				}
+			
+			],
+			"available": ["PreInit"]
+		},
+		{
+			"command": "setHighEdge",
+			"route": "/cuts/",
+			"type": "command",
+			"description": "Set high edge energy value",
+			"argList": [
+				{
+					"arg": "edge",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "KeV",
+					"candidates": ["eV","keV","MeV","GeV","TeV","PeV","J"]
+				}
+			
+			],
+			"available": ["PreInit"]
+		},
+		{
+			"command": "setMaxCutEnergy",
+			"route": "/cuts/",
+			"type": "command",
+			"description": "Set maximum of cut energy value ",
+			"argList": [
+				{
+					"arg": "cut",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "KeV",
+					"candidates": ["eV","keV","MeV","GeV","TeV","PeV","J"]
+				}
+			
+			],
+			"available": ["PreInit"]
+		},
+		{
+			"command": "dump",
+			"route": "/cuts/",
+			"type": "command",
+			"description": "Dump cuplues in ProductuinCutsTable.",
+			"argList": [],
+			"available": ["PreInit","Idle"]
+		}
+	
+	]
+	
+}

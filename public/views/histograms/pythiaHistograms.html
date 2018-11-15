@@ -1,0 +1,64 @@
+    <section class="content-header">
+      <h1>
+       	Data analysis
+        <small>Output data</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#/particlelab"><i class="fa fa-home"></i> Lab Home</a></li>
+        <li class="active">Pythia histograms</li>
+    </ol>
+    </section>
+    <section>
+    	<div class="content">
+	    	<!-- <div class="col-md-12"> -->
+	    		<div class="box box-primary">
+	    		  <div class="box-header with-border">
+	                  <h3 class="box-title">Pythia histograms</h3>
+	              </div><!-- /.box-header -->
+				  <div class="box-body">
+				  			<div class="row">
+					   			<div class="col-md-12">
+					   				<div class="row">
+					   					<div class="col-md-3">
+					   						<div class="form-group">
+						                      <label>Data</label>
+						                      <select class="form-control" ng-model="drawhistolist[0]"
+						                      		  ng-options="h.dataName group by h.particleName for h in histograms.pythiaHistograms"
+						                      		 >
+						                      </select>
+				                    		</div>
+					   					</div>
+					   					
+					   				</div>
+					   			</div>
+					   		</div>
+						 	<hr>
+					   		<div class="row">
+					   				<div class="col-md-12" draw-Pythia  histogram="drawhistolist[0]" fit="fitJSON" width="90" height="100">
+								 	</div>
+					   		</div>
+				  </div>
+				</div>	
+	    </div>
+    </section>
+     <section ><!-- Fit -->
+    	<div class="content">
+ 	    		<div class="box box-primary">
+	    		  <div class="box-header with-border">
+	                  <h3 class="box-title">Fit histogram</h3>
+	                  <div class="box-tools pull-right">
+	                    <button class="btn bg-primary btn-md btn-flat"  
+	                    		ng-click="newFit()">New fit</button>
+	                  </div>
+	              </div><!-- /.box-header -->
+				  <div class="box-body ">
+				  		<div ng-include="'views/histograms/fitAction.html'" ng-show="!isfit"></div>
+				  		<div ng-show="isfit">
+							<div ng-include="'views/histograms/fitActionResults.html'" ></div>
+				   		</div>
+						
+				  </div>
+				</div>	
+	    </div>
+    </section>
+

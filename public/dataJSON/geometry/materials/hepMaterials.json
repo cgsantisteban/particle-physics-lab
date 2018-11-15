@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Liquid Argon",
+		"gamosName": "G4_lAr"
+	},
+	{
+		"name": "Liquid Kripton",
+		"gamosName": "G4_lKr"
+	},
+	{
+		"name": "Liquid Xenon",
+		"gamosName": "G4_lXe"
+	},
+	{
+		"name": "PbWO4",
+		"gamosName": "G4_PbWO4"
+	},
+	{
+		"name": "Vacuum",
+		"gamosName": "G4_Galactic"
+	}
+]

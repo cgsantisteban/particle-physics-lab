@@ -1,0 +1,239 @@
+{
+	"command": "rayTracer",
+	"description": "RayTracer commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "trace",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Start the ray tracing.",
+			"argList": [
+				{
+					"arg": "fileName",
+					"optional": true,
+					"type": "string",
+					"default": "g4RayTracer.jpeg"
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "column",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Define the number of horizontal pixels.",
+			"argList": [
+				{
+					"arg": "nPixel",
+					"optional": false,
+					"type": "int",
+					"default": 1
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "row",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Define the number of vertical pixels.",
+			"argList": [
+				{
+					"arg": "nPixel",
+					"optional": false,
+					"type": "int",
+					"default": 1
+				}
+			],
+			"available": ["Idle"]
+		},
+		{
+			"command": "target",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Define the center position of the target.",
+			"argList": [
+				{
+					"arg": "X",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "Y",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "z",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "m"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "eyePosition",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Define the eye position.",
+			"argList": [
+				{
+					"arg": "X",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "Y",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "z",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "m"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "lightDirection",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Define the direction of illumination light.",
+			"argList": [
+				{
+					"arg": "Px",
+					"optional": true,
+					"type": "double",
+					"default": 0.1
+				},
+				{
+					"arg": "Py",
+					"optional": true,
+					"type": "double",
+					"default": 0.2
+				},
+				{
+					"arg": "Pz",
+					"optional": true,
+					"type": "double",
+					"default": 0.3
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "span",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Define the angle per 100 pixels.",
+			"argList": [
+				{
+					"arg": "span",
+					"optional": true,
+					"type": "double",
+					"default": 50
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "deg"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "headAngle",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Define the head direction.",
+			"argList": [
+				{
+					"arg": "headAngle",
+					"optional": true,
+					"type": "double",
+					"default": 270
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "deg"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "attenuation",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Define the attenuation length for transparent material.",
+			"argList": [
+				{
+					"arg": "Length",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "Unit",
+					"optional": true,
+					"type": "string",
+					"default": "m"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "distortion",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Distortion effect of the fish eye lens.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": true,
+					"type": "boolean",
+					"default": 0
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "ignoreTransparency",
+			"route": "/vis/rayTracer/",
+			"type": "command",
+			"description": "Ignore transparency even if the alpha of G4Colour < 1.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": true,
+					"type": "boolean",
+					"default": 0
+				}
+			],
+			"available": ["all"]
+		}
+	
+	]
+}

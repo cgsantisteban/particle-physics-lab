@@ -1,0 +1,521 @@
+{
+	"frameList": [
+					{
+						"name": "CM",
+						"option": 1
+					},
+					{
+						"name": "Back-to-Back",
+						"option": 2
+					}
+				],
+	"processList": [
+		{
+			"name": "QCD",
+			"typeList": [
+						  {
+								"type": "Hard",
+								"processes": [
+									{
+										"name": "all",
+										"macroName": "HardQCD:all",
+										"description": "All processes. "
+									},
+									{
+										"name": "g g → g g",
+										"macroName": "HardQCD:gg2gg",
+										"description": ""
+										
+									},
+									{
+										"name": "g g → q q&#772;",
+										"macroName": "HardQCD:gg2qqbar",
+										"description": ""
+									},
+									{
+										"name": "q g → q g",
+										"macroName": "HardQCD:qg2qg",
+										"description": "Scatterings q g → q g and qbar g → qbar g"
+									},
+									{
+										"name": "q q → q q",
+										"macroName": "HardQCD:qq2qq",
+										"description": "Scatterings q q' → q q', q qbar' → q qbar', qbar qbar' → qbar qbar'"
+									},
+									{
+										"name": "q q&#772; → g g",
+										"macroName": "HardQCD:qqbar2gg",
+										"description": "Scatterings q qbar → g g"
+									},
+									{
+										"name": "q q&#772; → q q&#772;New",
+										"macroName": "HardQCD:qqbar2qqbarNew",
+										"description": "Scatterings q qbar → q' qbar', where q' by default is a light quark (u, d, s)"
+									}
+								]
+							},
+							{
+							"type": "Soft",
+							"processes": [
+									{
+										"name": "all",
+										"macroName": "SoftQCD:all",
+										"description": "All processes. "
+									},
+									{
+										"name": "elastic",
+										"macroName": "SoftQCD:elastic",
+										"description": "Elastic scattering A B -> A B. "
+									},
+									{
+										"name": "non diffractive",
+										"macroName": "SoftQCD:nonDiffractive",
+										"description": "The inelastic nondiffrative part of the total cross section"  
+									},
+									{
+										"name": "single diffractive",
+										"macroName": "SoftQCD:singleDiffractive",
+										"description": "Single diffractive scattering A B -> X B and A B -> A X"
+									},
+									{
+										"name": "double diffractive",
+										"macroName": "SoftQCD:doubleDiffractive",
+										"description": "Double diffractive scattering A B -> X_1 X_2"
+									},
+									{
+										"name": "central diffractive",
+										"macroName": "SoftQCD:centralDiffractive",
+										"description": "Central diffractive scattering A B -> A X B "
+									},
+									{
+										"name": "inelastic",
+										"macroName": "SoftQCD:inelastic",
+										"description": "All processes, except for elastic"
+									}
+								]
+							}
+			]
+		},
+		{
+			"name": "Higgs",
+			"typeList": [
+				{
+					"type": "Standard model",
+					"processes": [
+						{
+							"name": "all",
+							"macroName": "HiggsSM:all",
+							"description": "All processes. "
+						},
+						{
+							"name": "g g → H<sup>0</sup>",
+							"macroName": "HiggsSM:gg2H",
+							"description": "Scattering g g → H^0 via loop contributions primarily from top"
+						},
+						{
+							"name": "f f&#772; → H<sup>0</sup>",
+							"macroName": "HiggsSM:ffbar2H",
+							"description": "Scattering f fbar → H^0, where f sums over available flavours except top."
+						},
+						{
+							"name": "gamma gamma → H<sup>0</sup>",
+							"macroName": "HiggsSM:gmgm2H",
+							"description": "Scattering gamma gamma → H^0 via loop contributions primarily from top and W"
+						},
+						{
+							"name": "f f&#772; → H<sup>0</sup> Z<sup>0</sup>",
+							"macroName": "HiggsSM:ffbar2HZ",
+							"description": "Scattering f fbar → H^0 Z^0 via s-channel Z^0 exchange"
+						},
+						{
+							"name": "f f&#772; → H<sup>0</sup> W<sup>+-</sup>",
+							"macroName": "HiggsSM:ffbar2HW",
+							"description": "Scattering f fbar → H^0 W^+- via s-channel W^+- exchange"
+						},
+						{
+							"name": "Scattering f f' → H<sup>0</sup> f f'",
+							"macroName": "HiggsSM:ff2Hff(t:ZZ)",
+							"description": "Scattering f fbar → H^0 W^+- via s-channel W^+- exchange"
+						},
+						{
+							"name": "f<sub>1</sub> f<sub>2</sub> → H<sup>0</sup> f<sub>3</sub> f<sub>4</sub>",
+							"macroName": "HiggsSM:ff2Hff(t:WW)",
+							"description": "Scattering f_1 f_2 → H^0 f_3 f_4 via W^+ W^- fusion"
+						},
+						{
+							"name": "g g → H<sup>0</sup> t t&#772;",
+							"macroName": "HiggsSM:gg2Httbar",
+							"description": "Scattering g g → H^0 t tbar via t tbar fusion. Warning this process is rather slow"
+						},
+						{
+							"name": "q q&#772; → H<sup>0</sup> t t&#772;",
+							"macroName": "HiggsSM:qqbar2Httbar",
+							"description": "Scattering q qbar → H^0 t tbar via t tbar fusion. Warning this process is rather slow"
+						}
+						
+					]
+				}
+			]
+		},
+		{
+			"name": "Electro weak",
+			"typeList": [
+				{
+					"type": "Prompt photon",
+					"processes": [
+						{
+							"name": "all",
+							"macroName": "PromptPhoton:all",
+							"description": "All processes. "
+						},
+						{
+							"name": "q g → q gamma",
+							"macroName": "PromptPhoton:qg2qgamma",
+							"description": "Scattering q g → q gamma"
+						},
+						{
+							"name": "q q&#772; → g gamma",
+							"macroName": "PromptPhoton:qqbar2ggamma",
+							"description": "Scattering q qbar → g gamma"
+						},
+						{
+							"name": "g g → g gamma",
+							"macroName": "PromptPhoton:gg2ggamma",
+							"description": "Scattering g g → g gamma"
+						},
+						{
+							"name": "f f&#772; → gamma gamma",
+							"macroName": "PromptPhoton:ffbar2gammagamma",
+							"description": "Scattering q qbar → gamma gamma"
+						},
+						{
+							"name": "g g → gamma gamma",
+							"macroName": "PromptPhoton:gg2gammagamma",
+							"description": "Scattering g g → gamma gamma"
+						}
+					]
+				},
+				{
+					"type": "Boson exchange",
+					"processes": [
+						{
+							"name": "all",
+							"macroName": "WeakBosonExchange:all",
+							"description": "All proccesses."
+						},
+						{
+							"name": "f f -> ff' (t:gmZ)",
+							"macroName": "WeakBosonExchange:ff2ff(t:gmZ)",
+							"description": "Scattering f f' → f f' via gamma<sup>*</sup>/Z<sup>0</sup> t-channel exchange, with full interference between the gamma^* and Z^0"
+						},
+						{
+							"name": "f<sub>1</sub> f<sub>2</sub> → f<sub>3</sub> f<sub>4</sub> (t:W)",
+							"macroName": "WeakBosonExchange:ff2ff(t:W)",
+							"description": "Scattering f<sub>1</sub> f<sub>2</sub> → f<sub>3</sub> f<sub>4</sub> via W<sup>+-</sup> t-channel exchange"
+						}
+					]
+				},
+				{
+					"type": "Single boson",
+					"processes": [
+						{
+							"name": "all",
+							"macroName": "WeakSingleBoson:all",
+							"description": "All processes"
+						},
+						{
+							"name": "f f&#772; → gamma<sup>*</sup>/Z<sup>0</sup>",
+							"macroName": "WeakSingleBoson:ffbar2gmZ",
+							"description": "Scattering f f&#772; → gamma<sup>*</sup>/Z<su>0</sup>, with full interference between the gamma^* and Z^0"
+						},
+						{
+							"name": "f f&#772;' → W<sup>+-</sup>",
+							"macroName": "WeakSingleBoson:ffbar2W",
+							"description": "Scattering f f&#772;' → W<sup>+-</sup>"
+						},
+						{
+							"name": "f f&#772; → gamma<sup>*</sup> → f' f&#772;'",
+							"macroName": "WeakSingleBoson:ffbar2ffbar(s:gm)",
+							"description": "Scattering f fbar → gamma<sup>*</sup> → f' f&#772;'"
+						},
+						{
+							"name": "f f&#772; → gamma<sup>*</sup>/Z<sup>0</sup> → f' f&#772;'",
+							"macroName": "WeakSingleBoson:ffbar2ffbar(s:gmZ)",
+							"description": "Scattering f fbar → gamma<sup>*</sup>/Z<sup>0</sup> → f' fbar'"
+						},
+						{
+							"name": "f<sub>1</sub> fbar<sub>2</sub> → W<sup>+-</sup> → f<sub>3</sub> f<sub>4</sub>",
+							"macroName": "WeakSingleBoson:ffbar2ffbar(s:W)",
+							"description": "Scattering f<sub>1</sub> fbar<sub>2</sub> → W<sup>+-</sup> → f<sub>3</sub> f<sub>4</sub>"
+						}
+					]
+				},
+				{
+					"type": "Boson pair",
+					"processes": [
+						{
+							"name": "all",
+							"macroName": "WeakDoubleBoson:all",
+							"description": "All proccesses"
+						},
+						{
+							"name": "f f&#772;' → gamma<sup>*</sup>/Z<sup>0</sup> gamma<sup>*</sup>/Z<sup>0</sup>",
+							"macroName": "WeakDoubleBoson:ffbar2gmZgmZ",
+							"description": "Scattering f fbar' → gamma<sup>*</sup>/Z<sup>0</sup> gamma<sup>*</sup>/Z<sup>0</sup>"
+						},
+						{
+							"name": "f f&#772;' → Z<sup>0</sup> W<sup>+-</sup>",
+							"macroName": "WeakDoubleBoson:ffbar2ZW",
+							"description": "Scattering f fbar' → Z<sup>0</sup> W<sup>+-</sup>"
+						},
+						{
+							"name": "f f&#772; → W<sup>+</sup> W<sup>-</sup>",
+							"macroName": "WeakDoubleBoson:ffbar2WW",
+							"description": "Scattering f f&#772; → W<sup>+</sup> W<sup>-</sup>"
+						}
+					]
+				},
+				{
+					"type": "Boson and parton",
+					"processes": [
+						{
+							"name": "all",
+							"macroName": "WeakBosonAndParton:all",
+							"description": "All processes"
+						},
+						{
+							"name": "gamma<sup>*</sup>/Z<sup>0</sup> g",
+							"macroName": "WeakBosonAndParton:qqbar2gmZg",
+							"description": "Scattering q q&#772; → gamma<sup>*</sup>/Z<sup>0</sup> g"
+						},
+						{
+							"name": "q g → gamma<sup>*</sup>/Z<sup>0</sup> q",
+							"macroName": "WeakBosonAndParton:qg2gmZq",
+							"description": "Scattering q g → gamma<sup>*</sup>/Z<sup>0</sup> q"
+						},
+						{
+							"name": "f gamma → gamma<sup>*</sup>/Z<sup>0</sup> f",
+							"macroName": "WeakBosonAndParton:fgm2gmZf",
+							"description": "Scattering f gamma → gamma<sup>*</sup>/Z<sup>0</sup> f"
+						},
+						{
+							"name": "q q&#772; → W<sup>+-</sup> g",
+							"macroName": "WeakBosonAndParton:qqbar2Wg",
+							"description": "Scattering q q&#772; → W<sup>+-</sup> g"
+						},
+						{
+							"name": "q g → W<sup>+-</sup> q",
+							"macroName": "WeakBosonAndParton:qg2Wq",
+							"description": "Scattering q g → W<sup>+-</sup> q"
+						},
+						{
+							"name": "f f&#772; → W<sup>+-</sup> gamma",
+							"macroName": "WeakBosonAndParton:ffbar2Wgm",
+							"description": "Scattering f f&#772; → W<sup>+-</sup> gamma"
+						},
+						{
+							"name": "f gamma → W<sup>+-</sup> f",
+							"macroName": "WeakBosonAndParton:fgm2Wf",
+							"description": "Scattering f gamma → W<sup>+-</sup> f"
+						}
+						
+					]
+				}
+				
+			]
+		},
+		{
+			"name": "Top",
+			"typeList": [
+				{
+					"type": "Top processes",
+					"processes": [
+						{
+							"name": "all",
+							"macroName": "Top:all",
+							"description": "All processes"
+						},
+						{
+							"name": "g g → t t&#772;",
+							"macroName": "Top:gg2ttbar",
+							"description": "Scatterings g g → t t&#772;"
+						},
+						{
+							"name": "q q&#772; → t t&#772;",
+							"macroName": "Top:qqbar2ttbar",
+							"description": "Scatterings q q&#772; → t tbar by gluon exchange"
+						},
+						{
+							"name": "q q → t q(t:W)",
+							"macroName": "Top:qq2tq(t:W)",
+							"description": "Scatterings q q' → t q'' by t-channel exchange of a W^+- boson"
+						},
+						{
+							"name": "f f&#772; → t t&#772;(s:gmZ)",
+							"macroName": "Top:ffbar2ttbar(s:gmZ)",
+							"description": "Scatterings f f&#772; → t t&#772; by s-channel exchange of a gamma^*/Z^0 boson"
+						},
+						{
+							"name": "f f&#772; → t q&#772;(s:W)",
+							"macroName": "Top:ffbar2tqbar(s:W)",
+							"description": "Scatterings f f&#772;' → t q'' by s-channel exchange of a W^+- boson"
+						},
+						{
+							"name": "gamma gamma → t t&#772;",
+							"macroName": "Top:gmgm2ttbar",
+							"description": "Scatterings gamma gamma → t t&#772;"
+						}
+					]
+				}
+			]
+		}
+	],
+	"dataList": [
+		{
+			"pythiaName": "px",
+			"type": "Momentum",
+			"name": "X momentum",
+			"units": "GeV/c",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "py",
+			"type": "Momentum",
+			"name": "Y momentum",
+			"units": "GeV/c",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "pz",
+			"type": "Momentum",
+			"name": "Z momentum",
+			"units": "GeV/c",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "e",
+			"type": "Energy",
+			"name": "Energy",
+			"units": "GeV",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "xProd",
+			"type": "position",
+			"name": "X Vertex production",
+			"units": "mm",
+			"nbins": 100,
+		 	"limits": [-1,1]
+		},
+		{
+			"pythiaName": "yProd",
+			"type": "Position",
+			"name": "Y Vertex production",
+			"units": "mm",
+			"nbins": 100,
+		 	"limits": [-1,1]
+		},
+		{
+			"pythiaName": "zProd",
+			"type": "Position",
+			"name": "Z Vertex production",
+			"units": "mm",
+			"nbins": 100,
+		 	"limits": [-1,1]
+		},
+		{
+			"pythiaName": "tProd",
+			"type": "Time",
+			"name": "T Vertex production",
+			"units": "mm/c",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "pT",
+			"type": "Momentum",
+			"name": "Transverse momentum",
+			"units": "GeV/c",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "pT2",
+			"type": "Momentum",
+			"name": "Square transverse momentum",
+			"units": "GeV/c<sup>2</sup>",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "eT",
+			"type": "Energy",
+			"name": "Transverse energy",
+			"units": "GeV",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "eT2",
+			"type": "Energy",
+			"name": "Square transverse energy",
+			"units": "GeV<sup>2</sup>",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "mT",
+			"type": "Energy",
+			"name": "Transverse mass",
+			"units": "GeV",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "mT2",
+			"type": "Energy",
+			"name": "Square transverse mass",
+			"units": "GeV<sup>2</sup>",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "y",
+			"type": "Rapidity",
+			"name": "rapidity",
+			"units": "mm/s",
+			"nbins": 100,
+		 	"limits": [0,1]
+		},
+		{
+			"pythiaName": "eta",
+			"type": "Pseudorapidity",
+			"name": "pseudorapidity",
+			"units": null,
+			"nbins": 100,
+		 	"limits": [0,10]
+		},
+		{
+			"pythiaName": "theta",
+			"type": "Angle",
+			"name": "Polar angle",
+			"units": "rad",
+			"nbins": 100,
+		 	"limits": [0,1]	 
+		},
+		{
+			"pythiaName": "phi",
+			"type": "Angle",
+			"name": "Azimuthal angle",
+			"units": "rad",
+			"nbins": 100,
+		 	"limits": [0,1]
+		}
+	]
+
+}
+

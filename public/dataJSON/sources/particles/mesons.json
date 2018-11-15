@@ -1,0 +1,260 @@
+[
+			{
+				"particleName": "pi+",
+				"gamosName": "pi+",
+				"type": "particle",
+				"particleType": "meson",
+				"pdg": 211,
+				"pythia": true,
+				"charge": "positive"
+				
+			
+			},
+			{
+				"particleName": "pi-",
+				"gamosName": "pi-",
+				"type": "particle",
+				"pdg": -211,
+				"particleType": "meson",
+				"pythia": true,
+				"charge": "negative"
+				
+			
+			},
+			{
+				"particleName": "pi0",
+				"gamosName": "pi0",
+				"type": "particle",
+				"pdg": 111,
+				"particleType": "meson",
+				"pythia": true,
+				"charge": "neutral"
+				
+			
+			},
+			{
+				"particleName": "eta",
+				"gamosName": "eta",
+				"type": "particle",
+				"pdg": 221,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Eta prime",
+				"gamosName": "eta_prime",
+				"type": "particle",
+				"pdg": 331,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "kaon+",
+				"gamosName": "kaon+",
+				"type": "particle",
+				"pdg": 321,
+				"particleType": "meson",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "kaon-",
+				"gamosName": "kaon-",
+				"type": "particle",
+				"pdg": -321,
+				"particleType": "meson",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "kaon0",
+				"gamosName": "kaon0",
+				"type": "particle",
+				"pdg": 311,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Anti kaon0",
+				"gamosName": "anti_kaon0",
+				"type": "particle",
+				"pdg": -311,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Kaon-Short 0",
+				"gamosName": "kaon0S",
+				"type": "particle",
+				"pdg": 310,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Kaon-Long 0",
+				"gamosName": "kaon0L",
+				"type": "particle",
+				"pdg": 130,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Kaon Star 0",
+				"gamosName": "k_star0",
+				"type": "particle",
+				"particleType": "meson"
+			
+			},
+			{
+				"particleName": "D+",
+				"gamosName": "D+",
+				"type": "particle",
+				"pdg": 411,
+				"particleType": "meson",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "D-",
+				"gamosName": "D-",
+				"type": "particle",
+				"pdg": -411,
+				"particleType": "meson",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "D0",
+				"gamosName": "D0",
+				"type": "particle",
+				"pdg": 421,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "D-short +",
+				"gamosName": "Ds+",
+				"type": "particle",
+				"pdg": 431,
+				"particleType": "meson",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "D-short -",
+				"gamosName": "Ds-",
+				"type": "particle",
+				"pdg": -431,
+				"particleType": "meson",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "B0",
+				"gamosName": "B0",
+				"type": "particle",
+				"pdg": 511,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "B+",
+				"gamosName": "B+",
+				"type": "particle",
+				"pdg": 521,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "B-",
+				"gamosName": "B-",
+				"type": "particle",
+				"pdg": -521,
+				"particleType": "meson",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Charmed B+",
+				"gamosName": "Bc+",
+				"type": "particle",
+				"pdg": 541,
+				"particleType": "meson",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Charmed B-",
+				"gamosName": "Bc-",
+				"type": "particle",
+				"pdg": -541,
+				"particleType": "meson",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "B-Short 0",
+				"gamosName": "Bs0",
+				"type": "particle",
+				"pdg": 531,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Rho+",
+				"gamosName": "rho+",
+				"type": "particle",
+				"pdg": 213,
+				"particleType": "meson",
+				"charge": "positive"
+			
+			},
+			{
+				"particleName": "Rho-",
+				"gamosName": "rho-",
+				"type": "particle",
+				"pdg": -213,
+				"particleType": "meson",
+				"charge": "negative"
+			
+			},
+			{
+				"particleName": "Rho 0",
+				"gamosName": "rho0",
+				"type": "particle",
+				"pdg": 113,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Phi",
+				"gamosName": "phi",
+				"type": "particle",
+				"pdg": 333,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "J/Psi",
+				"gamosName": "J/psi",
+				"type": "particle",
+				"pdg": 443,
+				"particleType": "meson",
+				"charge": "neutral"
+			
+			}
+		
+]
+

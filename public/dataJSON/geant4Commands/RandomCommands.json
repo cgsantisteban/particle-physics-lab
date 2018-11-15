@@ -1,0 +1,106 @@
+{
+	"command": "random",
+	"description": "Random number status control commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "setSeeds",
+			"route": "/random/",
+			"type": "command",
+			"description": "Initialize the random number generator with integer seed stream.",
+			"argList": [
+				{
+					"arg": "IntArray",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["PreInit","Idle","GeomClosed"]
+		},
+		{
+			"command": "setDirectoryName",
+			"route": "/random/",
+			"type": "command",
+			"description": "Define the directory name of the rndm status files.",
+			"argList": [
+				{
+					"arg": "fileName",
+					"optional": true,
+					"type": "string",
+					"default": "./"
+				}
+			],
+			"available": ["PreInit","Idle","GeomClosed"]
+		},
+		{
+			"command": "setSavingFlag",
+			"route": "/random/",
+			"type": "command",
+			"description": "The randomNumberStatus will be saved at :begining of run (currentRun.rndm) and begining of event (currentEvent.rndm) ",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": true,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "saveThisRun",
+			"route": "/random/",
+			"type": "command",
+			"description": "copy currentRun.rndm to runXXX.rndm",
+			"argList": [],
+			"available": ["Idle","GeomClosed","EventProc"]
+		},
+		{
+			"command": "resetEngineFrom",
+			"route": "/random/",
+			"type": "command",
+			"description": "Reset the status of the rndm engine from a file.",
+			"argList": [
+				{
+					"arg": "fileName",
+					"optional": true,
+					"type": "string",
+					"default": "currentRun.rndm"
+				}
+			],
+			"available": ["PreInit","Idle","GeomClosed"]
+		},
+		{
+			"command": "resetEngineFromEachEvent",
+			"route": "/random/",
+			"type": "command",
+			"description": "Reset the status of the rndm engine from a file at each event.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["PreInit","Idle","GeomClosed"]
+		},
+		{
+			"command": "saveEachEventFlag",
+			"route": "/random/",
+			"type": "command",
+			"description": "Save random number status at beginning of each event.",
+			"argList": [
+				{
+					"arg": "flag",
+					"optional": false,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		}
+	
+	]
+}

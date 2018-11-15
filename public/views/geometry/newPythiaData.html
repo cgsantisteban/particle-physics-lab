@@ -1,0 +1,97 @@
+<div class="modal-header">
+	<h3 class="modal-title">{{windowTitle}}</h3>
+</div>
+<div class="modal-body">
+	<section class="content" >
+		<div class="row">
+			<div class="col-md-6">
+				<label>Particle</label>
+				<select class="form-control"
+					ng-model="pythiaHistogram.particle"
+					ng-options="p.particleName group by p.particleType for p in allParticles track by p.particleName"
+				>
+				</select>
+			</div>
+			<div class="col-md-6">
+				<label>Data</label>
+				<select class="form-control"
+					ng-model="pythiaHistogram.data"
+					ng-options="d.name for d in pythiaData.dataList track by d.name"
+					>
+			    </select>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+ 			<div class="col-md-12">
+ 				<h4>Histogram limits</h4>
+ 			</div>
+	 	</div>
+		<div class="row">
+			<div class="col-md-4" >
+ 				<div class="form-group" ng-class="{'has-error':!isValidHistogram.isValidNbins.isValid}">
+                 <label >N. bins</label>
+                     
+	    		<input type="number" 
+		         ng-model="pythiaHistogram.data.nbins"
+		         class="form-control">
+				</div>
+	            <div class="col-md-12" >
+					<p class="text-red" ng-if="!isValidHistogram.isValidNbins.isValid">
+							<em>{{isValidHistogram.isValidNbins.errorMessages[0]}}</em>
+					</p>
+				</div>
+ 			</div>
+			
+			<div class="col-md-4">
+ 				<div class="form-group" ng-class="{'has-error':!isValidHistogram.isValidLimit[0].isValid}">
+                    <label >Min</label>
+                    <div class="input-group" 
+                    		>
+			    		<input type="number" 
+				         ng-model="pythiaHistogram.data.limits[0]"
+				         class="form-control">
+				        <div class="input-group-addon" ng-if="pythiaHistogram.data.units != null" ng-bind-html="pythiaHistogram.data.units">
+						</div>
+			       </div>
+                </div>
+               	<div class="col-md-12" ng-if="!isValidHistogram[dataId].isValidLimit[limitId].isValid">
+					<p class="text-red">
+						<em>{{isValidHistogram.isValidLimit[0].errorMessages[0]}}</em>
+					</p>
+				</div>
+ 			</div>
+ 			<div class="col-md-4">
+ 				<div class="form-group" ng-class="{'has-error':!isValidHistogram.isValidLimit[1].isValid}">
+                    <label >Max</label>
+                    <div class="input-group" 
+                    		>
+			    		<input type="number" 
+				         ng-model="pythiaHistogram.data.limits[1]"
+				         class="form-control">
+				        <div class="input-group-addon" ng-if="pythiaHistogram.data.units != null" ng-bind-html="pythiaHistogram.data.units">
+						</div>
+			       </div>
+                </div>
+               	<div class="col-md-12" ng-if="!isValidHistogram[dataId].isValidLimit[limitId].isValid">
+					<p class="text-red">
+							<em>{{isValidHistogram.isValidLimit[1].errorMessages[0]}}</em>
+					</p>
+				</div>
+ 			</div>
+		</div>
+		
+	</section> 
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-warning btn-flat pull-left" 
+			ng-click="cancel()"
+			>Cancel
+	</button>
+	<button type="button" class="btn btn-primary btn-flat" 
+			ng-click="addPythiaData()"
+			ng-disabled="!isValidAll" 
+			>Accept
+	</button>
+</div>

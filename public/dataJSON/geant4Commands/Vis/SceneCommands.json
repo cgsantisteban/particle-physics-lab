@@ -1,0 +1,934 @@
+{
+	"command": "scene",
+	"description": "Operations on Geant4 scenes.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "activateModel",
+			"route": "/vis/scene/",
+			"type": "command",
+			"description": "Activate or de-activate model.",
+			"argList": [
+				{
+					"arg": "search-string",
+					"optional": true,
+					"type": "string",
+					"default": "all"
+				},
+				{
+					"arg": "activate",
+					"optional": true,
+					"type": "boolean",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "create",
+			"route": "/vis/scene/",
+			"type": "command",
+			"description": "Creates an empty scene.",
+			"argList": [
+				{
+					"arg": "scene-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "endOfEventAction",
+			"route": "/vis/scene/",
+			"type": "command",
+			"description": "Accumulate or refresh the viewer for each new event.",
+			"argList": [
+				{
+					"arg": "action",
+					"optional": true,
+					"type": "string",
+					"default": "",
+					"candidate": ["accumulate","refresh"]
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "list",
+			"route": "/vis/scene/",
+			"type": "command",
+			"description": "Lists scene(s).",
+			"argList": [
+				{
+					"arg": "scene-name",
+					"optional": true,
+					"type": "string",
+					"default": "all"
+				},
+				{
+					"arg": "verbosity",
+					"optional": true,
+					"type": "string",
+					"default": "warnings"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "notifyHandlers",
+			"route": "/vis/scene/",
+			"type": "command",
+			"description": "Notifies scene handlers and forces re-rendering.",
+			"argList": [
+				{
+					"arg": "scene-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "refresh-flush",
+					"optional": true,
+					"type": "string",
+					"default": "refresh",
+					"candidates": ["refresh","flush"]
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "select",
+			"route": "/vis/scene/",
+			"type": "command",
+			"description": "Selects a scene",
+			"argList": [
+				{
+					"arg": "scene-name",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "add",
+			"description": "Add model to current scene.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "arrow",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds arrow to current scene.",
+					"argList": [
+						{
+							"arg": "x1",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y1",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "z1",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "x2",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "y2",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "z2",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "z2",
+							"optional": true,
+							"type": "string",
+							"default": "m"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "arrow2D",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds 2D arrow to current scene.",
+					"argList": [
+						{
+							"arg": "x1",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y1",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "x2",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "y2",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "axes",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Add axes.",
+					"argList": [
+						{
+							"arg": "x0",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y0",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "z0",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "length",
+							"optional": true,
+							"type": "double",
+							"default": -1
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "m"
+						},
+						{
+							"arg": "unitcolor",
+							"optional": true,
+							"type": "string",
+							"default": "auto"
+						},
+						{
+							"arg": "showtext",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "date",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds date to current scene.",
+					"argList": [
+						{
+							"arg": "size",
+							"optional": true,
+							"type": "int",
+							"default": 18
+						},
+						{
+							"arg": "x-position",
+							"optional": true,
+							"type": "double",
+							"default": 0.95
+						},
+						{
+							"arg": "y-position",
+							"optional": true,
+							"type": "double",
+							"default": 0.9
+						},
+						{
+							"arg": "length",
+							"optional": true,
+							"type": "double",
+							"default": -1
+						},
+						{
+							"arg": "layout",
+							"optional": true,
+							"type": "string",
+							"default": "right"
+						},
+						{
+							"arg": "date",
+							"optional": true,
+							"type": "string",
+							"default": "-"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "digis",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds digis to current scene.",
+					"argList": [],
+					"available": ["all"]
+				},
+				{
+					"command": "eventID",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds eventID to current scene.",
+					"argList": [
+						{
+							"arg": "size",
+							"optional": true,
+							"type": "int",
+							"default": 18
+						},
+						{
+							"arg": "x-position",
+							"optional": true,
+							"type": "double",
+							"default": -0.95
+						},
+						{
+							"arg": "y-position",
+							"optional": true,
+							"type": "double",
+							"default": 0.9
+						},
+						{
+							"arg": "layout",
+							"optional": true,
+							"type": "string",
+							"default": "left"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "extent",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds a dummy model with given extent to the current scene. ",
+					"argList": [
+						{
+							"arg": "xmin",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "xmax",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "ymin",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "ymax",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "zmin",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "zmax",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "m"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "frame",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds frame to current scene.",
+					"argList": [
+						{
+							"arg": "size",
+							"optional": true,
+							"type": "double",
+							"default": 0.97
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "hits",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds hits to current scene.",
+					"argList": [],
+					"available": ["all"]
+				},
+				{
+					"command": "line",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds frame to current scene.",
+					"argList": [
+						{
+							"arg": "x1",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y1",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "z1",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "x2",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "y2",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "z3",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						},
+												{
+							"arg": "unit",
+							"optional": false,
+							"type": "string",
+							"default": "m"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "line2D",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds 2D line to current scene.",
+					"argList": [
+						{
+							"arg": "x1",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y1",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "x2",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "y2",
+							"optional": false,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "logicalVolume",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds a logical volume to the current scene",
+					"argList": [
+						{
+							"arg": "logical-volume-name",
+							"optional": false,
+							"type": "string",
+							"default": ""
+						},
+						{
+							"arg": "depth-of-descent",
+							"optional": true,
+							"type": "int",
+							"default": 1
+						},
+						{
+							"arg": "booleans-flag",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						},
+						{
+							"arg": "voxels-flag",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						},
+						{
+							"arg": "readout-flag",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						},
+						{
+							"arg": "axes-flag",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "logo",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds a G4 logo to the current scene.",
+					"argList": [
+						{
+							"arg": "height",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "auto"
+						},
+						{
+							"arg": "direction",
+							"optional": true,
+							"type": "string",
+							"default": "auto"
+						},
+						{
+							"arg": "red",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "green",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "blue",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "placement",
+							"optional": true,
+							"type": "string",
+							"default": "auto"
+						},
+						{
+							"arg": "xmind",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "ymind",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "zmind",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "m"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "logo2D",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds 2D logo to current scene.",
+					"argList": [
+						{
+							"arg": "size",
+							"optional": true,
+							"type": "int",
+							"default": 48
+						},
+						{
+							"arg": "x-position",
+							"optional": true,
+							"type": "double",
+							"default": -0.9
+						},
+						{
+							"arg": "y-position",
+							"optional": true,
+							"type": "double",
+							"default": -0.9
+						},
+						{
+							"arg": "layout",
+							"optional": true,
+							"type": "string",
+							"default": "left"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "magneticField",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds magnetic field representation to current scene.",
+					"argList": [
+						{
+							"arg": "nDataPointsPerHalfScene",
+							"optional": true,
+							"type": "int",
+							"default": 10
+						},
+						{
+							"arg": "representation",
+							"optional": true,
+							"type": "string",
+							"default": "fullArrow",
+							"candidates": ["fullArrow","lightArrow"]
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "psHits",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds Primitive Scorer Hits (PSHits) to current scene.",
+					"argList": [
+						{
+							"arg": "mapname",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "scale",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds an annotated scale line to the current scene.",
+					"argList": [
+						{
+							"arg": "length",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "auto"
+						},
+						{
+							"arg": "direction",
+							"optional": true,
+							"type": "string",
+							"default": "auto"
+						},
+						{
+							"arg": "red",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "green",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "blue",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "placement",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						},
+						{
+							"arg": "xmid",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "ymid",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "zmid",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "m"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "text",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds text to current scene.",
+					"argList": [
+						{
+							"arg": "x",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "z",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "m"
+						},
+						{
+							"arg": "font_size",
+							"optional": true,
+							"type": "double",
+							"default": 12
+						},
+						{
+							"arg": "x_offset",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y_offset",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "text",
+							"optional": true,
+							"type": "string",
+							"default": "Hello G4"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "trajectories",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds trajectories to current scene.",
+					"argList": [
+						{
+							"arg": "default-trajectory-type",
+							"optional": true,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "userAction",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Add named Vis User Action to current scene.",
+					"argList": [
+						{
+							"arg": "action-name",
+							"optional": true,
+							"type": "string",
+							"default": "all"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "volume",
+					"route": "/vis/scene/add/",
+					"type": "command",
+					"description": "Adds a physical volume to current scene, with optional clipping volume.",
+					"argList": [
+						{
+							"arg": "physical-volume-name",
+							"optional": true,
+							"type": "string",
+							"default": "world"
+						},
+						{
+							"arg": "copy-no",
+							"optional": true,
+							"type": "int",
+							"default": -1
+						},
+						{
+							"arg": "depth-of-descent",
+							"optional": true,
+							"type": "int",
+							"default": -1
+						},
+						{
+							"arg": "clip-volume-type",
+							"optional": true,
+							"type": "string",
+							"default": "none",
+							"candidates": ["none","box","-box","*box"]
+						},
+						{
+							"arg": "parameter-unit",
+							"optional": true,
+							"type": "string",
+							"default": "m"
+						},
+						{
+							"arg": "parameter-1",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "parameter-2",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "parameter-3",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "parameter-4",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "parameter-5",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "parameter-6",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				}
+			
+			]
+		}
+	
+	]
+	
+}

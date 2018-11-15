@@ -1,0 +1,105 @@
+<div class="modal-header">
+	<h3 class="modal-title">{{windowTitle}}</h3>
+</div>
+<div class="modal-body">
+	<section class="content" >
+		<div class="row">
+   			<div class="col-md-12">
+   				
+					<div class="row">
+						<div class="col col-md-6 " ng-class="{'has-error':!isValidFilter.name.isValid}">
+							<div class="form-group">
+			                     <label for="filterName">Filter name</label>
+			                     <input type="text" class="form-control" id="filterName" 
+			                     	   ng-model="filterName" 
+									   type="text" class="form-control" 
+									   placeholder="Name of filter">
+			                </div>
+			                <p class="text-red">
+								<em>{{isValidFilter.name.errorMessages}}</em>
+							</p>
+			  			</div>
+					</div>
+				
+					<div class="row">
+						<div class="col col-md-3">
+							<div class="form-group">
+		                    	<label>Type</label>
+			                     <select class="form-control"  ng-model="filterType"  
+			                     		 ng-options="type for type in filterTypeList"
+			                     		 ng-change="setFilter(filterType)" 
+			                     		 >
+			                     </select>
+		                	</div>
+						</div>
+						<div class="col col-md-3">
+							<div class="form-group">
+				                <label>Filter</label>
+				                <select class="form-control" ng-model="myFilter" 
+				                		ng-options="f.subtype for f in initFilterList | filter:{'type': filterType} track by f.subtype"
+				                		>
+				                </select>
+			                </div>
+			            </div>
+						<div class="col-md-3" ng-repeat="(paramId,param) in myFilter.parameters track by paramId">
+							<div ng-if="param.paramType === 'selectParticle'" ng-class="{'has-error':!isValidFilter.parameters[paramId].isValid}">
+								<label>{{param.name}}</label>
+				                <select class="form-control" ng-model="myFilter.parameters[paramId].value" 
+				                		ng-options="particle.gamosName as particle.particleName group by particle.particleType for particle in getOptions(param.paramType)">
+				                		<option value="">-- Select a particle -- </option>
+				                </select>
+							</div>
+							<div ng-if="param.paramType === 'selectProcess'" ng-class="{'has-error':!isValidFilter.parameters[paramId].isValid}">
+								<label>{{param.name}}</label>
+				                <select class="form-control" ng-model="myFilter.parameters[paramId].value" 
+				                		ng-options="process for process in getOptions(param.paramType)">
+				                		<option value="">-- Select a process -- </option>
+				                </select>
+							</div>
+							
+							<div ng-if="param.paramType === 'selectFlux'" ng-class="{'has-error':!isValidFilter.parameters[paramId].isValid}">
+								<label>{{param.name}}</label>
+								
+				                <select class="form-control" ng-model="myFilter.parameters[paramId].value" 
+				                		ng-options="v.name as v.name for v in getOptions(param.paramType)">
+				                		<option value="">-- Select a volume -- </option>
+				                </select>
+							</div>
+							<div ng-if="param.paramType === 'Position' || param.paramType === 'Energy' || param.paramType === 'Angle'"
+								 ng-class="{'has-error':!isValidFilter.parameters[paramId].isValid}">
+								<label>{{param.name}}</label>
+				                <div class="input-group">
+						    		<input type="number" id="{{paramId}}"
+							         ng-model="myFilter.parameters[paramId].value"
+							         class="form-control">
+							        <div class="input-group-addon">
+										{{param.units}}
+									</div>
+						        </div>
+						       
+							</div>
+							 <p ng-repeat="error in isValidFilter.parameters[paramId].errorMessages" class="text-red">
+									<em>{{error}}</em>
+								</p>
+						</div>
+					</div>
+				
+   			</div><!-- end col -->
+   		</div><!-- end row -->
+				  
+		
+	</section> 
+		
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-warning btn-flat pull-left" 
+			ng-click="cancel()"
+			>Cancel
+	</button>
+	<button type="button" class="btn btn-primary btn-flat" 
+			ng-click="addFilter()"
+			ng-disabled="!isValidAll" 
+			>Accept
+	</button>
+</div>

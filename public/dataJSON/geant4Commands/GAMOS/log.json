@@ -1,0 +1,53 @@
+{
+	"command": "log",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "setCoutFile",
+			"route": "/gamos/log/",
+			"type": "command",
+			"description": "Select the file where the standard output will be copied ",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "setCerrFile",
+			"route": "/gamos/log/",
+			"type": "command",
+			"description": "Select the file where the standard error will be copied",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "writeFiles",
+			"route": "/gamos/log/",
+			"type": "command",
+			"description": "Select if the log files are written or not ",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "boolean",
+						"default": 0
+					}
+				],
+			"available": ["PreInit","Idle"]
+		}
+	
+	]
+}

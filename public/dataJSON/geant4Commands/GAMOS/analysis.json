@@ -1,0 +1,188 @@
+{
+	"command": "analysis",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "fileFormat",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Select the format of the analysis file: root, csv or txt",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "addFileFormat",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Adds another format of the analysis file: root, csv or txt",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "histo1NBins",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Changes the number of bins for histograms",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "histo1Min",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Changes the minimum limit for histograms",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "histo1Max",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Changes the maximum limit for histograms",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "histo2NBinsX",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Changes the number of bins for histograms",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "histo2MinX",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Changes the minimum limit for histograms",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "histo2MaxX",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Changes the maximum limit for histograms",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "histo2NBinsY",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Changes the number of bins for histograms",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "histo2MinY",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Changes the minimum limit for histograms",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "histo2MaxY",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Changes the maximum limit for histograms",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "histoPrint",
+			"route": "/gamos/analysis/",
+			"type": "command",
+			"description": "Prints information about histograms on the screen",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		}
+	
+	]
+}

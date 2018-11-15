@@ -1,0 +1,54 @@
+{
+	"distributionType": "Energy",
+	"distributions": [
+			{
+				"type": "Constant energy",
+				"gamosName": "GmGenerDistEnergyConstant",
+				"parameters": {
+						"Energy": 
+								{
+									"value": 1,
+									"units": "MeV",
+									"type": "Energy"	
+								}
+				}
+				
+			},
+			{
+				"type": "Random flat energy",
+				"gamosName": "GmGenerDistEnergyRandomFlat",
+				"parameters": {
+						
+						"min. energy": {
+									"value": 0,
+									"units": "MeV"	,
+									"type": "Energy"	
+								},
+						"max. energy": {
+								"value": 1,
+								"units": "MeV"	,
+								"type": "Energy"	
+								}		
+				
+				}
+			},
+			{
+				"type": "Gaussian",
+				"gamosName": "GmGenerDistEnergyGaussian",
+				"parameters": {
+						"mean": {
+							"value": 1,
+							"units": "MeV",
+							"type": "Energy"	
+						},
+						"sigma": {
+							"value": 0.1,
+							"units": "MeV",
+							"type": "Energy"	
+						}
+				}
+			}
+			 
+		]
+}
+

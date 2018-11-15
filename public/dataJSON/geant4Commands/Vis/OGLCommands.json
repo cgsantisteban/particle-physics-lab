@@ -1,0 +1,373 @@
+{
+	"command": "ogl",
+	"description": "G4OpenGLViewer commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "printEPS",
+			"route": "/vis/ogl/",
+			"type": "command",
+			"description": "Print Encapsulated PostScript file.",
+			"argList": [],
+			"available": ["all"]
+		},
+		{
+			"command": "export",
+			"route": "/vis/ogl/",
+			"type": "command",
+			"description": "export a screenshot of current OpenGL viewer",
+			"argList": [
+				{
+					"arg": "name",
+					"optional": true,
+					"type": "string",
+					"default": 1
+				},
+				{
+					"arg": "width",
+					"optional": true,
+					"type": "string",
+					"default": 1
+				},
+				{
+					"arg": "height",
+					"optional": true,
+					"type": "string",
+					"default": 1
+				}
+			
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "set",
+			"description": "G4OpenGLViewer set commands.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "displayHeadTime",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "Display head time of range in 2D text.",
+					"argList": [
+								{
+									"arg": "displayHeadTime",
+									"optional": false,
+									"type": "boolean",
+									"default": 1
+								},
+								{
+									"arg": "screenX",
+									"optional": true,
+									"type": "double",
+									"default": -0.9
+								},
+								{
+									"arg": "screenY",
+									"optional": true,
+									"type": "double",
+									"default": -0.9
+								},
+								{
+									"arg": "screenSize",
+									"optional": true,
+									"type": "double",
+									"default": 24
+								},
+								{
+									"arg": "red",
+									"optional": true,
+									"type": "double",
+									"default": 0
+								},
+								{
+									"arg": "green",
+									"optional": true,
+									"type": "double",
+									"default": 1
+								},
+								{
+									"arg": "blue",
+									"optional": true,
+									"type": "double",
+									"default": 1
+								}
+							
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "displayLightFront",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "Display the light front at head time.",
+					"argList": [
+								{
+									"arg": "displayLightFront",
+									"optional": false,
+									"type": "boolean",
+									"default": 1
+								},
+								{
+									"arg": "originX",
+									"optional": true,
+									"type": "double",
+									"default": 0
+								},
+								{
+									"arg": "originY",
+									"optional": true,
+									"type": "double",
+									"default": 0
+								},
+								{
+									"arg": "originZ",
+									"optional": true,
+									"type": "double",
+									"default": 0
+								},
+								{
+									"arg": "space_unit",
+									"optional": true,
+									"type": "string",
+									"default": "m"
+								},
+								{
+									"arg": "originT",
+									"optional": true,
+									"type": "double",
+									"default": 0
+								},
+								{
+									"arg": "time_unit",
+									"optional": true,
+									"type": "string",
+									"default": "s"
+								},
+								{
+									"arg": "red",
+									"optional": true,
+									"type": "double",
+									"default": 0
+								},
+								{
+									"arg": "green",
+									"optional": true,
+									"type": "double",
+									"default": 1
+								},
+								{
+									"arg": "blue",
+									"optional": true,
+									"type": "double",
+									"default": 1
+								}
+							
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "displayListLimit",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "Set/reset display list limit (to avoid memory exhaustion).",
+					"argList": [
+						{
+							"arg": "limit",
+							"optional": true,
+							"type": "int",
+							"default": 50000
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "endTime",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "Set end and range of track time.",
+					"argList": [
+						{
+							"arg": "end-time",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "end-time-unit",
+							"optional": false,
+							"type": "string",
+							"default": ""
+						},
+						{
+							"arg": "time-range",
+							"optional": true,
+							"type": "double",
+							"default": -1
+						},
+						{
+							"arg": "time-range-unit",
+							"optional": true,
+							"type": "string",
+							"default": "ns"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "eventsDrawInterval",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "Set number of events allowed in drawing pipeline - speeds drawing",
+					"argList": [
+						{
+							"arg": "interval",
+							"optional": true,
+							"type": "int",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "fade",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "0: no fade; 1: maximum fade with time within range.",
+					"argList": [
+						{
+							"arg": "fadefactor",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "printFilename",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "Set print filename",
+					"argList": [
+						{
+							"arg": "name",
+							"optional": true,
+							"type": "string",
+							"default": "G4OpenGL"
+						},
+						{
+							"arg": "incremental",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "exportFormat",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "Set export format",
+					"argList": [
+						{
+							"arg": "format",
+							"optional": true,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "printMode",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "Set export format",
+					"argList": [
+						{
+							"arg": "print_mode",
+							"optional": true,
+							"type": "string",
+							"default": "vectored",
+							"candidates": ["vectored","pixmap"]
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "printSize",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "Set print size",
+					"argList": [
+						{
+							"arg": "width",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "height",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "startTime",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "Set start and range of track time.",
+					"argList": [
+						{
+							"arg": "start-time",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "start-time-unit",
+							"optional": false,
+							"type": "string",
+							"default": ""
+						},
+						{
+							"arg": "time-range",
+							"optional": true,
+							"type": "double",
+							"default": -1
+						},
+						{
+							"arg": "time-range-unit",
+							"optional": true,
+							"type": "string",
+							"default": "ns"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "transparency",
+					"route": "/vis/ogl/set/",
+					"type": "command",
+					"description": "True/false to enable/disable rendering of transparent objects.",
+					"argList": [
+						{
+							"arg": "transparency-enabled",
+							"optional": false,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				}
+			
+			]
+		}
+	
+	]
+}

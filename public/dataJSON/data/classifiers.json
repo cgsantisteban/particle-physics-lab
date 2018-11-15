@@ -1,0 +1,39 @@
+[
+                      	{
+                      		"name": "Logical volume",
+                      		"gamosName": "GmClassifierByLogicalVolume"
+                      	},
+                      	{
+                      		"name": "Material",
+                      		"gamosName": "GmClassifierByMaterial"
+                      	},
+                      	{
+                      		"name": "Process",
+                      		"gamosName": "GmClassifierByProcess"
+                      	},
+                      	{
+                      		"name": "Particle process",
+                      		"gamosName": "GmClassifierByParticleProcess"
+                      	},
+                      	{
+                      		"name": "Creator process",
+                      		"gamosName": "GmClassifierByCreatorProcess"
+                      	},
+                      	{
+                      		"name": "Particle",
+                      		"gamosName": "GmClassifierByParticle"
+                      	},
+                      	{
+                      		"name": "Primary particle",
+                      		"gamosName": "GmClassifierByPrimaryParticle"
+                      	},
+                      	{
+                      		"name": "Secondaries list",
+                      		"gamosName": "GmClassifierBySecondariesList"
+                      	},
+                      	{
+                      		"name": "Hadronic reaction",
+                      		"gamosName": "GmClassifierByHadronicReaction"
+                      	}
+                      	
+                      ]

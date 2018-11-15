@@ -1,0 +1,38 @@
+{
+	"command": "GmPhysics",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "replacePhysics",
+			"route": "/gamos/GmPhysics/",
+			"type": "command",
+			"description": "Replace a set of process models of a particle",
+			"argList": [
+					{
+						"arg": "physList",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "addPhysics",
+			"route": "/gamos/GmPhysics/",
+			"type": "command",
+			"description": "Replace a set of process models of a particle",
+			"argList": [
+					{
+						"arg": "physList",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		}
+	
+	]
+}

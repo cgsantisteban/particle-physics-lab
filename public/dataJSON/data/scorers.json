@@ -1,0 +1,86 @@
+{
+	"scorerList": [
+		{
+			"type": "Track and Length",
+			"name": "Track Length",
+			"gamosName": "GmG4PSTrackLength"
+		},
+		{
+			"type": "Track and Length",
+			"name": "Passage Track Length",
+			"gamosName": "GmG4PSPassageTrackLength"
+		},
+		{
+			"type": "Deposited energy",
+			"name": "Energy Deposit",
+			"gamosName": "GmG4PSEnergyDeposit"
+		},
+		{
+			"type": "Deposited energy",
+			"name": "Dose Deposit",
+			"gamosName": "GmG4PSDoseDeposit"
+		},
+		{
+			"type": "Track and Length",
+			"name": "Kerma",
+			"gamosName": "GmG4PSKerma"
+		},
+		{
+			"type": "Current and flux",
+			"name": "Surface Flux",
+			"gamosName": "GmPSSurfaceFlux"
+		},
+		{
+			"type": "Other scorers",
+			"name": "MinKinE At Generation",
+			"gamosName": "GmG4PSMinKinEAtGeneration"
+		},
+		{
+			"type": "Other scorers",
+			"name": "N of Secondary",
+			"gamosName": "GmG4PSNofSecondary"
+		},
+		{
+			"type": "Other scorers",
+			"name": "Cell Charge",
+			"gamosName": "GmG4PSCellCharge"
+		},
+		{
+			"type": "Other scorers",
+			"name": "Track Counter",
+			"gamosName": "GmG4PSTrackCounter"
+		},
+		{
+			"type": "Event biasing",
+			"name": "N of Collision",
+			"gamosName": "GmG4PSNofCollision"
+		},
+		{
+			"type": "Event biasing",
+			"name": "Population",
+			"gamosName": "GmG4PSPopulation"
+		},
+		{
+			"type": "Event biasing",
+			"name": "Termination",
+			"gamosName": "GmG4PSTermination"
+		}
+		
+
+	],
+	"fluxTypeList": ["In", "Out", "InOut"],
+	"fluxSurfaceList": [
+                          {
+                        	  "solidType": "BOX",
+                        	  "surfaceList": ["X+","X-","Y+","Y-","Z+","Z-"]
+                          },
+                          {
+                        	  "solidType": "SPHERE",
+                        	  "surfaceList": ["INNER","OUTER","THETA","PHI"]
+                          },
+                          {
+                        	  "solidType": "TUBS",
+                        	  "surfaceList": ["INNER","OUTER","PHI","TOP","BOTTOM"]
+                          }
+                      ]
+}

@@ -1,0 +1,115 @@
+<div style="position: absolute; top: 0px; left: 10px; width: 250px;  height: 650px; overflow-y: auto;" >
+	<div class="box box-default">
+        <div class="box-header with-border">
+          <h3 class="box-title">Position and rotation</h3>
+          <div class="box-tools pull-right">
+            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+          </div><!-- /.box-tools -->
+        </div><!-- /.box-header -->
+        <div class="box-body">
+        	 <div class="box-group" id="accordion">
+               <div class="panel " ng-repeat="(i,v) in experiment.geometry.volumeList | filter:{'isWorld': false}">
+                  <div class="box-header">
+                    <span class="box-title">
+                      <a href="javascript:void(0)" data-toggle="collapse" data-parent="#accordion" data-target="#{{v.name}}">
+                        {{v.name}}
+                      </a>
+                    </span>
+                    <small class="label pull-right bg-red"  ng-if="showErrorVolume(v.name,isValidGeometry,isIn)">
+						<i class="fa fa-exclamation"></i>
+					</small>
+                  </div>
+                  <div id="{{v.name}}" class="panel-collapse collapse" ng-class="{'in': $index === 0}">
+                    <div class="box-body">
+                    	<form>
+                    		<div class="row">
+                    			<div  ng-if="!v.isParam ">
+                    				<div class="form-group col-md-12 " ng-repeat="(coord,ii) in v.position">
+										<!-- <div class="input-group" ng-class="{'has-error':!isValidPosRot.isValidPosition[coord]}"> -->
+										<div class="input-group" ng-class="{'has-error':!isValidGeometry[v.name].isValidPosRot.isValidPosition[coord]}">
+											<div class="input-group-addon">
+												<strong>{{coord}}</strong>
+											</div>
+											<input type="number" class="form-control input-sm" 
+												 ng-model="v.position[coord].value"
+												 >
+											<div class="input-group-addon">
+												{{v.position[coord].units}}
+											</div>
+										</div>
+									</div>
+                    			</div>
+				    			
+								<div class="form-group col-md-12" ng-repeat="(coord,ii) in v.rotation">
+									<!-- <div class="input-group" ng-class="{'has-error':!isValidPosRot.isValidRotation[coord]}"> -->
+									<div class="input-group" ng-class="{'has-error':!isValidGeometry[v.name].isValidPosRot.isValidRotation[coord]}">
+										<div class="input-group-addon">
+											<strong>{{coord}}</strong>
+										</div>
+										<input type="number" class="form-control input-sm" 
+											ng-model="v.rotation[coord].value"
+											>
+										<div class="input-group-addon">
+											{{v.rotation[coord].units}}
+										</div>
+									</div>
+								</div>
+				    		</div>
+				    		<hr />
+				    		<div ng-if="v.isParam">
+				    			<div class="row">
+				    				<div class="col-md-12">
+				    					<span><strong>Parameterisation:</strong> {{v.parameterisation.type}}</span>
+				    				</div>
+				    				
+				    			</div>
+				    			<br>
+				    			<div class="row" >
+				    				<div class="col-md-12 form-group" ng-repeat="(parameter,i) in v.parameterisation.parameters"
+												ng-class="{'has-error':!isValidGeometry[v.name].isValidParam[parameter].isValid} ">
+										<div class="input-group">
+											<div class="input-group-addon">
+												<strong>{{parameter}}</strong>
+											</div>
+								    		<input type="number" 
+									         ng-model="v.parameterisation.parameters[parameter].value"
+									         class="form-control input-sm">
+									        <div class="input-group-addon" ng-if="v.parameterisation.parameters[parameter].units !== null">
+												{{v.parameterisation.parameters[parameter].units}}
+											</div>
+										</div>
+										<div>
+											<p class="text-red" ng-if="!isValidParam[parameter].isValid">
+												<em>{{isValidGeometry[v.name].isValidParam[parameter].errorMessages}}</em>
+											</p>
+										</div>	
+										
+								    </div>
+								</div>
+				    		</div>
+				    		<!-- opacity -->
+				    		<div class="row" ng-if="v != null">
+								<div class="col-md-12">
+									<!-- <div class="form-group" ng-class="{'has-error':!isValidPosRot.isValidOpacity}"> -->
+									<div class="form-group" ng-class="{'has-error':!isValidGeometry[v.name].isValidPosRot.isValidOpacity}">
+										<div class="input-group">
+											<div class="input-group-addon">
+												<strong>Opacity</strong>
+											</div>
+											<input type="number" class="form-control input-sm" min="0" max="1" step="0.1" 
+												ng-model="v.opacity"
+												>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</form>
+                   </div>
+                 </div>
+               </div>
+              
+             </div>
+          </div><!-- box-body -->
+	</div>
+</div>	

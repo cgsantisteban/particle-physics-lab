@@ -1,0 +1,230 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="box box-primary box-solid">
+			<div class="box-body">
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Pythia configuration</h3>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-12">
+										<h4>1. Beams</h4>
+									</div>
+								</div>
+								<div class="row">
+									
+									<div class="col col-md-4">
+										
+										<div class="form-group">
+											<label>Type</label>
+								            <select class="form-control"
+								            		ng-model="experiment.pythiaData.pythiaBeam.type"
+								             		ng-options="pt for pt in particleTypeList"
+								             		ng-change="setSourceType(experiment.pythiaData.pythiaBeam.type)">
+								            </select>
+							           	</div>
+									</div>
+									<div class="col col-md-4">
+										<div class="form-group">
+											<label>Beam A</label>
+								            <select class="form-control"
+								            	ng-model="experiment.pythiaData.pythiaBeam.beamA"
+								            	ng-options="p.pdg as p.particleName for p in pythiaParticles[experiment.pythiaData.pythiaBeam.type]"
+								            	>
+								            					
+								            </select>
+							           	</div>
+									</div>
+									<div class="col col-md-4">
+										<div class="form-group">
+											<label>Beam B</label>
+								            <select class="form-control"
+								            	ng-model="experiment.pythiaData.pythiaBeam.beamB"
+								            	ng-options="p.pdg as p.particleName for p in getBeamB(experiment.pythiaData.pythiaBeam.type) "
+								            	>
+								            					
+								            </select>
+							           	</div>
+									</div>
+								</div>	
+						
+					</div><!-- end beam -->
+					<div class="col-md-6">
+						
+								<div class="row">
+									<div class="col-md-3">
+										<h4>2. Energy</h4>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col col-md-4">
+										<div class="form-group">
+											<label>Frame</label>
+								            <select class="form-control"
+								            	ng-model="experiment.pythiaData.pythiaBeam.energy.frame"
+								            	ng-options="f.name for f in pythiaData.frameList track by f.name"
+								            	ng-change="setFrame(experiment.pythiaData.pythiaBeam.energy.frame)">
+								            </select>
+							           	</div>
+									</div>
+									<div class="col col-md-4" ng-if="experiment.pythiaData.pythiaBeam.energy.frame.option === 1"
+										 ng-class="{'has-error':!isValidPythia.energy.isValidCM}">
+										<label class="control-label" >Energy CM</label>
+										<div class="input-group">
+											<input type="number" class="form-control"
+													ng-model="experiment.pythiaData.pythiaBeam.energy.eCM" min="10">
+											 <span class="input-group-addon">{{experiment.pythiaData.pythiaBeam.energy.units}}</span>
+										</div>
+									</div>
+									<div ng-if="experiment.pythiaData.pythiaBeam.energy.frame.option === 2">
+										<div class="col col-md-4"  ng-class="{'has-error':!isValidPythia.energy.isValidEA}">
+										<label class="control-label">Energy beam A</label>
+										<div class="input-group">
+											<input type="number" class="form-control"
+													ng-model="experiment.pythiaData.pythiaBeam.energy.eA" min="0">
+											 <span class="input-group-addon">{{experiment.pythiaData.pythiaBeam.energy.units}}</span>
+										</div>
+										</div>
+										<div class="col col-md-4"  ng-class="{'has-error':!isValidPythia.energy.isValidEB}">
+											<label class="control-label">Energy beam B</label>
+											<div class="input-group">
+												<input type="number" class="form-control"
+														ng-model="experiment.pythiaData.pythiaBeam.energy.eB" min="0">
+												 <span class="input-group-addon">{{experiment.pythiaData.pythiaBeam.energy.units}}</span>
+											</div>
+										</div>
+									</div>
+									
+								</div><!-- energy -->
+								<div class="row" ng-if="isValidPythia.energy.errorMessages.length>0">
+									<div class="col-md-12">
+										<p class="text-red" ng-repeat="error in isValidPythia.energy.errorMessages">
+												<em>{{error}}</em>
+										</p>
+									</div>
+								</div>
+					</div><!-- end energy -->
+				</div>
+				
+				<hr />
+				<div class="row">
+					<div class="col-md-12">
+					
+								<div class="row">
+									<div class="col-md-12">
+										<h4>3. Process</h4>
+									</div>
+									
+								</div>
+								<div class="row" ng-if="!isValidExperiment.isValidPythiaProcess"> <!-- errors -->
+										<div class="col-md-12">
+											<p class="text-red">
+												<em>{{errorPythiaProcesses}}</em>
+											</p>
+										</div>
+									</div>
+								<div class="row" ng-repeat="process in pythiaData.processList">
+									<div class="col col-md-12 ">
+										
+										<h5>{{process.name}}</h5>
+										<div class="row" ng-repeat="t in process.typeList">
+											<div class="col-md-2">
+														<button class="btn btn-sm btn-flat"
+															ng-click="addAllPythiaProcess(process.name,t.type,experiment.pythiaData.processList,pythiaData.processList)">
+															Select all
+														</button>
+											</div>
+											<div class="col col-md-10">
+												<div class="row">
+													<div class="col-md-4">
+														<strong>{{t.type}}</strong>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-4" ng-repeat="p in getProcess(t.processes)">
+														<div class="checkbox" >
+															<label>
+													    	<input type="checkbox"
+													    			ng-checked="findPythiaProcess(p,experiment.pythiaData.processList,process.name,t.type)"
+													    			ng-click="addPythiaProcess(p,experiment.pythiaData.processList,process.name,t.type)">
+													    			<em ng-bind-html="p.name"></em>
+														   	</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<hr>
+								</div>
+					</div><!-- end process -->
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12">
+								<h4>4. Data</h4> 
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<table class="table" ng-show="experiment.pythiaData.pythiaHistograms.length>0">
+									<thead>
+										<tr>
+										   <th style="width: 5%;"></th>
+						           		   <th style="width: 30%;">Particle</th>
+						           		   <th style="width: 65%;">Data</th>
+						                 </tr>
+									</thead>	
+					           		<tbody>
+					           			<tr ng-repeat="(histoId,pythiaHistogram) in experiment.pythiaData.pythiaHistograms">
+					           				<td>
+					           					<div class="btn-group" uib-dropdown>
+											      <button id="split-button" type="button" class="btn btn-default btn-sm btn-flat" uib-dropdown-toggle>
+											      	<i class="fa fa-gear"></i> <span class="caret"></span>
+											      </button>
+											      <ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+											        <li role="menuitem">
+											        	<a ng-click="addPythiaData('lg',histoId)"> 
+											        		<i class="fa fa-edit"></i> Edit
+											        	</a>
+											        </li>
+											        <li role="menuitem">
+											        	<a ng-click="delPythiaData(histoId)">
+											        		<i class="fa fa-trash"></i> Delete
+											        	</a>
+											        </li>
+											      </ul>
+											    </div>
+					           				</td>
+					           				<td>
+				           					   {{pythiaHistogram.particle.particleName}}
+					           				</td>
+					           				<td>
+					           					{{pythiaHistogram.data.name}}
+					           				</td>
+					           			</tr>
+					           			
+					           		</tbody>
+					             </table>
+								 <button class="btn btn-primary btn-md btn-flat"
+										ng-click="addPythiaData('lg',-1)"
+										ng-disabled="experiment.pythiaData.processList.length<=0">
+									Add data
+								</button>
+							</div>
+						</div>
+					</div><!-- end data	-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

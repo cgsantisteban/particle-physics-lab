@@ -1,0 +1,130 @@
+{
+	"command": "modeling",
+	"description": "Modeling commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "trajectories",
+			"description": "Trajectory model commands.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "list",
+					"route": "/vis/modeling/trajectories/",
+					"type": "command",
+					"description": "List objects registered with list manager",
+					"argList": [
+						{
+							"arg": "name",
+							"optional": true,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "select",
+					"route": "/vis/modeling/trajectories/",
+					"type": "command",
+					"description": "Select created object",
+					"argList": [
+						{
+							"arg": "name",
+							"optional": false,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "create",
+					"description": "Create trajectory models and messengers.",
+					"collapsed": true,
+					"children": [
+						{
+							"command": "generic",
+							"route": "/vis/modeling/trajectories/create/",
+							"type": "command",
+							"description": "Create a generic model and associated messengers.",
+							"argList": [
+								{
+									"arg": "model-name",
+									"optional": true,
+									"type": "string",
+									"default": ""
+								}
+							],
+							"available": ["all"]
+						},
+						{
+							"command": "drawByCharge",
+							"route": "/vis/modeling/trajectories/create/",
+							"type": "command",
+							"description": "Create a drawByCharge model and associated messengers.",
+							"argList": [
+								{
+									"arg": "model-name",
+									"optional": true,
+									"type": "string",
+									"default": ""
+								}
+							],
+							"available": ["all"]
+						},
+						{
+							"command": "drawByParticleID",
+							"route": "/vis/modeling/trajectories/create/",
+							"type": "command",
+							"description": "Create a drawByParticleID model and associated messengers.",
+							"argList": [
+								{
+									"arg": "model-name",
+									"optional": true,
+									"type": "string",
+									"default": ""
+								}
+							],
+							"available": ["all"]
+						},
+						{
+							"command": "drawByOriginVolume",
+							"route": "/vis/modeling/trajectories/create/",
+							"type": "command",
+							"description": "Create a drawByOriginVolume model and associated messengers.",
+							"argList": [
+								{
+									"arg": "model-name",
+									"optional": true,
+									"type": "string",
+									"default": ""
+								}
+							],
+							"available": ["all"]
+						},
+						{
+							"command": "drawByAttribute",
+							"route": "/vis/modeling/trajectories/create/",
+							"type": "command",
+							"description": "Create a drawByAttribute model and associated messengers.",
+							"argList": [
+								{
+									"arg": "model-name",
+									"optional": true,
+									"type": "string",
+									"default": ""
+								}
+							],
+							"available": ["all"]
+						}
+					
+					
+					]
+				}
+				
+			]
+		}
+	]
+	
+}

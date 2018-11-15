@@ -1,0 +1,55 @@
+{
+	"distributionType": "Time",
+	"distributions": [
+			{
+				"type": "No defined",
+				"gamosName": "null",
+				"parameters": {}
+			},
+			{
+				"type": "Constant time",
+				"gamosName": "GmGenerDistTimeConstant",
+				"parameters": {
+					"Time": {
+						"value": 0,
+						"units": "s",
+						"type": "Time"
+					}
+				}
+			},
+			{
+				"type": "Time changing",
+				"gamosName": "GmGenerDistTimeConstantChange",
+				"parameters": {
+					"Time interval": {
+						"value": 1,
+						"units": "s",
+						"type": "Time"
+					},
+					"Time offset": {
+						"value": 1,
+						"units": "s",
+						"type": "Time"
+					}
+				}
+			},
+			{
+				"type": "Decay time",
+				"gamosName": "GmGenerDistTimeDecay",
+				"parameters": {
+					"Activity": {
+						"value": 1000,
+						"units": "Bq",
+						"type": "Activity"
+					},
+					"Life time": {
+						"value": 1,
+						"units": "s",
+						"type": "Life time"
+					}
+				}
+				
+			}
+		
+		]
+}

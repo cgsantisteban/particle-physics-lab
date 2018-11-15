@@ -1,0 +1,103 @@
+<div class="modal-header">
+	<h3 class="modal-title">{{windowTitle}}</h3>
+</div>
+<div class="modal-body">
+	<section class="content" >
+		
+	    <div class="row">
+			<div class="col-md-2" ng-if="data.data[0].gamosName !== 'StackCounter'">
+				<label>Type</label>
+                    <select class="form-control"
+                    			ng-model="data.dimension"
+                    			ng-options="ht for ht in dimensionList"
+                    			ng-change="setData(data)">
+                    		
+                    </select>
+			</div>
+			
+			<div class="col-md-5">
+				 <label>GAMOS data<span ng-if="data.dimension === '2D'">1 (X axis)</span></label>
+				 <select class="form-control"
+				 		 ng-model="data.data[0]"
+				 		 ng-options="d.name group by d.type for d in dataList track by d.gamosName">
+                  </select>
+			</div>
+			
+			<div class="col-md-5" ng-if="data.data[0].gamosName == 'StackCounter'">
+				 <label>Particle</span></label>
+				 <select class="form-control"
+				 		 ng-model="data.data[0].particle"
+				 		 ng-options="p.particleName group by p.particleType for p in particles track by p.gamosName">
+                  </select>
+			</div>
+			
+			<div class="col-md-5" ng-if="data.dimension === '2D'">
+				 <label>GAMOS data 2 (Y axis)</label>
+				 <select class="form-control"
+				 		 ng-model="data.data[1]"
+				 		 ng-options="d.name group by d.type for d in dataList track by d.gamosName">
+                    		
+                  </select>
+			</div>
+		</div>
+		
+		<div >
+			<hr>
+	 		<div class="row">
+	 			<div class="col-md-12">
+	 				<h4>Histogram limits</h4>
+	 			</div>
+	 		</div>
+	 		<div class="row" ng-repeat="(dataId,d) in data.data track by dataId">
+	 			<div class="col-md-4" >
+	 				<div class="form-group" ng-class="{'has-error':!isValidHistogram[dataId].isValidNbins.isValid}">
+	                   <label >N. bins</label>
+	                     
+		    		<input type="number" 
+			         ng-model="data.data[dataId].nbins"
+			         class="form-control">
+					</div>
+		            <div class="col-md-12" >
+						<p class="text-red" ng-if="!isValidHistogram[dataId].isValidNbins.isValid">
+								<em>{{isValidHistogram[dataId].isValidNbins.errorMessages[0]}}</em>
+						</p>
+					</div>
+	 			</div>
+	 			<div class="col-md-4" ng-repeat="(limitId,limit) in d.limits track by limitId">
+	 				<div class="form-group" ng-class="{'has-error':!isValidHistogram[dataId].isValidLimit[limitId].isValid}">
+	                    <label >{{limitLabel[dataId][limitId]}}</label>
+	                    <div class="input-group" 
+	                    		>
+				    		<input type="number" 
+					         ng-model="data.data[dataId].limits[limitId]"
+					         class="form-control">
+					        <div class="input-group-addon" ng-if="d.units != null">
+								{{d.units}}
+							</div>
+				       </div>
+	                </div>
+	               	<div class="col-md-12" ng-if="!isValidHistogram[dataId].isValidLimit[limitId].isValid">
+						<p class="text-red">
+								<em>{{isValidHistogram[dataId].isValidLimit[limitId].errorMessages[0]}}</em>
+						</p>
+					</div>
+	 			</div>
+	
+	 		
+	 		</div>
+		</div>
+	</section> <!--action type and data-->
+	
+</div>
+
+<div class="modal-footer">
+	<button type="button" class="btn btn-warning btn-flat pull-left" 
+			ng-click="cancel()"
+			>Cancel
+	</button>
+	<button type="button" class="btn btn-primary btn-flat" 
+			ng-click="addData()"
+			ng-disabled="!isValidAll"
+			>Accept
+	</button>
+</div>

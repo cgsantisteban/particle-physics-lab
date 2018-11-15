@@ -1,0 +1,400 @@
+[	
+			{
+				"name": "H",
+				"gamosName": "G4_H"
+			},
+			{
+				"name": "He",
+				"gamosName": "G4_He"
+			},
+			{
+				"name": "Li",
+				"gamosName": "G4_Li"
+			},
+			{
+				"name": "Be",
+				"gamosName": "G4_Be"
+			},
+			{
+				"name": "B",
+				"gamosName": "G4_B"
+			},
+			{
+				"name": "C",
+				"gamosName": "G4_C"
+			},
+			{
+				"name": "N",
+				"gamosName": "G4_N"
+			},
+			{
+				"name": "O",
+				"gamosName": "G4_O"
+			},
+			{
+				"name": "F",
+				"gamosName": "G4_F"
+			},
+			{
+				"name": "Ne",
+				"gamosName": "G4_Ne"
+			},
+			{
+				"name": "Na",
+				"gamosName": "G4_Na"
+			},
+			{
+				"name": "Mg",
+				"gamosName": "G4_Mg"
+			},
+			{
+				"name": "Al",
+				"gamosName": "G4_Al"
+			},
+			{
+				"name": "Si",
+				"gamosName": "G4_Si"
+			},
+			{
+				"name": "P",
+				"gamosName": "G4_P"
+			},
+			{
+				"name": "S",
+				"gamosName": "G4_S"
+			},
+			{
+				"name": "Cl",
+				"gamosName": "G4_Cl"
+			},
+			{
+				"name": "Ar",
+				"gamosName": "G4_Ar"
+			},
+			{
+				"name": "K",
+				"gamosName": "G4_K"
+			},
+			{
+				"name": "Ca",
+				"gamosName": "G4_Ca"
+			},
+			{
+				"name": "Sc",
+				"gamosName": "G4_Sc"
+			},
+			{
+				"name": "Ti",
+				"gamosName": "G4_Ti"
+			},
+			{
+				"name": "V",
+				"gamosName": "G4_V"
+			},
+			{
+				"name": "Cr",
+				"gamosName": "G4_Cr"
+			},
+			{
+				"name": "Mn",
+				"gamosName": "G4_Mn"
+			},
+			{
+				"name": "Fe",
+				"gamosName": "G4_Fe"
+			},
+			{
+				"name": "Co",
+				"gamosName": "G4_Co"
+			},
+			{
+				"name": "Ni",
+				"gamosName": "G4_Ni"
+			},
+			{
+				"name": "Cu",
+				"gamosName": "G4_Cu"
+			},
+			{
+				"name": "Zn",
+				"gamosName": "G4_Zn"
+			},
+			{
+				"name": "Ga",
+				"gamosName": "G4_Ga"
+			},
+			{
+				"name": "Ge",
+				"gamosName": "G4_Ge"
+			},
+			{
+				"name": "As",
+				"gamosName": "G4_As"
+			},
+			{
+				"name": "Se",
+				"gamosName": "G4_Se"
+			},
+			{
+				"name": "Br",
+				"gamosName": "G4_Br"
+			},
+			{
+				"name": "Kr",
+				"gamosName": "G4_Kr"
+			},
+			{
+				"name": "Rb",
+				"gamosName": "G4_Rb"
+			},
+			{
+				"name": "Sr",
+				"gamosName": "G4_Sr"
+			},
+			{
+				"name": "Y",
+				"gamosName": "G4_Y"
+			},
+			{
+				"name": "Zr",
+				"gamosName": "G4_Zr"
+			},
+			{
+				"name": "Nb",
+				"gamosName": "G4_Nb"
+			},
+			{
+				"name": "Mo",
+				"gamosName": "G4_Mo"
+			},
+			{
+				"name": "Tc",
+				"gamosName": "G4_Tc"
+			},
+			{
+				"name": "Ru",
+				"gamosName": "G4_Ru"
+			},
+			{
+				"name": "Rh",
+				"gamosName": "G4_Rh"
+			},
+			{
+				"name": "Pd",
+				"gamosName": "G4_Pd"
+			},
+			{
+				"name": "Ag",
+				"gamosName": "G4_Ag"
+			},
+			{
+				"name": "Cd",
+				"gamosName": "G4_Cd"
+			},
+			{
+				"name": "In",
+				"gamosName": "G4_In"
+			},
+			{
+				"name": "Sn",
+				"gamosName": "G4_Sn"
+			},
+			{
+				"name": "Sb",
+				"gamosName": "G4_Sb"
+			},
+			{
+				"name": "Te",
+				"gamosName": "G4_Te"
+			},
+			{
+				"name": "I",
+				"gamosName": "G4_I"
+			},
+			{
+				"name": "Xe",
+				"gamosName": "G4_Xe"
+			},
+			{
+				"name": "Cs",
+				"gamosName": "G4_Cs"
+			},
+			{
+				"name": "Ba",
+				"gamosName": "G4_Ba"
+			},
+			{
+				"name": "La",
+				"gamosName": "G4_La"
+			},
+			{
+				"name": "Ce",
+				"gamosName": "G4_Ce"
+			},
+			{
+				"name": "Pr",
+				"gamosName": "G4_Pr"
+			},
+			{
+				"name": "Nd",
+				"gamosName": "G4_Nd"
+			},
+			{
+				"name": "Pm",
+				"gamosName": "G4_Pm"
+			},
+			{
+				"name": "Sm",
+				"gamosName": "G4_Sm"
+			},
+			{
+				"name": "Eu",
+				"gamosName": "G4_Eu"
+			},
+			{
+				"name": "Gd",
+				"gamosName": "G4_Gd"
+			},
+			{
+				"name": "Tb",
+				"gamosName": "G4_Tb"
+			},
+			{
+				"name": "Dy",
+				"gamosName": "G4_Dy"
+			},
+			{
+				"name": "Ho",
+				"gamosName": "G4_Ho"
+			},
+			{
+				"name": "Er",
+				"gamosName": "G4_Er"
+			},
+			{
+				"name": "Tm",
+				"gamosName": "G4_Tm"
+			},
+			{
+				"name": "Yb",
+				"gamosName": "G4_Yb"
+			},
+			{
+				"name": "Lu",
+				"gamosName": "G4_Lu"
+			},
+			{
+				"name": "Hf",
+				"gamosName": "G4_Hf"
+			},
+			{
+				"name": "Ta",
+				"gamosName": "G4_Ta"
+			},
+			{
+				"name": "W",
+				"gamosName": "G4_W"
+			},
+			{
+				"name": "Re",
+				"gamosName": "G4_Re"
+			},
+			{
+				"name": "Os",
+				"gamosName": "G4_Os"
+			},
+			{
+				"name": "Ir",
+				"gamosName": "G4_Ir"
+			},
+			{
+				"name": "Pt",
+				"gamosName": "G4_Pt"
+			},
+			{
+				"name": "Au",
+				"gamosName": "G4_Au"
+			},
+			{
+				"name": "Hg",
+				"gamosName": "G4_Hg"
+			},
+			{
+				"name": "Tl",
+				"gamosName": "G4_Tl"
+			},
+			{
+				"name": "Pb",
+				"gamosName": "G4_Pb"
+			},
+			{
+				"name": "Bi",
+				"gamosName": "G4_Bi"
+			},
+			{
+				"name": "Po",
+				"gamosName": "G4_Po"
+			},
+			{
+				"name": "At",
+				"gamosName": "G4_At"
+			},
+			{
+				"name": "Rn",
+				"gamosName": "G4_Rn"
+			},
+			{
+				"name": "Fr",
+				"gamosName": "G4_Fr"
+			},
+			{
+				"name": "Ra",
+				"gamosName": "G4_Ra"
+			},
+			{
+				"name": "Ac",
+				"gamosName": "G4_Ac"
+			},
+			{
+				"name": "Th",
+				"gamosName": "G4_Th"
+			},
+			{
+				"name": "Pa",
+				"gamosName": "G4_Pa"
+			},
+			{
+				"name": "U",
+				"gamosName": "G4_U"
+			},
+			{
+				"name": "Np",
+				"gamosName": "G4_Np"
+			},
+			{
+				"name": "Pu",
+				"gamosName": "G4_Pu"
+			},
+			{
+				"name": "Am",
+				"gamosName": "G4_Am"
+			},
+			{
+				"name": "Cm",
+				"gamosName": "G4_Cm"
+			},
+			{
+				"name": "Bk",
+				"gamosName": "G4_Bk"
+			},
+			{
+				"name": "Cf",
+				"gamosName": "G4_Cf"
+			}
+]
+
+
+
+
+	
+	 

@@ -1,0 +1,31 @@
+[
+			{
+				"particleName": "Gamma",
+				"gamosName": "gamma",
+				"type": "particle",
+				"particleType": "other",
+				"pdg": 22,
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Optical photon",
+				"gamosName": "opticalphoton",
+				"type": "particle",
+				"pdg": 22,
+				"particleType": "other",
+				"charge": "neutral"
+			
+			},
+			{
+				"particleName": "Geantino",
+				"gamosName": "geantino",
+				"type": "particle",
+				"pdg": 0,
+				"particleType": "other",
+				"charge": "neutral"
+			
+			}
+]
+
+

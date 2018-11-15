@@ -1,0 +1,86 @@
+{
+	
+	"command": "sceneHandler",
+	"description": "Operations on Geant4 scene handlers.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "attach",
+			"route": "/vis/sceneHandler/",
+			"type": "command",
+			"description": "Attaches scene to current scene handler.",
+			"argList": [
+				{
+					"arg": "scene-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "create",
+			"route": "/vis/sceneHandler/",
+			"type": "command",
+			"description": "Creates an scene handler for a specific graphics system.",
+			"argList": [
+				{
+					"arg": "graphics-system-name",
+					"optional": false,
+					"type": "string",
+					"default": "",
+					"candidates": ["ASCIITree","ATree","DAWNFILE","DAWNFILE","G4HepRep","HepRepXML",
+								"G4HepRepFile","HepRepFile","RayTracer","RayTracer","VRML1FILE",
+								"VRML1FILE","VRML2FILE","VRML2FILE","gMocrenFile","gMocrenFile",
+								"FukuiRenderer","DAWN","VRML1","VRML1","VRML2","VRML2",
+								"OpenGLImmediateX","OGLIX","OGLI","OpenGLStoredX","OGLSX","OGL","OGLS"]
+				},
+				{
+					"arg": "scene-handler-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "list",
+			"route": "/vis/sceneHandler/",
+			"type": "command",
+			"description": "Lists scene handler(s).",
+			"argList": [
+				{
+					"arg": "scene-handler-name",
+					"optional": true,
+					"type": "string",
+					"default": "all"
+				},
+				{
+					"arg": "verbosity",
+					"optional": true,
+					"type": "string",
+					"default": "warnings"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "select",
+			"route": "/vis/sceneHandler/",
+			"type": "command",
+			"description": "Selects a scene handler.",
+			"argList": [
+				{
+					"arg": "scene-handler-name",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		}
+	
+	]
+}

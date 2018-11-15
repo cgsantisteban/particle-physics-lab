@@ -1,0 +1,67 @@
+{
+	"command": "field",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "setMagField",
+			"route": "/gamos/field/",
+			"type": "command",
+			"description": "Define magnetic field vector: FIELD_X FIELD_Y FIELD_Z",
+			"argList": [
+					{
+						"arg": "magField",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setElecField",
+			"route": "/gamos/field/",
+			"type": "command",
+			"description": "Define electric field vector: FIELD_X FIELD_Y FIELD_Z",
+			"argList": [
+					{
+						"arg": "elecField",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setEMField",
+			"route": "/gamos/field/",
+			"type": "command",
+			"description": "Define electromagnetic field vector",
+			"argList": [
+					{
+						"arg": "emField",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "setLocalMagField",
+			"route": "/gamos/field/",
+			"type": "command",
+			"description": "Define local magnetic field vector",
+			"argList": [
+					{
+						"arg": "localMagField",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["Idle"]
+		}
+	]
+}

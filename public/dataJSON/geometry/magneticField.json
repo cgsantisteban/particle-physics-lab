@@ -1,0 +1,17 @@
+{
+	"Bx": {
+			"value": 0,
+			"units": "T",
+			"type": "Field"
+		},
+	"By": {
+			"value": 0,
+			"units": "T",
+			"type": "Field"
+		},
+	"Bz": {
+			"value": 0,
+			"units": "T",
+			"type": "Field"
+		}	
+}

@@ -1,0 +1,68 @@
+    <section class="content-header">
+      <h1>
+       	Data analysis
+        <small>Output data</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#!/particlelab"><i class="fa fa-home"></i> Lab Home</a></li>
+        <li class="active">Scorer histograms</li>
+    </ol>
+    </section>
+    <section>
+    	<div class="content">
+	    		<div class="box box-primary">
+	    		  <div class="box-header with-border">
+	                  <h3 class="box-title">Histograms</h3>
+	              </div><!-- /.box-header -->
+				  <div class="box-body">
+				   		<div class="row">
+				   			<div class="col col-md-12">
+				   				<div class="row">
+				   					<div class="col-md-4">
+				   						<div class="form-group">
+					                      <label>Scorers</label>
+					                      <select class="form-control" ng-model="selectedScorer"
+					                      		  ng-options="scorer.scorerName for scorer in histograms.scorerHistograms"
+					                      		 >
+					                      </select>
+			                    		</div>
+				   					</div>
+				   					<div class="col-md-4" ng-show="isPhantom && !isClassifier">
+				   						<div class="form-group">
+					                      <label>Graph type</label>
+					                       <select class="form-control" ng-model="graphType"
+					                      		  ng-options="gt for gt in graphTypeList">
+					                       </select>
+			                    		</div>
+				   					</div>
+				   					<div class="col-md-4" ng-show="isPhantom && graphType != 'index' ">
+				   						<div class="form-group" ng-class="{'has-error':!isValidLayer.isValid}">
+					                      <label>
+					                      		Layer (z-axis) {{dimLayer}} (max.: {{scorerVolume.parameterisation.parameters['N copies Z'].value}})
+					                      </label>
+					                      <input ng-model="layer"
+									    	   type="number" class="form-control" 
+									    	   min=1 
+									    	   max="{{scorerVolume.parameterisation.parameters['N. copies Z'].value}}" >
+			                    		</div>
+			                    		<div ng-if="!isvalidLayer.isValid" id="display-error">
+											<p ng-repeat="error in isValidLayer.errorMessages" class="text-red">
+												<em>{{error}}</em>
+											</p>
+			      						</div>
+				   					</div>
+				   				</div>
+				   			</div>
+				   		</div>
+				   		<hr>
+				   		<div class="row">
+				   				<div class="col col-md-12">
+							 		<draw-scorer scorer="selectedScorer" graphtype="graphType" volume="scorerVolume"
+							 				layer="layer" isvalidlayer="isValidLayer.isValid" width="90" height="100"></draw-scorer>
+							 	</div>
+				   		</div>
+				  </div>
+				</div>	
+	    </div>
+    </section>
+

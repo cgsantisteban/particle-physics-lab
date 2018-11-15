@@ -1,0 +1,23 @@
+{
+	"command": "base",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "printParametersUsage",
+			"route": "/gamos/base/",
+			"type": "command",
+			"description": "Print the usage of Parameters",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "int",
+						"default": 0 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		}
+	
+	]
+}

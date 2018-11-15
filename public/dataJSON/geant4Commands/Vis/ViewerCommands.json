@@ -1,0 +1,1236 @@
+{
+	"command": "viewer",
+	"description": "Operations on Geant4 viewers.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "addCutawayPlane",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Add cutaway plane to current viewer.",
+			"argList": [
+				{
+					"arg": "x",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "y",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "z",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "unit",
+					"optional": true,
+					"type": "strine",
+					"default": "m"
+				},
+				{
+					"arg": "nx",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "ny",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "nz",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "changeCutawayPlane",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Change cutaway plane.",
+			"argList": [
+				{
+					"arg": "index",
+					"optional": false,
+					"type": "int",
+					"default": 1
+				},
+				{
+					"arg": "x",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "y",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "z",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "unit",
+					"optional": true,
+					"type": "strine",
+					"default": "m"
+				},
+				{
+					"arg": "nx",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "ny",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "nz",
+					"optional": true,
+					"type": "double",
+					"default": 0
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "clear",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Clears viewer.",
+			"argList": [
+				{
+					"arg": "viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "clearCutawayPlanes",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Clear cutaway planes of current viewer.",
+			"argList": [],
+			"available": ["all"]
+		},
+		{
+			"command": "clearTransients",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Clears transients from viewer.",
+			"argList": [
+				{
+					"arg": "viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "clone",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Clones viewer.",
+			"argList": [
+				{
+					"arg": "original-viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "clone-name",
+					"optional": true,
+					"type": "string",
+					"default": "node"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "copyViewFrom",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Copy the camera-specific parameters from the specified viewer.",
+			"argList": [
+				{
+					"arg": "from-viewer-name",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "create",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Creates a viewer for the specified scene handler.",
+			"argList": [
+				{
+					"arg": "scene-handler",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "window-size-hint",
+					"optional": true,
+					"type": "string",
+					"default": "600"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "dolly",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Incremental dolly.",
+			"argList": [
+				{
+					"arg": "increment",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "Unit",
+					"optional": false,
+					"type": "string",
+					"default": "m"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "dollyTo",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Dolly to specific coordinate.",
+			"argList": [
+				{
+					"arg": "distance",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "Unit",
+					"optional": false,
+					"type": "string",
+					"default": "m"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "flush",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Compound command: /vis/viewer/refresh + /vis/viewer/update.",
+			"argList": [
+				{
+					"arg": "viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "list",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Lists viewers(s).",
+			"argList": [
+				{
+					"arg": "viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": "all"
+				},
+				{
+					"arg": "verbosity",
+					"optional": true,
+					"type": "string",
+					"default": "warnings"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "pan",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Incremental pan.",
+			"argList": [
+				{
+					"arg": "right-increment",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "up-increment",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "unit",
+					"optional": true,
+					"type": "string",
+					"default": "m"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "panTo",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Pan to specific coordinate.",
+			"argList": [
+				{
+					"arg": "right",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "up",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "unit",
+					"optional": true,
+					"type": "string",
+					"default": "m"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "rebuild",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Forces rebuild of graphical database.",
+			"argList": [
+				{
+					"arg": "viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "refresh",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Refreshes viewer.",
+			"argList": [
+				{
+					"arg": "viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "reset",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Reset viewer.",
+			"argList": [
+				{
+					"arg": "viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "save",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Reset viewer.",
+			"argList": [
+				{
+					"arg": "file-name",
+					"optional": true,
+					"type": "string",
+					"default": "G4cout"
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "scale",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Incremental (non-uniform) scaling.",
+			"argList": [
+				{
+					"arg": "x-scale-multiplier",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "y-scale-multiplier",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "z-scale-multiplier",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "scaleTo",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Absolute (non-uniform) scaling.",
+			"argList": [
+				{
+					"arg": "x-scale-factor",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "y-scale-factor",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "z-scale-factor",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "select",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Selects viewer.",
+			"argList": [
+				{
+					"arg": "viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "update",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Triggers graphical database post-processing for viewers using that technique.",
+			"argList": [
+				{
+					"arg": "viewer-name",
+					"optional": true,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "zoom",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Incremental zoom.",
+			"argList": [
+				{
+					"arg": "multiplier",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "zoomTo",
+			"route": "/vis/viewer/",
+			"type": "command",
+			"description": "Absolute zoom.",
+			"argList": [
+				{
+					"arg": "factor",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "default",
+			"description": "Set default values for future viewers.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "hiddenEdge",
+					"route": "/vis/viewer/default/",
+					"type": "command",
+					"description": "Default hiddenEdge drawing for future viewers.",
+					"argList": [
+						{
+							"arg": "hidden-edge",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "style",
+					"route": "/vis/viewer/default/",
+					"type": "command",
+					"description": "Default drawing style for future viewers.",
+					"argList": [
+						{
+							"arg": "style",
+							"optional": false,
+							"type": "string",
+							"default": "",
+							"candidates": ["wireframe","surface"]
+						}
+					],
+					"available": ["all"]
+				}
+			
+			]
+		},
+		{
+			"command": "set",
+			"description": "Set view parameters of current viewer.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "all",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Copies view parameters.",
+					"argList": [
+						{
+							"arg": "from-viewer-name",
+							"optional": false,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "autoRefresh",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Sets auto-refresh.",
+					"argList": [
+						{
+							"arg": "auto-refresh",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "auxiliaryEdge",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Sets visibility of auxiliary edges.",
+					"argList": [
+						{
+							"arg": "edge",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "background",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set background colour and transparency (default black and opaque).",
+					"argList": [
+						{
+							"arg": "red",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "green",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "blue",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "opacity",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "culling",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set culling options.",
+					"argList": [
+						{
+							"arg": "culling-option",
+							"optional": false,
+							"type": "string",
+							"default": ""
+						},
+						{
+							"arg": "action",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						},
+						{
+							"arg": "density-threshold",
+							"optional": true,
+							"type": "double",
+							"default": 0.01
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "g/cm3",
+							"candidates": ["g/cm3","mg/cm3","kg/m3"]
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "cutawayMode",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Sets cutaway mode - add (union) or multiply (intersection).",
+					"argList": [
+						{
+							"arg": "cutaway-mode",
+							"optional": false,
+							"type": "string",
+							"default": "",
+							"candidates": ["add","union","multiply","intersection"]
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "defaultColour",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set defaultColour colour and transparency (default white and opaque).",
+					"argList": [
+						{
+							"arg": "red",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "green",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "blue",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "opacity",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "defaultTextColour",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set defaultTextColour colour and transparency (default white and opaque).",
+					"argList": [
+						{
+							"arg": "red",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "green",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "blue",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "opacity",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "edge",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Edges become visible/invisible in surface mode.",
+					"argList": [
+						{
+							"arg": "edge",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "explodeFactor",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Moves top-level drawn volumes by this factor from this centre.",
+					"argList": [
+						{
+							"arg": "explodeFactor",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "x",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "z",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "m"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "globalLineWidthScale",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Multiplies line widths by this factor.",
+					"argList": [
+						{
+							"arg": "scale-factor",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "globalMarkerScale",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Multiplies marker sizes by this factor.",
+					"argList": [
+						{
+							"arg": "scale-factor",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "hiddenEdge",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Edges become hidden/seen in wireframe or surface mode.",
+					"argList": [
+						{
+							"arg": "hidden-edge",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "hiddenMarker",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "If true, closer objects hide markers. Otherwise, markers always show.",
+					"argList": [
+						{
+							"arg": "hidden-marker",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "lightsMove",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Lights move with camera or with object",
+					"argList": [
+						{
+							"arg": "lightsMove",
+							"optional": false,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "lightsThetaPhi",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set direction from target to lights.",
+					"argList": [
+						{
+							"arg": "theta",
+							"optional": true,
+							"type": "double",
+							"default": 60
+						},
+						{
+							"arg": "phi",
+							"optional": true,
+							"type": "double",
+							"default": 45
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "deg"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "lightsVector",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set direction from target to lights.",
+					"argList": [
+						{
+							"arg": "x",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "y",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "z",
+							"optional": true,
+							"type": "string",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "lineSegmentsPerCircle",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set number of sides per circle for polygon/polyhedron drawing.",
+					"argList": [
+						{
+							"arg": "line-segments",
+							"optional": true,
+							"type": "int",
+							"default": 24
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "picking",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Sets picking, if available.",
+					"argList": [
+						{
+							"arg": "picking",
+							"optional": true,
+							"type": "boolean",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "projection",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set projection style - o[rthogonal] or p[erspective].",
+					"argList": [
+						{
+							"arg": "projection",
+							"optional": true,
+							"type": "string",
+							"default": "orthogonal",
+							"candidates": ["orthogonal","perspective"]
+						},
+						{
+							"arg": "field-half-angle",
+							"optional": true,
+							"type": "double",
+							"default": 30
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "deg"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "rotationStyle",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set style of rotation - constrainUpDirection or freeRotation constrainUpDirection: conventional HEP view.",
+					"argList": [
+						{
+							"arg": "style",
+							"optional": false,
+							"type": "string",
+							"default": "",
+							"candidates": ["constrainUpDirection","freeRotation"]
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "sectionPlane",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set plane for drawing section (DCUT).",
+					"argList": [
+						{
+							"arg": "Selector",
+							"optional": true,
+							"type": "char",
+							"default": "on"
+						},
+						{
+							"arg": "x",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "z",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "m"
+						},
+						{
+							"arg": "nx",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "ny",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "nz",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "style",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set style of drawing - w[ireframe] or s[urface].",
+					"argList": [
+						{
+							"arg": "style",
+							"optional": true,
+							"type": "string",
+							"default": "",
+							"candidates": ["wireframe","surface"]
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "targetPoint",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set target point.",
+					"argList": [
+						{
+							"arg": "x",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "z",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "Unit",
+							"optional": false,
+							"type": "string",
+							"default": ""
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "upThetaPhi",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set up vector.",
+					"argList": [
+						{
+							"arg": "theta",
+							"optional": true,
+							"type": "double",
+							"default": 90
+						},
+						{
+							"arg": "phi",
+							"optional": true,
+							"type": "double",
+							"default": 90
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "deg"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "upVector",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set up vector.",
+					"argList": [
+						{
+							"arg": "x",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "y",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "z",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "viewpointThetaPhi",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set direction from target to camera.",
+					"argList": [
+						{
+							"arg": "theta",
+							"optional": true,
+							"type": "double",
+							"default": 60
+						},
+						{
+							"arg": "phi",
+							"optional": true,
+							"type": "double",
+							"default": 45
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "deg"
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "viewpointVector",
+					"route": "/vis/viewer/set/",
+					"type": "command",
+					"description": "Set direction from target to camera.",
+					"argList": [
+						{
+							"arg": "x",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "y",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "z",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				}
+			
+			]
+		}
+	
+	
+	]
+}

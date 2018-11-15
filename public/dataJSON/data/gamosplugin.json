@@ -1,0 +1,997 @@
+[ 
+ 				{"type": "Run",
+ 				 "dataList": [
+		 						{
+		 							"name": "Accumulated energy lost",
+		 							"gamosName": "AccumulatedEnergyLost",
+		 							"type": "Energy",
+		 							"units": "MeV",
+		 							"nbins": 100,
+		 							"limits": [0,1]
+		 						},
+						 		{
+							 		"name": "Accumulated energy deposited",
+							 		"gamosName": "AccumulatedEnergyDeposited",
+							 		"type": "Energy",
+		 							"units": "MeV",
+		 							"nbins": 100,
+		 							"limits": [0,1]
+						 		},
+						 		{
+							 		"name": "Accumulated dose",
+							 		"gamosName": "AccumulatedDose",
+							 		"type": "Energy",
+		 							"units": "Gy",
+		 							"nbins": 100,
+		 							"limits": [0,1]
+						 		}
+ 						 	]
+ 						 
+ 				},
+ 				{
+ 				 "type": "Event",
+ 				 "dataList": [
+ 									{
+ 							 			"name": "Initial kinetic energy",
+	 							 		"gamosName": "InitialKineticEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+	 							 	{
+ 							 			"name": "Initial total energy",
+	 							 		"gamosName": "InitialTotalEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+									{
+	 							 		"name": "Accumulated Ener Deposited",
+	 							 		"gamosName": "AccumulatedEnergyDeposited",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 						 		},
+	 						 		{
+	 							 		"name": "Accumulated dose",
+	 							 		"gamosName": "AccumulatedDose",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 						 		},
+	 						 		{
+	 						        	"name": "Initial position X",
+	 						        	"gamosName": "InitialPosX",
+	 						        	"type": "Position",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						        {
+	 						        	"name": "Initial position Y",
+	 						        	"gamosName": "InitialPosY",
+	 						        	"type": "Position",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						        {
+	 						        	"name": "Initial position Z",
+	 						        	"gamosName": "InitialPosZ",
+	 						        	"type": "Position",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						 		{
+	 						        	"name": "Initial local position X",
+	 						        	"gamosName": "InitialLocalPosX",
+	 						        	"type": "Position",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						        {
+	 						        	"name": "Initial local position Y",
+	 						        	"gamosName": "InitialLocalPosY",
+	 						        	"type": "Position",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						        {
+	 						        	"name": "Initial local position Z",
+	 						        	"gamosName": "InitialLocalPosZ",
+	 						        	"type": "Position",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						        {
+	 						        	"name": "Initial direction X",
+	 						        	"gamosName": "InitialDirX",
+	 						        	"type": "Direction",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						        {
+	 						        	"name": "Initial direction Y",
+	 						        	"gamosName": "InitialDirY",
+	 						        	"type": "Direction",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						        {
+	 						        	"name": "Initial direction Z",
+	 						        	"gamosName": "InitialDirZ",
+	 						        	"type": "Direction",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						        {
+	 						        	"name": "Initial local direction X",
+	 						        	"gamosName": "InitialLocalDirX",
+	 						        	"type": "Direction",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						        {
+	 						        	"name": "Initial local direction Y",
+	 						        	"gamosName": "InitialLocalDirY",
+	 						        	"type": "Direction",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        },
+	 						        {
+	 						        	"name": "Initial local direction Z",
+	 						        	"gamosName": "InitialLocalDirZ",
+	 						        	"type": "Direction",
+	 						        	"nbins": 100,
+	 						        	"limits": [-1000,1000],
+			 							"units": "mm"
+	 						        }
+ 						
+ 					  		 ]
+ 				},
+ 				{"type": "Stack",
+ 				 "dataList": [
+		 						{
+		 							"name": "Counter",
+		 							"gamosName": "StackCounter",
+		 							"type": "Counter",
+		 							"units": null,
+		 							"nbins": 150,
+		 							"limits": [0,5000],
+		 							"particle": null
+		 						}
+ 						 	]
+ 						 
+ 				},
+ 				{
+ 				 "type": "Track",
+ 	 			 "dataList": [
+ 	 								{
+ 							 			"name": "Initial kinetic energy",
+	 							 		"gamosName": "InitialKineticEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+	 							 	{
+ 							 			"name": "Final kinetic energy",
+	 							 		"gamosName": "FinalKineticEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+	 							 	{
+ 							 			"name": "Initial total energy",
+	 							 		"gamosName": "InitialTotalEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+	 							 	{
+ 							 			"name": "Final total energy",
+	 							 		"gamosName": "FinalTotalEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+	 							 	{
+ 							 			"name": "Kinetic energy change",
+	 							 		"gamosName": "KineticEnergyChange",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+								{
+						 			"name": "Accumulated energy lost",
+ 							 		"gamosName": "AccumulatedEnergyLost",
+ 							 		"type": "Energy",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+ 						 		},
+ 						 		{
+ 							 		"name": "Accumulated energy deposited",
+ 							 		"gamosName": "AccumulatedEnergyDeposited",
+ 							 		"type": "Energy",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+ 						 		},
+ 						 		{
+ 							 		"name": "Accumulated dose",
+ 							 		"gamosName": "AccumulatedDose",
+ 							 		"type": "Energy",
+	 								"units": "Gy",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+ 						 		},
+ 						        {
+ 						        	"name": "Initial direction X",
+ 						        	"gamosName": "InitialDirX",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+					        	},
+					        	{
+ 						        	"name": "Initial direction Y",
+ 						        	"gamosName": "InitialDirY",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Initial direction Z",
+ 						        	"gamosName": "InitialDirZ",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Initial local direction X",
+ 						        	"gamosName": "InitialLocalDirX",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+					        	},
+					        	{
+ 						        	"name": "Initial local direction Y",
+ 						        	"gamosName": "InitialLocalDirY",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Initial lcoal direction Z",
+ 						        	"gamosName": "InitialLocalDirZ",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Final direction X",
+ 						        	"gamosName": "FinalDirX",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+					        	},
+					        	{
+ 						        	"name": "Final direction Y",
+ 						        	"gamosName": "FinalDirY",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Final direction Z",
+ 						        	"gamosName": "FinalDirZ",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Final local direction X",
+ 						        	"gamosName": "FinalLocalDirX",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+					        	},
+					        	{
+ 						        	"name": "Final local direction Y",
+ 						        	"gamosName": "FinalLocalDirY",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Final local direction Z",
+ 						        	"gamosName": "FinalLocalDirZ",
+ 						        	"type": "Direction",
+		 							"units": "mm",
+		 							"nbins": 100,
+		 							"limits": [-1000,1000]
+ 						        },
+ 	 						    {
+ 						        	"name": "Initial position X",
+ 						        	"gamosName": "InitialPosX",
+ 						        	"type": "Position",
+	 								"units": "mm",
+	 								"nbins": 100,
+	 								"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Initial position Y",
+ 						        	"gamosName": "InitialPosY",
+ 						        	"type": "Position",
+	 								"units": "mm",
+	 								"nbins": 100,
+	 								"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Initial position Z",
+ 						        	"gamosName": "InitialPosZ",
+ 						        	"type": "Position",
+	 								"units": "mm",
+	 								"nbins": 100,
+	 								"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Initial local position X",
+ 						        	"gamosName": "InitialLocalPosX",
+ 						        	"type": "Position",
+	 								"units": "mm",
+	 								"nbins": 1000,
+	 								"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Initial local position Y",
+ 						        	"gamosName": "InitialLocalPosY",
+ 						        	"type": "Position",
+	 								"units": "mm",
+	 								"nbins": 100,
+	 								"limits": [-1000,100]
+ 						        },
+ 						        {
+ 						        	"name": "Initial local position Z",
+ 						        	"gamosName": "InitialLocalPosZ",
+ 						        	"type": "Position",
+	 								"units": "cm",
+	 								"nbins": 100,
+	 								"limits": [-100,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Final position X",
+ 						        	"gamosName": "FinalPosX",
+ 						        	"type": "Position",
+	 								"units": "nm",
+	 								"nbins": 100,
+	 								"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Final position Y",
+ 						        	"gamosName": "FinalPosY",
+ 						        	"type": "Position",
+	 								"units": "mm",
+	 								"nbins": 100,
+	 								"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Final position Z",
+ 						        	"gamosName": "FinalPosZ",
+ 						        	"type": "Position",
+	 								"units": "mm",
+	 								"nbins": 100,
+	 								"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Final local position X",
+ 						        	"gamosName": "FinalLocalPosX",
+ 						        	"type": "Position",
+	 								"units": "mm",
+	 								"nbins": 100,
+	 								"limits": [-1000,1000]
+ 						        },
+ 						        {
+ 						        	"name": "Final local position Y",
+ 						        	"gamosName": "FinalLocalPosY",
+ 						        	"type": "Position",
+	 								"units": "cm",
+	 								"nbins": 100,
+	 								"limits": [-100,100]
+ 						        },
+ 						        {
+ 						        	"name": "Final local position Z",
+ 						        	"gamosName": "FinalLocalPosZ",
+ 						        	"type": "Position",
+	 								"units": "mm",
+	 								"nbins": 100,
+	 								"limits": [-1000,1000]
+ 						        },
+	 	 	 				    {
+						        	"name": "Initial momentum X",
+						        	"gamosName": "InitialMomX",
+						        	"type": "Momentum",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+						        },
+						        {
+						        	"name": "Initial momentum Y",
+						        	"gamosName": "InitialMomY",
+						        	"type": "Momentum",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+						        },
+						        {
+						        	"name": "Initial momentum Z",
+						        	"gamosName": "InitialMomZ",
+						        	"type": "Momentum",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+						        },
+						        {
+						        	"name": "Final momentum X",
+						        	"gamosName": "FinalMomX",
+						        	"type": "Momentum",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+						        },
+						        {
+						        	"name": "Final momentum Y",
+						        	"gamosName": "FinalMomY",
+						        	"type": "Momentum",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+						        },
+						        {
+						        	"name": "Final momentum Z",
+						        	"gamosName": "FinalMomZ",
+						        	"type": "Momentum",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+						        },
+						        {
+ 						        	"name": "Momentum change X",
+ 						        	"gamosName": "MomChangeX",
+ 						        	"type": "Momentum",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+ 						        },
+ 						        {
+ 						        	"name": "Momentum change Y",
+ 						        	"gamosName": "MomChangeY",
+ 						        	"type": "Momentum",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+ 						        },
+ 						        {
+ 						        	"name": "Momentum change Z",
+ 						        	"gamosName": "MomChangeZ",
+ 						        	"type": "Momentum",
+	 								"units": "MeV",
+	 								"nbins": 100,
+	 								"limits": [0,1]
+ 						        }
+ 	 					   ]
+ 	 				},
+ 	 				{"type": "Step",
+ 	 				 "dataList": [
+ 	 								{
+ 							 			"name": "Initial kinetic energy",
+	 							 		"gamosName": "InitialKineticEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+	 							 	{
+ 							 			"name": "Final kinetic energy",
+	 							 		"gamosName": "FinalKineticEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+	 							 	{
+ 							 			"name": "Initial total energy",
+	 							 		"gamosName": "InitialTotalEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+	 							 	{
+ 							 			"name": "Final total energy",
+	 							 		"gamosName": "FinalTotalEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+	 							 	{
+ 							 			"name": "Kinetic energy change",
+	 							 		"gamosName": "KineticEnergyChange",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 	},
+ 									{
+ 							 			"name": "Accumulated energy lost",
+	 							 		"gamosName": "AccumulatedEnergyLost",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 							 		
+	 						 		},
+	 						 		{
+	 							 		"name": "Accumulated energy deposited",
+	 							 		"gamosName": "AccumulatedEnergyDeposited",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 						 		},
+	 						 		{
+	 							 		"name": "Accumulated dose",
+	 							 		"gamosName": "AccumulatedDose",
+	 							 		"type": "Energy",
+			 							"units": "Gy",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 						 		},
+ 	 						        {
+	 						        	"name": "Initial direction X",
+	 						        	"gamosName": "InitialDirX",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 1000,
+		 								"limits": [-1000,1000]
+ 						        	},
+ 						        	{
+	 						        	"name": "Initial direction Y",
+	 						        	"gamosName": "InitialDirY",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+	 						        },
+	 						        {
+	 						        	"name": "Initial direction Z",
+	 						        	"gamosName": "InitialDirZ",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+	 						        },
+	 						        {
+	 						        	"name": "Initial local direction X",
+	 						        	"gamosName": "InitialLocalDirX",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+ 						        	},
+ 						        	{
+	 						        	"name": "Initial local direction Y",
+	 						        	"gamosName": "InitialLocalDirY",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+	 						        },
+	 						        {
+	 						        	"name": "Initial local direction Z",
+	 						        	"gamosName": "InitialLocalDirZ",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+	 						        },
+	 						        {
+	 						        	"name": "Final direction X",
+	 						        	"gamosName": "FinalDirX",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+ 						        	},
+ 						        	{
+	 						        	"name": "Final direction Y",
+	 						        	"gamosName": "FinalDirY",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+	 						        },
+	 						        {
+	 						        	"name": "Final direction Z",
+	 						        	"gamosName": "FinalDirZ",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+	 						        },
+	 						        {
+	 						        	"name": "Final local direction X",
+	 						        	"gamosName": "FinalLocalDirX",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+ 						        	},
+ 						        	{
+	 						        	"name": "Final local direction Y",
+	 						        	"gamosName": "FinalLocalDirY",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+	 						        },
+	 						        {
+	 						        	"name": "Final local direction Z",
+	 						        	"gamosName": "FinalLocalDirZ",
+	 						        	"type": "Direction",
+				 						"units": "mm",
+				 						"nbins": 100,
+		 								"limits": [-1000,1000]
+	 						        },
+ 	 						      	{
+ 	 						        	"name": "Initial position X",
+ 	 						        	"gamosName": "InitialPosX",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Initial position Y",
+ 	 						        	"gamosName": "InitialPosY",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Initial position Z",
+ 	 						        	"gamosName": "InitialPosZ",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Initial local position X",
+ 	 						        	"gamosName": "InitialLocalPosX",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Initial local position Y",
+ 	 						        	"gamosName": "InitialLocalPosY",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Initial local position Z",
+ 	 						        	"gamosName": "InitialLocalPosZ",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Final position X",
+ 	 						        	"gamosName": "FinalPosX",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Final position Y",
+ 	 						        	"gamosName": "FinalPosY",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Final position Z",
+ 	 						        	"gamosName": "FinalPosZ",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Final local position X",
+ 	 						        	"gamosName": "FinalLocalPosX",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Final local position Y",
+ 	 						        	"gamosName": "FinalLocalPosY",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Final local position Z",
+ 	 						        	"gamosName": "FinalLocalPosZ",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Vertex position X",
+ 	 						        	"gamosName": "VertexPosX",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Vertex position Y",
+ 	 						        	"gamosName": "VertexPosY",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Vertex position Z",
+ 	 						        	"gamosName": "VertexPosZ",
+ 	 						        	"type": "Position",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Vertex direction X",
+ 	 						        	"gamosName": "VertexDirX",
+ 	 						        	"type": "Direction",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Vertex direction Y",
+ 	 						        	"gamosName": "VertexDirY",
+ 	 						        	"type": "Direction",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Vertex direction Z",
+ 	 						        	"gamosName": "VertexDirZ",
+ 	 						        	"type": "Direction",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Direction change X",
+ 	 						        	"gamosName": "DirChangeX",
+ 	 						        	"type": "Direction",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Direction change X",
+ 	 						        	"gamosName": "DirChangeX",
+ 	 						        	"type": "Direction",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Direction change Y",
+ 	 						        	"gamosName": "DirChangeY",
+ 	 						        	"type": "Direction",
+		 								"units": "mm",
+		 								"nbins": 100,
+		 								"limits": [-1000,1000]
+ 	 						        },
+ 	 	 						    {
+ 	 						        	"name": "Initial momentum X",
+ 	 						        	"gamosName": "InitialMomX",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Initial momentum Y",
+ 	 						        	"gamosName": "InitialMomY",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Initial momentum Z",
+ 	 						        	"gamosName": "InitialMomZ",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Final momentum X",
+ 	 						        	"gamosName": "FinalMomX",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Final momentum Y",
+ 	 						        	"gamosName": "FinalMomY",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Final momentum Z",
+ 	 						        	"gamosName": "FinalMomZ",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Momentum change X",
+ 	 						        	"gamosName": "MomChangeX",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Momentum change Y",
+ 	 						        	"gamosName": "MomChangeY",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Momentum change Z",
+ 	 						        	"gamosName": "MomChangeZ",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Vertex momentum X",
+ 	 						        	"gamosName": "VertexMomX",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Vertex momentum Y",
+ 	 						        	"gamosName": "VertexMomY",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        },
+ 	 						        {
+ 	 						        	"name": "Vertex momentum Z",
+ 	 						        	"gamosName": "VertexMomZ",
+ 	 						        	"type": "Momentum",
+		 								"units": "MeV",
+		 								"nbins": 100,
+		 								"limits": [0,1]
+ 	 						        }
+ 	 	 				   ]
+ 	 				},
+ 	 				{"type": "SecondaryTrack",
+ 	 				 "dataList": [
+ 							 		{
+ 							 			"name": "Initial primary minus secondary kinetic energy",
+ 							 			"gamosName": "InitialPrimMinusSecoKineticEnergy",
+ 							 			"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+ 							 			
+ 						 		  	},
+ 							 		{
+ 							 			"name": "Final primary minus secondary kinetic energy",
+ 							 			"gamosName": "FinalPrimMinusSecoKineticEnergy",
+ 							 			"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+ 							 			
+ 						 		  	},
+	 						 		{
+	 							 		"name": "Secondary divided initial prim. kinetic energy",
+	 							 		"gamosName": "SecoDividedInitialPrimKineticEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 						 		},
+	 						 		{
+	 							 		"name": "Secondary kinetic energy",
+	 							 		"gamosName": "SecoKineticEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 						 		},
+	 						 		{
+	 							 		"name": "Initial primary kinetic energy",
+	 							 		"gamosName": "InitialPrimKineticEnergy",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 						 		},
+	 						 		{
+	 							 		"name": "FinalPrimKineticEnergy",
+	 							 		"gamosName": "FinalPrimKineticEnergy.",
+	 							 		"type": "Energy",
+			 							"units": "MeV",
+			 							"nbins": 100,
+			 							"limits": [0,1]
+	 						 		}
+ 						 		]
+	 						 
+	 				}
+
+ 	]

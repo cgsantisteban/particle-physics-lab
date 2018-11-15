@@ -1,0 +1,129 @@
+<div style="position: absolute; top: 0px; left: 10px; width: 200px;" ng-controller="PosRotCtrl">
+	<div class="box box-default">
+        <div class="box-header with-border">
+          <h3 class="box-title">Position and rotation</h3>
+          <div class="box-tools pull-right">
+            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+          </div><!-- /.box-tools -->
+        </div><!-- /.box-header -->
+        <div class="box-body">
+    		<form class="form">
+	    		<div class="row">
+	    			<div class="col-md-12">
+	    				<div class="form-group">
+	    					
+							<select class="form-control input-sm" input-sm
+				            		ng-model="experiment.geometry.volumeList[$index]"
+				            		
+				            		ng-options="v.name for v in experiment.geometry.volumeList | filter:{'isWorld': false} track by v.name"
+				            		ng-disabled="!isValidExperiment.isValidVolumes">
+				            		 <option value="">Select a volume</option>						
+				            </select>
+				    	</div>
+	    			</div>
+	    		</div>
+	    		<div class="row" ng-if="(!selectedVol.isParam || selectedVol.parameterisation.type === 'PHANTOM')">
+	    			<div class="form-group col-md-12 " ng-repeat="(coord,i) in selectedVol.position">
+						<div class="input-group" ng-class="{'has-error':!isValidPosRot.isValidPosition[coord]}">
+							<div class="input-group-addon">
+								<strong>{{coord}}</strong>
+							</div>
+							<input type="number" class="form-control input-sm" 
+								 ng-model="selectedVol.position[coord].value"
+								 >
+							<div class="input-group-addon">
+								{{selectedVol.position[coord].units}}
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-md-12" ng-repeat="(coord,i) in selectedVol.rotation">
+						<div class="input-group" ng-class="{'has-error':!isValidPosRot.isValidRotation[coord]}">
+							<div class="input-group-addon">
+								<strong>{{coord}}</strong>
+							</div>
+							<input type="number" class="form-control input-sm" 
+								ng-model="selectedVol.rotation[coord].value"
+								>
+							<div class="input-group-addon">
+								{{selectedVol.rotation[coord].units}}
+							</div>
+						</div>
+					</div>
+	    		</div>
+	    		<!-- opacity -->
+	    		<div class="row" ng-if="selectedVol != null">
+					<div class="col-md-12">
+						<div class="form-group" ng-class="{'has-error':!isValidPosRot.isValidOpacity}">
+							<div class="input-group">
+								<div class="input-group-addon">
+									<strong>Opacity</strong>
+								</div>
+								<input type="number" class="form-control input-sm" min="0" max="1" step="0.1" 
+									ng-model="selectedVol.opacity"
+									>
+							</div>
+					</div>
+						
+					</div>
+				</div>
+				<hr />
+				<!-- Parameterisation -->
+	    		<div class="row" ng-if="selectedVol != null">
+	    			<div class="col-md-6">
+	    				<div class="form-group">
+							 <div class="checkbox">
+		                        <label>
+		                          <input type="checkbox"
+		                          		 ng-model="selectedVol.isParam" 
+								   		 ng-change="initParam(selectedVol.isParam,solidData.paramTypeList[0])"
+								   		 ng-disabled="!isValidExperiment.isValidVolumes">
+		                         	<strong>Parameterisation</strong>
+		                        </label>
+		                      </div>
+			        	</div>
+	    			</div>
+	    		</div>
+	    		<div ng-if="selectedVol.isParam"> <!-- parameterisation -->
+	    			<div class="row">
+	    				<div class="col-md-12" >
+							<div class="form-group">
+								
+								<select class="form-control input-sm" ng-model="selectedVol.parameterisation"
+				                		ng-options="p.type for p in getParametersitation(selectedVol.solid.solidType) track by p.type"
+				                		>
+				                </select>
+							</div>
+						</div>
+	    			</div>
+	    			<div class="row" >
+	    				<div class="col-md-12">
+	    					<p class="text-red" ng-if="!isInParam.isValid">
+								<em>{{isInParam.errorMessages}}</em>
+							</p>	
+	    				</div>
+	    				<div class="col-md-12 form-group" ng-repeat="(parameter,i) in selectedVol.parameterisation.parameters"
+									ng-class="{'has-error':!isValidParam[parameter].isValid || !isInParam.isValid } ">
+							<div class="input-group">
+					    		<div class="input-group-addon">
+									<strong>{{parameter}}</strong>
+								</div>
+								<input type="number" 
+						         ng-model="selectedVol.parameterisation.parameters[parameter].value"
+						         class="form-control input-sm">
+						        <div class="input-group-addon" ng-if="selectedVol.parameterisation.parameters[parameter].units !== null">
+									{{selectedVol.parameterisation.parameters[parameter].units}}
+								</div>
+							</div>
+							<div>
+								<p class="text-red" ng-if="!isValidParam[parameter].isValid">
+									<em>{{isValidParam[parameter].errorMessages}}</em>
+								</p>
+							</div>	
+							
+					    </div>
+					</div>
+	    		</div> <!-- end parameterisation -->
+	    	</form>
+		</div>
+	</div>
+</div>	

@@ -1,0 +1,107 @@
+    <section class="content-header">
+      <h1>
+       	Data analysis
+        <small>Output data</small>
+      </h1>
+     <ol class="breadcrumb">
+        <li><a href="#!/particlelab"><i class="fa fa-home"></i> Lab Home</a></li>
+        <li class="active">GAMOS Data histograms</li>
+     </ol> 
+    </section>
+    <section>
+    	<div class="content">
+    		<div class="box box-primary">
+	      	  <div class="box-header with-border">
+	                  <h3 class="box-title">GAMOS Data histograms</h3>
+	           </div><!-- /.box-header -->
+			   <div class="box-body">
+				  	<div class="row">
+				  		
+				  		<div class="col-md-3">
+	   						<div class="form-group">
+		                      <label>GAMOS Data</label>
+		                      <select class="form-control" ng-model="selectedAction"
+		                      		  ng-options="ah.actionName for ah in histograms.actionHistograms"
+		                      		  ng-change="setDataClass(selectedAction.actionName,histograms.actionHistograms)">
+		                       
+		                      </select>
+                    		</div>
+	   					</div>
+	   					<div class="col-md-2">
+	   						<div class="form-group">
+		                      <label>Dimension</label>
+		                      <select class="form-control" ng-model="dimension"
+		                      		  ng-options="dim for dim in dimList"
+		                      		  ng-change="changeDimension(selectedAction.actionName,histograms.actionHistograms,dimension)"
+		                      		  >
+		                      </select>
+                    		</div>
+	   					</div>
+	   					<div class="col-md-3">
+	   						<div class="form-group">
+		                      <label>Data (plug-in)</label>
+		                      <select class="form-control" ng-model="selectedData"
+		                      		  ng-options="d for d in dataClassList.dataTypeList"
+		                      		  ng-change="setClassifier(selectedAction,selectedData,histograms.actionHistograms,dimension)"
+		                      		>
+		                      </select>
+                    		</div>
+	   					</div>
+	   					<div class="col-md-3" ng-if="dimension === '2D' && dataClassList.classifierList[0]  != null">
+	   						<div class="form-group">
+		                      <label>Classifier</label>
+		                      <select class="form-control" ng-model="classifier2D"
+		                      		  ng-options="cl for cl in dataClassList.classifierList"
+		                      		  ng-change="setClassifier(selectedAction,selectedData,histograms.actionHistograms,dimension,classifier2D)">
+		                      </select>
+                    		</div>
+	   					</div>
+	   				</div><!-- end row -->
+	   				
+	   				<div ng-if="dataClassList.classifierList[0] != null && dimension != '2D'">
+	   					<h4>Classifiers</h4>
+		   				<div class="row">
+		   					
+		   					<div class="col-md-2" ng-repeat="cl in dataClassList.classifierList">
+		   						<div class="checkbox">
+			                        <label>
+			                          <input type="checkbox"
+			                          	ng-click="addHisto(drawhistolist,selectedAction,selectedData,dataClassList.classifierList[$index],dimension)"
+										ng-checked="findHisto(drawhistolist,selectedData,dataClassList.classifierList[$index],dimension)<drawhistolist.length">
+			                         	{{cl}}
+			                        </label>
+			                    </div>
+		   					</div>
+		   				</div>
+   					</div>
+   						<div class="row">
+						<div class="col-md-12">
+							<draw-Action  drawhistolist="drawhistolist" fit="fitJSON" id="graphic" width="90" height="100">
+							</draw-Action>
+						</div>
+					</div>
+				  </div><!-- box-body -->
+				</div>	
+	    </div>
+    </section>
+     <section ng-if="drawhistolist.length === 1 && dimension == '1D' "><!-- Fit -->
+    	<div class="content">
+    			<div class="box box-primary">
+	    		  <div class="box-header with-border">
+	                  <h3 class="box-title">Fit histogram (Chi-square)</h3>
+	                  <div class="box-tools pull-right">
+	                    <button class="btn bg-primary btn-md btn-flat"  
+	                    		ng-if="isfit"
+	                    		ng-click="newFit()">New fit</button>
+	                  </div>
+	              </div><!-- /.box-header -->
+				  <div class="box-body ">
+				  		<div ng-include="'views/histograms/fitAction.html'" ng-show="!isfit"></div>
+				  		<div ng-show="isfit">
+							<div ng-include="'views/histograms/fitActionResults.html'" ></div>
+				   		</div>
+				  </div>
+				</div>	
+	   </div>
+    </section>
+ 

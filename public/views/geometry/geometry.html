@@ -1,0 +1,156 @@
+<section class="content-header">
+  <h1>
+    Geometry
+    <small>Volume and source list</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#!/particlelab"><i class="fa fa-home"></i> Lab Home</a></li>
+    <li class="active">Geometry</li>
+  </ol>
+</section>
+<!-- three  lab -->
+<section  ngsf-fullscreen>
+	<div class="content">
+ 		<div class="box box-primary">
+ 		  <div class="box-header with-border">
+               <h3 class="box-title">Virtual laboratory</h3>
+               <div class="box-tools pull-right">
+                 <button class="btn bg-primary btn-sm"  ngsf-toggle-fullscreen>
+                 	<i ng-if="!isFull" class="fa fa-expand" ></i><i ng-if="isFull" class="fa fa-compress" ></i>
+                 </button>
+               </div>
+           </div><!-- /.box-header -->
+		  	<div class="box-body">
+		   		<div class="row">
+		   			<div class="col col-md-12">
+		   				<div draw-laboratory isvalidvolumes="isValidExperiment.isValidVolumes" isin="isIn"
+		   					volumelist="experiment.geometry.volumeList" sourcelist="experiment.sourceList"  id="container" >
+						</div>
+						<ng-include src="'views/geometry/posrot.html'" 
+								ng-show="experiment.geometry.volumeList.length>1">
+						</ng-include>
+		   			</div>
+			   	</div>
+			</div>
+ 		</div>	
+ 	</div>
+</section> <!-- three lab -->
+<section class="content">
+	<div class="row">
+	 	<div class="col col-md-12">
+	 		<div class="box box-primary">
+	 		  <div class="box-header with-border">
+	               <h3 class="box-title">Volume list</h3>
+	          </div><!-- /.box-header -->
+			  <div class="box-body">
+			   		<div class="row">
+						<div class="col col-md-12 ">
+				  			<div class="alert alert-warning alert-dismissible" ng-if="newSourceData.removeSourceList.length>0">
+				                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"
+				                	ng-click="clearDelSource()">&times;</button>
+				                <h5><i class="icon fa fa-warning"></i> Deleted sources</h5>
+				                <div ng-repeat="s in newSourceData.removeSourceList">
+				                	{{s}}
+				                </div>
+				            </div>	
+							<div class="alert alert-warning alert-dismissible" ng-if="newSourceData.removeScorerList.length>0">
+				                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				                <h5><i class="icon fa fa-warning"></i> Scorers has been removed.</h5>
+				                <ul>
+				                	<li ng-repeat="s in newSourceData.removeScorerList.removeScorerList">
+				                		{{s}}
+				                	</li>
+				                </ul>
+					         </div>	
+				  			<table class="table table-bordered table-hover table-responsive">
+				  				<thead>
+				  					<tr>
+					            	    <th style="width: 5%;"></th>
+					                    <th style="width: 25%;">Name</th>
+					                    <th style="width: 20%;">Volume</th>
+					                    <th style="width: 25%;">Dimensions</th>
+					                    <th style="width: 25%;">Material</th>
+					                 </tr>
+				  				</thead>
+				  				
+				            	<tfoot>
+								    <tr>
+								      <td colspan="5" ng-show="isValidExperiment.isValidVolumes && geomCommands.length>0">
+								      	
+								      	<button class="btn btn-info btn-flat btn-xs" type="button" data-toggle="collapse" 
+										  		data-target="#collapseGeomData" 
+												aria-expanded="false" 
+												aria-controls="collapseData"
+												ng-click="isViewGeomCommand = !isViewGeomCommand">
+											<span ng-show="isViewGeomCommand"><i class="fa fa-code"></i> Show GAMOS instructions</span> 
+											<span ng-show="!isViewGeomCommand"><i class="fa fa-code"></i> Hide GAMOS instructions</span>
+										</button>
+										
+										<hr />
+								      	<div  class="collapse box box-primary box-solid" id="collapseGeomData">
+							      			<div class="box-body">
+												<p ng-repeat="line in geomCommands track by $index">
+									      			<code>{{line}}</code>
+									      		</p>
+											</div>
+										</div>
+								      </td>
+								       
+								    </tr>
+								</tfoot>
+				                <tr ng-repeat="(id,v) in experiment.geometry.volumeList track by id">
+				                    <td>
+				                    	<div class="btn-group" uib-dropdown>
+									      <button id="split-button" type="button" class="btn btn-default btn-sm btn-flat" uib-dropdown-toggle>
+									      	<i class="fa fa-gear"> </i><span class="caret"> </span>
+									      </button>
+									      <ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+									        <li role="menuitem" ng-if="v.isWorld || !showErrorVolume(v.name,isValidGeometry,isIn)"><a ng-click="addVolume('lg',id)"><i class="fa fa-edit"></i> Edit</a></li>
+									        <li role="menuitem" ng-if="!v.isWorld && !v.isParam && !showErrorVolume(v.name,isValidGeometry,isIn)"><a ng-click="cloneVolume(id)" >
+									        	<i class="fa fa-clone"></i> Clone</a>
+									        </li>
+									        <li role="menuitem" ng-if="!v.isWorld"><a ng-click="delVolume(v.name)"><i class="fa fa-trash"></i> Delete</a></li>
+									      </ul>
+									    </div>
+				                    </td>
+				                    <td>{{v.name}} <span ng-if="v.isWorld">(world)</span></td>
+				                    <td>
+				                    	{{v.solid.solidType}} <span ng-if="v.isParam"> <em>(parameterised)</em></span>
+				                    	<div ng-if="v.isParam">
+				                    		<span><em>Param. type</em>: {{v.parameterisation.type}}</span><br />
+				                   			<span><em>Parent volume</em>: {{v.parentVolume}}</span><br />
+				                   			<div ng-repeat="(key, param) in v.parameterisation.parameters">
+				                    			<em>{{key}}</em>: {{param.value}} {{param.units}}
+				                    		</div>	
+				                    	</div>
+				                    </td>
+				                    <td >
+				                    	<div ng-repeat="(dim, d) in v.solid.dimensions">
+				                    		<em>{{dim}}</em>: {{d.value}} {{d.units}}
+				                    	</div>
+				                    </td>
+				                    <td>{{v.material.name}}</td>
+				                  </tr>
+				                 
+				               	</table>
+				  			 
+				  		</div>
+					</div>		
+					<div class="row">
+						<div class="col-md-12">
+							<button class="btn btn-primary btn-flat"
+							        ng-click="addVolume('lg',-1)" ng-disabled="!isValidExperiment.isValidVolumes">
+							  		New volume
+							</button>
+						</div>
+					</div>
+			  </div>
+			</div>	
+	 	</div>
+ </div>
+</section>
+
+
+  
+ 
+

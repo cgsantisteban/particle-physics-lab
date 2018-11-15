@@ -1,0 +1,27 @@
+{
+		"name": "untitled",
+		"isVisualization": false,
+		"macroFile": "macro.in",
+		"geomFile": "geom.geom",
+		"processRemove": [],
+		"isEMField": false,
+		"emField": {
+			"electric": {},
+			"magnetic": {}
+		},
+		"localField": {
+			"magnetic": {}
+		},
+		"sourceList": [],
+		"geometry": {
+						"volumeList": []
+					},
+		"data": {	
+					"actionList": [],
+					"scorerList": [],
+					"filterList": []
+				},
+		"nBeams": 1,
+		"isPythia": false,
+		"pythiaData": null
+}

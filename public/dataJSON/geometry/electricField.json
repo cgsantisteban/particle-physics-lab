@@ -1,0 +1,17 @@
+{
+	"Ex": {
+			"value": 0,
+			"units": "N/C",
+			"type": "Field"
+		},
+	"Ey": {
+			"value": 0,
+			"units": "N/C",
+			"type": "Field"
+		},
+	"Ez": {
+			"value": 0,
+			"units": "N/C",
+			"type": "Field"
+		}	
+}

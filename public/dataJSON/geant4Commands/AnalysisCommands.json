@@ -1,0 +1,72 @@
+{
+	"command": "analysis",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "plot",
+			"collapsed":true,
+			"description": "1D profile control",
+			"children": [
+				{
+					"command": "setStyle",
+					"route": "/analysis/plot/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "Style",
+							"optional": true,
+							"type": "string",
+							"default": "inlib_default"
+						}],
+					"description": "Only one plotting style is available in low resolution",
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "setLayout",
+					"route": "/analysis/plot/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "columns",
+							"optional": false,
+							"type": "int",
+							"default": 1
+						},
+						{
+							"arg": "rows",
+							"optional": false,
+							"type": "int",
+							"default": 1
+						}],
+					"description": "Set page layout (number of columns and rows per page)",
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "setDimensions",
+					"route": "/analysis/plot/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "width",
+							"optional": false,
+							"type": "int",
+							"default": 1
+						},
+						{
+							"arg": "height",
+							"optional": false,
+							"type": "int",
+							"default": 1
+						}],
+					"description": "Set the plotter window size (width and height) in pixels",
+					"available": ["PreInit","Idle"]
+				}
+			
+			]
+			
+		}
+		
+	]
+	 
+}

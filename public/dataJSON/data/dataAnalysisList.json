@@ -1,0 +1,22 @@
+[
+	{
+		"dataName": "Final position X",
+		"gamosName": "FinalPosX",
+		"actionList": ["Track","Step"],
+		"dataType": "Energy",
+		"nbins": 200,
+		"limits": [10,200],
+		"unitList": ["eV","KeV","MeV"]
+	},
+	{
+		"dataName": "Accumulated energy lost",
+		"gamosName": "AccumulatedEnergyLost",
+		"actionList": ["Track","Step","Event","Run"],
+		"dataType": "Energy",
+		"nbins": 100,
+		"limits": [0,100],
+		"unitList": ["eV","KeV","MeV"]
+	}
+
+
+]

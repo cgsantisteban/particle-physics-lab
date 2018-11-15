@@ -1,0 +1,19 @@
+[
+	{
+		"helpPage": "physicsLib",
+		"title": "Physics list",
+		"description": "Physics list help"
+	},
+	{
+		"helpPage": "dataanalysis",
+		"title": "Data analysis",
+		"description": "GAMOS data, scores, etc. descriptions"
+	},
+	{
+		"helpPage": "pythia",
+		"title": "Pythia event generator",
+		"description": "Pythia help"
+	}
+]
+
+

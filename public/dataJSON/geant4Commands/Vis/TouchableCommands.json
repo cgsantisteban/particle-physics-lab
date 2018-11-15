@@ -1,0 +1,177 @@
+{
+	"command": "touchable",
+	"description": "Operations on touchables.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "dump",
+			"route": "/vis/touchable/",
+			"type": "command",
+			"description": "Dump touchable attributes.",
+			"argList": [],
+			"available": ["all"]
+		},
+		{
+			"command": "set",
+			"description": "Set vis attributes of current touchable.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "colour",
+					"route": "/vis/touchable/set/",
+					"type": "command",
+					"description": "Set colour of current touchable.",
+					"argList": [
+						{
+							"arg": "red",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "green",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "blue",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						},
+						{
+							"arg": "opacity",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "daughtersInvisible",
+					"route": "/vis/touchable/set/",
+					"type": "command",
+					"description": "Daughters of current touchable invisible: true/false.",
+					"argList": [
+						{
+							"arg": "daughtersInvisible",
+							"optional": true,
+							"type": "boolean",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "forceAuxEdgeVisible",
+					"route": "/vis/touchable/set/",
+					"type": "command",
+					"description": "Force auxiliary (soft) edges of current touchable to be visible: true/false.",
+					"argList": [
+						{
+							"arg": "forceAuxEdgeVisible",
+							"optional": true,
+							"type": "boolean",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "lineSegmentsPerCircle",
+					"route": "/vis/touchable/set/",
+					"type": "command",
+					"description": "For current touchable, set number of line segments per circle, the precision with which a curved line or surface is represented by a polygon or polyhedron, regardless of the view parameters. ",
+					"argList": [
+						{
+							"arg": "lineSegmentsPerCircle",
+							"optional": true,
+							"type": "int",
+							"default": -1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "forceSolid",
+					"route": "/vis/touchable/set/",
+					"type": "command",
+					"description": "Force current touchable always to be drawn solid (surface drawing).",
+					"argList": [
+						{
+							"arg": "forceSolid",
+							"optional": true,
+							"type": "boolean",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "forceWireframe",
+					"route": "/vis/touchable/set/",
+					"type": "command",
+					"description": "Force current touchable always to be drawn as wireframe.",
+					"argList": [
+						{
+							"arg": "forceWireframe",
+							"optional": true,
+							"type": "boolean",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "lineStyle",
+					"route": "/vis/touchable/set/",
+					"type": "command",
+					"description": "Set line style of current touchable drawing.",
+					"argList": [
+						{
+							"arg": "lineStyle",
+							"optional": true,
+							"type": "string",
+							"default": "unbroken",
+							"candidates": ["unbroken","dashed","dotted"]
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "lineWidth",
+					"route": "/vis/touchable/set/",
+					"type": "command",
+					"description": "Set line width of current touchable.",
+					"argList": [
+						{
+							"arg": "lineWidth",
+							"optional": true,
+							"type": "double",
+							"default": 1
+						}
+					],
+					"available": ["all"]
+				},
+				{
+					"command": "visibility",
+					"route": "/vis/touchable/set/",
+					"type": "command",
+					"description": "Set visibility of current touchable: true/false.",
+					"argList": [
+						{
+							"arg": "visibility",
+							"optional": true,
+							"type": "boolean",
+							"default": 0
+						}
+					],
+					"available": ["all"]
+				}
+			
+			]
+		}
+	]
+}

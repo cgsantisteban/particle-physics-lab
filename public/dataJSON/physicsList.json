@@ -1,0 +1,51 @@
+[
+	 {
+		 "lib": "GmEMExtendedPhysics",
+		 "processList": ["phot","compt","conv","Rayl","msc","eIoni","eBrem",
+	            		  "annihil","hIoni","ionIoni","nuclearStopping","hBrems","hPairProd","muIoni","muBrems",
+	         			  "muPairProd","CoulombScat","Scintillation","OpAbsorption","OpRayleigh","OpBoundary","Decay"
+		                 ],
+		 "description": "Low Energies (E<1 GeV). This physics list instantiates the most common EM processes and creates all GEANT4 particles (bosons, leptons, mesons, ions and short live particles).",
+		 "isPythia": false
+	 },
+	 {
+		 "lib": "G4QGSP_BERT",
+		 "processList": ["msc","hIoni","ionIoni","hBrems","hPairProd","eIoni","eBrem",
+						 "annihil","CoulombScat","phot","compt","conv","muIoni","muBrems","muPairProd",
+						 "PhotonInelastic","ElectroNuclear","PositronNuclear","Decay","hadElastic",
+						 "NeutronInelastic","nCapture","nFission","ProtonInelastic","PionPlusInelastic","PionMinusInelastic",
+						 "KaonPlusInelastic","KaonMinusInelastic","KaonZeroLInelastic","KaonZeroSInelastic","AntiProtonInelastic",
+						 "AntiNeutronInelastic","LambdaInelastic","AntiLambdaInelastic","SigmaMinusInelastic",
+						 "AntiSigmaMinusInelastic","SigmaPlusInelastic","AntiSigmaPlusInelastic","XiMinusInelastic",
+						 "AntiXiMinusInelastic","XiZeroInelastic","AntiXiZeroInelastic","OmegaMinusInelastic",
+						 "AntiOmegaMinusInelastic","hFritiofCaptureAtRest","hBertiniCaptureAtRest","muMinusCaptureAtRest",
+						 "dInelastic","tInelastic","He3Inelastic","alphaInelastic","ionInelastic",
+					     "Scintillation","OpAbsorption","OpRayleigh","OpBoundary"
+						],
+		 "description": "High energy Physics (HEP). Physics list based on a modeling using Quark Gluon String for high energies (> 20 GeV) and Bertini-style cascade up to 9.5 GeV",
+		 "isPythia": true
+	 },
+	 {
+		 "lib": "G4FTFP_BERT",
+		 "processList": ["msc","hIoni","ionIoni","hBrems","hPairProd","eIoni","eBrem","annihil",
+						 "CoulombScat","phot","compt","conv","muIoni","muBrems","muPairProd","PhotonInelastic",
+						 "ElectroNuclear","PositronNuclear","Decay","hadElastic","NeutronInelastic","nCapture",
+						 "nFission","ProtonInelastic","PionPlusInelastic","PionMinusInelastic","KaonPlusInelastic",
+						 "KaonMinusInelastic","KaonZeroLInelastic","KaonZeroSInelastic","LambdaInelastic","AntiLambdaInelastic",
+						 "SigmaMinusInelastic","AntiSigmaMinusInelastic","SigmaPlusInelastic"
+		                 ],
+		 "description": "High energy Physics (HEP). This physics list uses Bertini-style cascade for hadrons (< 5 GeV) and FTF (Fritiof) model for high energies (> 4 GeV)",
+		 "isPythia": true
+	 },
+	 {
+		 "lib": "G4Shielding",
+		 "processList": ["msc","hIoni","ionIoni","hBrems","hPairProd","eIoni","eBrem","annihil", "CoulombScat","phot","compt","conv","muIoni",
+							 "muBrems","muPairProd","PhotonInelastic","ElectroNuclear","PositronNuclear","Decay","RadioactiveDecay","hadElastic",
+							 "ProtonInelastic","NeutronInelastic","nCapture","nFission","PionPlusInelastic","PionMinusInelastic","KaonPlusInelastic",
+							 "KaonMinusInelastic","KaonZeroLInelastic","KaonZeroSInelastic","hFritiofCaptureAtRest","hBertiniCaptureAtRest","muMinusCaptureAtRest",
+							 "dInelastic","tInelastic","He3Inelastic","alphaInelastic","ionInelastic"
+						 ],
+		 "description": "Physics list based on FTFP_BERT with improved neutron cross sections from JENDL. Recommended for shielding applications,space physics and HEP.",
+		 "isPythia": true
+	 }
+ ]

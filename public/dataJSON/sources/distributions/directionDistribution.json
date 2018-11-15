@@ -1,0 +1,61 @@
+{
+	"distributionType": "Direction",
+	"distributions": [
+				{
+					"type": "Random",
+					"gamosName": "GmGenerDistDirectionRandom",
+					"parameters": {}
+				},
+				{
+					"type": "Constant",
+					"gamosName": "GmGenerDistDirectionConst",
+					"parameters": {
+							"x": {
+								"value": 0,
+								"units": "cm",
+								"type": "Direction"
+								},
+							"y": {
+									"value": 0,
+									"units": "cm",
+									"type": "Direction"
+								},
+							"z": {
+									"value": 1,
+									"units": "cm",
+									"type": "Direction"
+								}
+						
+					}
+				},
+				{
+					"type": "Cone",
+					"gamosName": "GmGenerDistDirectionCone",
+					"parameters": {
+							"x": {
+								"value": 0,
+								"units": "cm",
+								"type": "Direction"
+							},
+							"y": {
+								"value": 0,
+								"units": "cm",
+								"type": "Direction"
+								},
+							"z":{
+								"value": 1,
+								"units": "cm",
+								"type": "Direction"
+								},
+							"angle":{
+								"value": 10,
+								"units": "deg",
+								"type": "Delta"
+								}
+					}
+				}
+			
+			]
+
+
+}

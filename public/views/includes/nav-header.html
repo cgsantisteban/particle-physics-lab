@@ -1,0 +1,107 @@
+  <nav class="navbar navbar-static-top" ng-controller="HeaderCtrl">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand">{{experiment.name}} <b ng-if="!isSaved">*</b></span>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+       	<li class="dropdown notifications-menu">
+	        <!-- Menu toggle button -->
+	        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+	          	File <span class="caret"></span>
+	        </a>
+	        <ul class="dropdown-menu">
+	          <li>
+	            <ul class="menu">
+	              <li>
+	                <a href="javascript:void(0)" ng-click="resetExperiment('md')">
+		        		
+		        		<i class="fa fa-file-text-o text-aqua" ></i> New experiment
+		        	</a>
+	              </li>
+	            </ul>
+	          </li> 
+	          <li ng-if="isMongo">
+	            <ul class="menu">
+	              <li>
+	                <a href="#!/experimentlist">
+	                  <i class="fa fa-tv text-aqua"></i> Experiment list (load / delete)
+	                </a>
+	              </li>
+	            </ul>
+	          </li>
+	          <li ng-if="isMongo">
+	           <ul class="menu">
+	              <li ng-show="isValidAll">
+	                 <a href="" ng-click="saveExperiment('lg',experiment._id,0)" >
+	                 	<i class="fa fa-save text-aqua"></i> Save
+	                 </a>
+	              </li>
+	            </ul>
+	          </li>
+	          <li ng-if="experiment._id != undefined && isValidAll && isMongo" ng-disabled="isValidAll">
+	            
+	            <ul class="menu">
+	              <li>
+	                <a href="javascript:void(0)" ng-click="saveExperiment('lg',experiment._id,-1)" >
+	                 	<i class="fa fa-save text-aqua"></i> Save As..
+	                 </a>
+	              </li>
+	            </ul>
+	          </li>
+	          <li>
+	          	 <ul class="menu">
+	              <li>
+	                <a href="javascript:void(0)" ng-click="importExperiment('md')">
+	                  <i class="fa fa-download text-aqua"></i> Import experiment
+	                </a>
+	              </li>
+	            </ul>
+	          </li> 
+	          <li ng-if="isValidAll">
+	          	 <ul class="menu">
+	              <li>
+	                <a href="javascript:void(0)" ng-click="exportExperiment('md')">
+	                  <i class="fa fa-upload text-aqua"></i> Export experiment 
+	                 
+	                </a>
+	              </li>
+	            </ul>
+	          </li>
+	         
+	        </ul>
+	      </li><!-- file -->
+	      <li class="dropdown notifications-menu">
+	        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+	          	Help <span class="caret"></span>
+	        </a>
+	        <ul class="dropdown-menu">
+	        	<li>
+	            <ul class="menu">
+	              <li>
+	                <a href="#!/getstarted">
+	                  Get started
+	                </a>
+	              </li>
+	            </ul>
+	          </li>
+	          <li>
+	            <ul class="menu">
+	              <li>
+	                <a href="#!/about">
+	                  About Particle Lab
+	                </a>
+	              </li>
+	            </ul>
+	          </li> 
+	        </ul>
+	      </li>
+	      
+	  </ul>
+      
+    </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+

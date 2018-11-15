@@ -1,0 +1,1207 @@
+{
+	"command": "process",
+	"description": "Process Table control commands.",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "list",
+			"route": "/process/",
+			"type": "command",
+			"description": "List up process names",
+			"argList": [
+					{
+						"arg": "type",
+						"optional": true,
+						"type": "string",
+						"default": "all" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "verbose",
+			"route": "/process/",
+			"type": "command",
+			"description": "Set Verbose Level for Process Table",
+			"argList": [
+					{
+						"arg": "verbose",
+						"optional": true,
+						"type": "int",
+						"default": 1 
+					}
+				],
+			"available": ["PreInit","Init","Idle","GeomClosed","EventProc"]
+		},
+		{
+			"command": "setVerbose",
+			"route": "/process/",
+			"type": "command",
+			"description": "Set verbose level for processes",
+			"argList": [
+					{
+						"arg": "verbose",
+						"optional": false,
+						"type": "int",
+						"default": 1 
+					},
+					{
+						"arg": "type",
+						"optional": true,
+						"type": "string",
+						"default": "all" 
+					}
+				],
+			"available": ["Idle","GeomClosed","EventProc"]
+		},
+		{
+			"command": "dump",
+			"route": "/process/",
+			"type": "command",
+			"description": "Dump process information",
+			"argList": [
+					{
+						"arg": "procName",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "particle",
+						"optional": true,
+						"type": "string",
+						"default": "all" 
+					}
+				],
+			"available": ["Init","Idle","GeomClosed","EventProc"]
+		},
+		{
+			"command": "activate",
+			"route": "/process/",
+			"type": "command",
+			"description": "Activate processes",
+			"argList": [
+					{
+						"arg": "procName",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "particle",
+						"optional": true,
+						"type": "string",
+						"default": "all" 
+					}
+				],
+			"available": ["Idle","GeomClosed","EventProc"]
+		},
+		{
+			"command": "inactivate",
+			"route": "/process/",
+			"type": "command",
+			"description": "Inactivate process ",
+			"argList": [
+					{
+						"arg": "procName",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "particle",
+						"optional": true,
+						"type": "string",
+						"default": "all" 
+					}
+				],
+			"available": ["Idle","GeomClosed","EventProc"]
+		},
+		{
+			"command": "had",
+			"description": "...Title not available...",
+			"collapsed":true,
+			"children": [
+				
+				{
+					"command": "particle_hp",
+					"description": "UI commands of ParticleHP",
+					"children": [
+						{
+							"command": "use_photo_evaporation",
+							"route": "/process/had/particle_hp/",
+							"type": "command",
+							"description": "Force the use of the Photon Evaporation model, instead of the neutron capture final state data.",
+							"argList": [
+									{
+										"arg": "choice",
+										"optional": false,
+										"type": "string",
+										"default": false 
+									}
+								],
+							"available": ["PreInit","Idle"]
+						},
+						{
+							"command": "skip_missing_isotopes",
+							"route": "/process/had/particle_hp/",
+							"type": "command",
+							"description": "Use only exact isotope data files, instead of allowing nearby isotope files to be used.",
+							"argList": [
+									{
+										"arg": "choice",
+										"optional": false,
+										"type": "string",
+										"default": false 
+									}
+								],
+							"available": ["PreInit","Idle"]
+						},
+						{
+							"command": "neglect_Doppler_broadening",
+							"route": "/process/had/particle_hp/",
+							"type": "command",
+							"description": "Switch off the Doppler broadening due to the thermal motion of the target nucleus.",
+							"argList": [
+									{
+										"arg": "choice",
+										"optional": false,
+										"type": "string",
+										"default": false 
+									}
+								],
+							"available": ["PreInit","Idle"]
+						},
+						{
+							"command": "do_not_adjust_final_state",
+							"route": "/process/had/particle_hp/",
+							"type": "command",
+							"description": "Disable to adjust final state for getting better conservation.",
+							"argList": [
+									{
+										"arg": "choice",
+										"optional": false,
+										"type": "string",
+										"default": false 
+									}
+								],
+							"available": ["PreInit","Idle"]
+						},
+						{
+							"command": "produce_fission_fragment",
+							"route": "/process/had/particle_hp/",
+							"type": "command",
+							"description": "Enable to generate fission fragments.",
+							"argList": [
+									{
+										"arg": "choice",
+										"optional": false,
+										"type": "string",
+										"default": false 
+									}
+								],
+							"available": ["PreInit","Idle"]
+						},
+						{
+							"command": "verbose",
+							"route": "/process/had/particle_hp/",
+							"type": "command",
+							"description": "Enable to generate fission fragments.",
+							"argList": [
+									{
+										"arg": "verbose_level",
+										"optional": false,
+										"type": "int",
+										"default": 1
+									}
+								],
+							"available": ["PreInit","Idle"]
+						}
+					]
+				}	
+			]
+		},
+		{
+			"command": "eLoss",
+			"description": "Commands for EM processes.",
+			"collapsed":true,
+			"available": ["Idle"],
+			"children": [
+				{
+					"command": "fluct",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Enable/disable energy loss fluctuations.",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "boolean",
+								"default": 1 
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "CSDARange",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Enable/disable CSDA range calculation",
+					"argList": [
+							{
+								"arg": "range",
+								"optional": true,
+								"type": "boolean",
+								"default": 0 
+							}
+						],
+					"available": ["PreInit"]
+				},
+				{
+					"command": "LPM",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Enable/disable LPM effect calculation",
+					"argList": [
+							{
+								"arg": "lpm",
+								"optional": true,
+								"type": "boolean",
+								"default": 1 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "useCutAsFinalRange",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Enable/disable use of cut in range as a final range",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "boolean",
+								"default": 0 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "UseAngularGenerator",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Enable usage of angular generator",
+					"argList": [
+							{
+								"arg": "del",
+								"optional": false,
+								"type": "boolean",
+								"default": 0 
+							}
+						],
+					"available": ["PreInit"]
+				},
+				{
+					"command": "minsubsec",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set the ratio subcut/cut",
+					"argList": [
+							{
+								"arg": "rcmin",
+								"optional": false,
+								"type": "double",
+								"default": 0 
+							}
+						],
+					"available": ["PreInit"]
+				},
+				{
+					"command": "minKinEnergy",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set the min kinetic energy for EM tables",
+					"argList": [
+							{
+								"arg": "emin",
+								"optional": true,
+								"type": "double",
+								"default": 0 
+							},
+							{
+								"arg": "Unit",
+								"optional": false,
+								"type": "string",
+								"default": "MeV" 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "maxKinEnergy",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set the max kinetic energy for EM tables",
+					"argList": [
+							{
+								"arg": "emin",
+								"optional": true,
+								"type": "double",
+								"default": 0 
+							},
+							{
+								"arg": "Unit",
+								"optional": false,
+								"type": "string",
+								"default": "MeV" 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "maxKinEnergyCSDA",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set the max kinetic energy for CSDA table",
+					"argList": [
+							{
+								"arg": "emaxCSDA",
+								"optional": true,
+								"type": "double",
+								"default": 0 
+							},
+							{
+								"arg": "Unit",
+								"optional": false,
+								"type": "string",
+								"default": "MeV" 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "linLossLimit ",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set linearLossLimit parameter",
+					"argList": [
+							{
+								"arg": "linlim",
+								"optional": true,
+								"type": "boolean",
+								"default": 0 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "bremThreshold",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set bremsstrahlung energy threshold",
+					"argList": [
+							{
+								"arg": "emaxBrem",
+								"optional": true,
+								"type": "double",
+								"default": 0 
+							},
+							{
+								"arg": "Unit",
+								"optional": false,
+								"type": "string",
+								"default": "MeV" 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "LambdaFactor",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set lambdaFactor parameter for integral option",
+					"argList": [
+							{
+								"arg": "Fl",
+								"optional": true,
+								"type": "boolean",
+								"default": 0 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "binsDEDX",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set number of bins for EM tables",
+					"argList": [
+							{
+								"arg": "binsDEDX",
+								"optional": true,
+								"type": "int",
+								"default": 77 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "binsLambda ",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set number of bins for EM tables",
+					"argList": [
+							{
+								"arg": "binsL",
+								"optional": true,
+								"type": "int",
+								"default": 77 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "binsPerDecade",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set number of bins per decade for EM tables",
+					"argList": [
+							{
+								"arg": "Fl",
+								"optional": true,
+								"type": "int",
+								"default": 7 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "verbose",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set verbose level for EM physics",
+					"argList": [
+							{
+								"arg": "verb",
+								"optional": true,
+								"type": "int",
+								"default": 1 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "subsec",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Switch true/false the subcutoff generation.",
+					"argList": [
+							{
+								"arg": "choice",
+								"optional": true,
+								"type": "boolean",
+								"default": 1
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "StepFunction",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Set the energy loss step limitation parameters.",
+					"argList": [
+							{
+								"arg": "dRoverR",
+								"optional": false,
+								"type": "double",
+								"default": 1 
+							},
+							{
+								"arg": "finalRange",
+								"optional": false,
+								"type": "double",
+								"default": 1 
+							},
+							{
+								"arg": "unit",
+								"optional": true,
+								"type": "string",
+								"default": "m" 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				},
+				{
+					"command": "integral",
+					"route": "/process/eLoss/",
+					"type": "command",
+					"description": "Switch true/false the integral option",
+					"argList": [
+							{
+								"arg": "integ",
+								"optional": true,
+								"type": "boolean",
+								"default": 1 
+							}
+						],
+					"available": ["PreInit", "Idle"]
+				}
+			]
+		
+		},
+		{
+			"command": "msc",
+			"desciption": "Commands for EM scattering processes.",
+			"collapsed":true,
+			"available": ["Idle"],
+			"children": [
+				{
+					"command": "LateralDisplacement",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Switch true/false the integral option",
+					"argList": [
+							{
+								"arg": "lat",
+								"optional": true,
+								"type": "boolean",
+								"default": 1 
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "MuHadLateralDisplacement",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Enable/disable sampling of lateral displacement for muons and hadrons",
+					"argList": [
+							{
+								"arg": "mulat",
+								"optional": true,
+								"type": "boolean",
+								"default": 1 
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "DisplacementBeyondSafety",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Enable/disable displacement at geometry boundary",
+					"argList": [
+							{
+								"arg": "cat",
+								"optional": true,
+								"type": "boolean",
+								"default": 0 
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "UseMottCorrection",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Enable usage of Mott corrections for e- elastic scattering",
+					"argList": [
+							{
+								"arg": "mott",
+								"optional": true,
+								"type": "boolean",
+								"default": 0 
+							}
+						],
+					"available": ["PreInit"]
+				},
+				{
+					"command": "FactorForAngleLimit",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Switch true/false the integral option",
+					"argList": [
+							{
+								"arg": "Fact",
+								"optional": true,
+								"type": "boolean",
+								"default": 1 
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "ThetaLimit",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Set the limit on the polar angle for msc and single scattering",
+					"argList": [
+							{
+								"arg": "theta",
+								"optional": true,
+								"type": "double",
+								"default": 0 
+							},
+							{
+								"arg": "Unit",
+								"optional": false,
+								"type": "double",
+								"default": "radian" 
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "RangeFactor",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Set RangeFactor for msc processes of e+-",
+					"argList": [
+							{
+								"arg": "Fr",
+								"optional": true,
+								"type": "double",
+								"default": 0.04 
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "RangeFactorMuHad",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Set RangeFactor for msc processes of muons/hadrons",
+					"argList": [
+							{
+								"arg": "Fr1",
+								"optional": true,
+								"type": "double",
+								"default": 0.2 
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "GeomFactor",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Set GeomFactor parameter for msc processes",
+					"argList": [
+							{
+								"arg": "Fg",
+								"optional": true,
+								"type": "double",
+								"default": 3.5 
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "Skin",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Set skin parameter for msc processes",
+					"argList": [
+							{
+								"arg": "skin",
+								"optional": true,
+								"type": "double",
+								"default": 0 
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "StepLimit",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Set msc step limitation type",
+					"argList": [
+							{
+								"arg": "StepLim",
+								"optional": true,
+								"type": "string",
+								"default": "UseSafety"
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "StepLimitMuHad",
+					"route": "/process/msc/",
+					"type": "command",
+					"description": "Set msc step limitation type for muons/hadrons",
+					"argList": [
+							{
+								"arg": "StepLim1",
+								"optional": true,
+								"type": "string",
+								"default": "fUseSafety"
+							}
+						],
+					"available": ["PreInit","Idle"]
+				}
+			
+			]
+		},
+		{
+			"command": "em",
+			"description": "General commands for EM processes.",
+			"collapsed":true,
+			"available": ["Idle"],
+			"children": [
+				{
+					"command": "spline",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Enable/disable usage spline for Physics Vectors",
+					"argList": [
+							{
+								"arg": "spl",
+								"optional": true,
+								"type": "boolean",
+								"default": 0
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "applyCuts",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Enable/disable applying cuts for gamma processes",
+					"argList": [
+							{
+								"arg": "apl",
+								"optional": true,
+								"type": "boolean",
+								"default": 0
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "fluo",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Enable/disable atomic deexcitation",
+					"argList": [
+							{
+								"arg": "fluoFlag",
+								"optional": true,
+								"type": "boolean",
+								"default": 0
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "fluoBearden",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Enable/disable usage of Bearden fluorescence files",
+					"argList": [
+							{
+								"arg": "fluoBeardenFlag",
+								"optional": true,
+								"type": "boolean",
+								"default": 0
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "auger",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Enable/disable Auger electrons production",
+					"argList": [
+							{
+								"arg": "augerFlag",
+								"optional": true,
+								"type": "boolean",
+								"default": 0
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "augerCascade",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Enable/disable simulation of cascade of Auger electrons",
+					"argList": [
+							{
+								"arg": "augerCascadeFlag",
+								"optional": true,
+								"type": "boolean",
+								"default": 0
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "pixe",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Enable/disable PIXE simulation",
+					"argList": [
+							{
+								"arg": "pixeFlag",
+								"optional": true,
+								"type": "boolean",
+								"default": 0
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "deexcitationIgnoreCut",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Enable/Disable usage of cuts in de-excitation module",
+					"argList": [
+							{
+								"arg": "deexcut",
+								"optional": true,
+								"type": "boolean",
+								"default": 0
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "lowestElectronEnergy",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Set the lowest kinetic energy for e+-",
+					"argList": [
+							{
+								"arg": "elow",
+								"optional": true,
+								"type": "double",
+								"default": 0
+							},
+							{
+								"arg": "Unit",
+								"optional": true,
+								"type": "string",
+								"default": "MeV"
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "lowestMuHadEnergy",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Set the lowest kinetic energy for muons and hadrons",
+					"argList": [
+							{
+								"arg": "elowh",
+								"optional": true,
+								"type": "double",
+								"default": 0
+							},
+							{
+								"arg": "Unit",
+								"optional": true,
+								"type": "string",
+								"default": "MeV"
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "verbose",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Set verbose level for EM physics",
+					"argList": [
+							{
+								"arg": "verb1",
+								"optional": true,
+								"type": "int",
+								"default": 1
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "workerVerbose",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Set worker verbose level for EM physics",
+					"argList": [
+							{
+								"arg": "verb2",
+								"optional": true,
+								"type": "int",
+								"default": 1
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "pixeXSmodel",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "The name of PIXE cross section",
+					"argList": [
+							{
+								"arg": "pixeXS",
+								"optional": true,
+								"type": "string",
+								"default": "ECPSSR_Analytical Empirical"
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "pixeElecXSmodel",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "The name of PIXE cross section for electron",
+					"argList": [
+							{
+								"arg": "pixeEXS",
+								"optional": true,
+								"type": "string",
+								"default": "ECPSSR_Analytical Empirical "
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "workerVerbose",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Set worker verbose level for EM physics",
+					"argList": [
+							{
+								"arg": "verb2",
+								"optional": true,
+								"type": "int",
+								"default": 1
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "AddPAIRegion",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Activate PAI in the G4Region.",
+					"argList": [
+							{
+								"arg": "partName",
+								"optional": false,
+								"type": "string",
+								"default": "all"
+							},
+							{
+								"arg": "regName",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "paiType",
+								"optional": true,
+								"type": "string",
+								"default": "PAI"
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "AddMicroElecRegion",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Activate MicroElec model in the G4Region",
+					"argList": [
+							{
+								"arg": "MicroElec",
+								"optional": true,
+								"type": "string",
+								"default": ""
+							}
+						],
+					"available": ["PreInit"]
+				},
+				{
+					"command": "AddDNARegion",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Activate DNA in the G4Region.",
+					"argList": [
+							{
+								"arg": "regName",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "dnaType",
+								"optional": false,
+								"type": "string",
+								"default": "opt0"
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "printParameters",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Print all EM parameters.",
+					"argList": [],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "deexcitation",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Set deexcitation flags per G4Region.",
+					"argList": [
+							{
+								"arg": "regName",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "flagFluo",
+								"optional": false,
+								"type": "string",
+								"default": "Fluorescence"
+							},
+							{
+								"arg": "flagAuger",
+								"optional": false,
+								"type": "string",
+								"default": "Auger"
+							},
+							{
+								"arg": "flagPIXE",
+								"optional": false,
+								"type": "string",
+								"default": "PIXE"
+							}
+						],
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "setBiasingFactor",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Set factor for the process cross section.",
+					"argList": [
+							{
+								"arg": "procName",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "procFact",
+								"optional": false,
+								"type": "double",
+								"default": 0
+							},
+							{
+								"arg": "flagFact",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "setForcedInteraction",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Set factor for the process cross section.",
+					"argList": [
+							{
+								"arg": "procName",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "regNam",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "tlength",
+								"optional": false,
+								"type": "double",
+								"default": 1
+							},
+							{
+								"arg": "unitT",
+								"optional": true,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "tflag",
+								"optional": true,
+								"type": "string",
+								"default": ""
+							}
+						],
+					"available": ["Idle"]
+				},
+				{
+					"command": "setSecBiasing",
+					"route": "/process/em/",
+					"type": "command",
+					"description": "Set bremsstrahlung or delta-e- splitting/Russian roullette per region.",
+					"argList": [
+							{
+								"arg": "bProcName",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "bRegNam",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "bFactor",
+								"optional": false,
+								"type": "double",
+								"default": 1
+							},
+							{
+								"arg": "bEnergy",
+								"optional": false,
+								"type": "double",
+								"default": 1
+							},
+							{
+								"arg": "bUnit",
+								"optional": true,
+								"type": "string",
+								"default": ""
+							}
+						],
+					"available": ["Idle"]
+				}
+				
+			]
+			
+		}
+		
+	]
+}

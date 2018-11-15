@@ -1,0 +1,106 @@
+<section class="content-header">
+     <h1>
+       Console GAMOS/Geant4 <span class="text-red">(Alpha version)</span>
+     </h1>
+     <ol class="breadcrumb">
+       <li><a href="#!/particlelab"><i class="fa fa-dashboard"></i> Lab Home</a></li>
+       <li class="active">Console GAMOS/Geant4</li>
+     </ol>
+</section>
+ 
+<section class="content">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="box  box-primary">
+		       <div class="box-header with-border">
+		         <h3 class="box-title">Command list</h3>
+		       </div>
+		       <div class="box-body">
+		       	<div class="row">
+		       		<div class="col-md-12">
+		       			<div
+						    data-angular-treeview="true"
+							data-tree-id="gamosTree"
+							data-tree-model="geantCommands_tree"
+							data-node-id="id"
+							data-node-label="command"
+							data-node-children="children" 
+							style="height: 460px; overflow-y: scroll;">
+						</div>
+		       		</div>
+		       		
+		       	</div>
+		       	<hr>
+		       	<div class="row" ng-if="gamosTree.currentNode != undefined">
+		       		<div class="col-md-12 ">
+		       			<div class="box box-primary box-solid">
+		       				<div class="box-body">
+		       					<div>
+		       						<span><b>{{gamosTree.currentNode.command}}</b></span>
+		       					</div>
+		       					<div>
+		       						<span><em>{{gamosTree.currentNode.description}}</em></span>
+		       					</div>
+		       					<div ng-if="gamosTree.currentNode.help != undefined">
+		       						<a href="{{gamosTree.currentNode.help}}" target="_blank"> <i class="fa fa-question"></i> Help</a>
+		       					</div>
+		       					
+		       					<div ng-if="gamosTree.currentNode.argList.length>0">
+		       						<b>Args</b>
+		       						<ul>
+				       					<li ng-repeat="a in gamosTree.currentNode.argList">
+				       						<span><em>{{a.arg}}</em></span><span ng-if="a.optional"> <em>(Omittable)</em></span>
+				       					</li>
+				       				</ul> 
+				       				 
+				       			</div>
+				       			<div ng-if="gamosTree.currentNode.available.length>0">
+				       				<span><b>Available (Geant4 states):</b> 
+				       				<ul>
+				       					<li ng-repeat="s in gamosTree.currentNode.available">
+				       						<span><em>{{s}}</em></span>
+				       					</li>
+				       				</ul> 
+				       			</div>
+				       			<div ng-if="gamosTree.currentNode.type === 'command'"
+				       				ng-click="copyCommand(gamosTree.currentNode)">
+				       				<button class="btn btn-primary btn-sm btn-flat"
+				       						ng-disabled="!getState(gamosTree.currentNode.available)">Copy to terminal</button>
+				       			</div>
+				       			
+		       				</div>
+		       			</div>
+		       		</div>
+		       		
+		       	</div>
+		       </div>
+		    
+		     </div>
+		</div>
+		<div class="col-md-9">
+			<div class="box  box-primary">
+		       <div class="box-header with-border">
+		         <h3 class="box-title">Terminal</h3>
+		       </div>
+		       <div class="box-body">
+		        <div class="row" >
+		        	<div class="col-md-12" ng-paste="paste=true" ng-init="paste=false">
+		        		
+		        		<console-gamos id="terminal" currentnode="nodeCopy" ></console-gamos>
+		        	</div>
+		        </div>
+		       	<div class="row" ng-if="!termData.isActive && !termData.initTerm">
+		       		<div class="col-md-12" >
+		       			<button class="btn btn-primary" ng-click="initTerm()">Run console</button>
+		       		</div>
+		       	</div>
+		       </div>
+		    	
+		   	</div>
+		
+		</div>
+	</div>
+	
+
+</section>
+   

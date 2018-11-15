@@ -1,0 +1,349 @@
+{
+	"command": "generator",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "createIon",
+			"route": "/gamos/generator/",
+			"type": "command",
+			"description": "Deprecated command",
+			"argList": [
+					{
+						"arg": "ion",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "addSingleParticleSource",
+			"route": "/gamos/generator/",
+			"type": "command",
+			"help": "http://fismed.ciemat.es/GAMOS/GAMOS_doc/GAMOS.5.1.0/c2390.html#AEN2406",
+			"description": "Add single particle source to list of active particle sources",
+			"argList": [
+					{
+						"arg": "name",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "particleName",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "energy",
+						"optional": false,
+						"type": "double",
+						"default": 0 
+					}
+					
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "addIsotopeSource",
+			"route": "/gamos/generator/",
+			"type": "command",
+			"help": "http://fismed.ciemat.es/GAMOS/GAMOS_doc/GAMOS.5.1.0/c2390.html#AEN2406",
+			"description": "Add single particle source to list of active particle sources",
+			"argList": [
+					{
+						"arg": "name",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "isotopeName",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "activity",
+						"optional": false,
+						"type": "double",
+						"default": 0 
+					}
+					
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "addDoubleBackToBackParticleSource",
+			"route": "/gamos/generator/",
+			"type": "command",
+			"help": "http://fismed.ciemat.es/GAMOS/GAMOS_doc/GAMOS.5.1.0/c2390.html#AEN2406",
+			"description": "Add particle source of two particles with opposite directions to list of active particle sources",
+			"argList": [
+					{
+						"arg": "name",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "particleName",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "energy",
+						"optional": false,
+						"type": "double",
+						"default": 0 
+					}
+					
+				],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "timeDist",
+			"help": "http://fismed.ciemat.es/GAMOS/GAMOS_doc/GAMOS.5.1.0/c2390.html#AEN2468", 
+			"route": "/gamos/generator/",
+			"type": "command",
+			"description": "Sets the time distribution type for one source",
+			"argList": [
+					{
+						"arg": "source_name",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "distribution_type",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					},
+					{
+						"arg": "extra_parameters",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					}
+					
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "energyDist",
+			"help": "http://fismed.ciemat.es/GAMOS/GAMOS_doc/GAMOS.5.1.0/c2390.html#AEN2468", 
+			"route": "/gamos/generator/",
+			"type": "command",
+			"description": "Sets the energy distribution type for one source",
+			"argList": [
+					{
+						"arg": "source_name",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "distribution_type",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					},
+					{
+						"arg": "extra_parameters",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					}
+					
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "energyDist",
+			"help": "http://fismed.ciemat.es/GAMOS/GAMOS_doc/GAMOS.5.1.0/c2390.html#AEN2468", 
+			"route": "/gamos/generator/",
+			"type": "command",
+			"description": "Sets the energy distribution type for one source",
+			"argList": [
+					{
+						"arg": "source_name",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "distribution_type",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					},
+					{
+						"arg": "extra_parameters",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					}
+					
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "positionDist",
+			"help": "http://fismed.ciemat.es/GAMOS/GAMOS_doc/GAMOS.5.1.0/c2390.html#AEN2468", 
+			"route": "/gamos/generator/",
+			"type": "command",
+			"description": "Sets the position distribution type for one source",
+			"argList": [
+					{
+						"arg": "source_name",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "distribution_type",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					},
+					{
+						"arg": "extra_parameters",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					}
+					
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "directionDist",
+			"help": "http://fismed.ciemat.es/GAMOS/GAMOS_doc/GAMOS.5.1.0/c2390.html#AEN2468", 
+			"route": "/gamos/generator/",
+			"type": "command",
+			"description": "Sets the direction distribution type for one source",
+			"argList": [
+					{
+						"arg": "source_name",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "distribution_type",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					},
+					{
+						"arg": "extra_parameters",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					}
+					
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "addBiasDistribution ",
+			"help": "http://fismed.ciemat.es/GAMOS/GAMOS_doc/GAMOS.5.1.0/c2390.html#AEN2468", 
+			"route": "/gamos/generator/",
+			"type": "command",
+			"description": "Add a new distribution to bias a variable",
+			"argList": [
+					{
+						"arg": "generator_dist_type",
+						"optional": false,
+						"type": "string",
+						"default": "" 
+					},
+					{
+						"arg": "bias_dist_type",
+						"optional": false,
+						"type": "string",
+						"default": ""
+					}
+					
+				],
+			"available": ["Idle"]
+		},
+		{
+			"command": "GmPositionVolumesAndSurfaces",
+			"description": "...Title not available...",
+			"children": [
+				{
+					"command": "addVolumeOrSurface",
+					"help": "http://fismed.ciemat.es/GAMOS/GAMOS_doc/GAMOS.5.1.0/c2390.html#AEN2468", 
+					"route": "/gamos/generator/GmPositionVolumesAndSurfaces/",
+					"type": "command",
+					"description": "Add a new volume to the position distribution of type GmPositionUserVolumes",
+					"argList": [
+							{
+								"arg": "name",
+								"optional": false,
+								"type": "string",
+								"default": "" 
+							},
+							{
+								"arg": "solid_type",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "pos_x",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "pos_y",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "pos_z",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "ang_x",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "ang_y",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "ang_z",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							},
+							{
+								"arg": "solid_param1",
+								"optional": false,
+								"type": "string",
+								"default": ""
+							}
+							
+						],
+					"available": ["PreInit","Idle"]
+				}
+			]
+		}
+	
+	]
+}

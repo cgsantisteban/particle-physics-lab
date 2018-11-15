@@ -1,0 +1,39 @@
+<section>
+ 	<div class="content-header">
+ 	 <h1>
+       Data
+       <small>GAMOS data, scorer and filter plug-ins.</small>
+     </h1>
+     <ol class="breadcrumb">
+       <li><a href="#!/particlelab"><i class="fa fa-home"></i> Lab Home</a></li>
+       <li class="active">Data</li>
+   </ol>
+ 	</div>
+   
+</section>
+<section>
+ 	<div class="content">
+  		<div class="box box-primary">
+	  <div class="box-body" active="2">
+	   		<uib-tabset active="active">
+			    <uib-tab index="0">
+			    	<uib-tab-heading> 
+				       	<span>GAMOS data
+				       		<i ng-if="!isValidExperiment.isValidActions"
+				       			class="fa fa-exclamation-circle text-red" ></i>
+				       	</span>
+				    </uib-tab-heading>
+			    	<ng-include src="'views/data/actions/actionList.html'" ></ng-include>
+			    </uib-tab>
+			    <uib-tab index="1" heading="Scorers" >
+			    	<ng-include src="'views/data/scorers/scorerList.html'"></ng-include>
+			    </uib-tab>
+			    <uib-tab index="2" heading="Filters" >
+			    	<ng-include src="'views/data/filters/filterList.html'"></ng-include>
+			    </uib-tab>
+			</uib-tabset>
+	  </div>
+	</div>	
+  </div>
+</section>
+

@@ -1,0 +1,46 @@
+{
+	"distributionType": "Position",
+	"distributions": [
+			{
+				"type": "Point",
+				"gamosName": "GmGenerDistPositionPoint",
+				"parameters":{ 
+					"x": {
+						"value": 0,
+						"units": "cm",
+						"type": "Position"	
+						},
+					"y":{
+							"value": 0,
+							"units": "cm",
+							"type": "Position"
+						},
+					"z":{
+							"value": 0,
+							"units": "cm",
+							"type": "Position"
+						}
+				}
+			},
+			{
+				"type": "Volume",
+				"gamosName": "GmGenerDistPositionInG4Volumes",
+				"parameters": {
+						"volume": {
+							"value": ""
+						}
+				}
+				
+			},
+			{
+				"type": "Volume surface",
+				"gamosName": "GmGenerDistPositionInG4Surfaces",
+				"parameters": {
+					"volume": {
+						"value": ""
+					}
+				}
+			}
+		]
+}
+

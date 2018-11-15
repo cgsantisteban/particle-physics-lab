@@ -1,0 +1,45 @@
+{
+	"command": "ASCIITree",
+	"description": "Commands for ASCIITree control.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "verbose",
+			"route": "/vis/ASCIITree/",
+			"type": "command",
+			"description": "Setting of verbosity level",
+			"argList": [
+				{
+					"arg": "verbosity",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				}
+			],
+			"available": ["all"]
+		},
+		{
+			"command": "set",
+			"description": "Settings for ASCIITree control.",
+			"collapsed": true,
+			"children": [
+				{
+					"command": "outFile",
+					"route": "/vis/ASCIITree/",
+					"type": "command",
+					"description": "Set name of output file.",
+					"argList": [
+						{
+							"arg": "out-filename",
+							"optional": true,
+							"type": "string",
+							"default": "G4cout"
+						}
+					],
+					"available": ["all"]
+				}
+			
+			]
+		}
+	]
+}

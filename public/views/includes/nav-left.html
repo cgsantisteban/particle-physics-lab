@@ -1,0 +1,38 @@
+<div ng-controller="LeftNavCtrl">
+	<aside class="main-sidebar">
+    <section class="sidebar">
+      <ul class="sidebar-menu" >
+      	<li class="header">EXPERIMENT DEFINITION</li>
+        <li ng-repeat="(name,p) in pageList.Main" ng-class="{active: p.isActive}">
+			<a  ng-click="setActive(name)"  href="#!{{p.url}}">
+				<i class="fa {{p.ico}}"></i> 
+				<span>{{name}}  
+					<small ng-if="!p.isValid" class="label pull-right bg-red" tooltip-placement="bottom" uib-tooltip="{{getToolTipError(name, isValidExperiment)}}">
+						<i class="fa fa-exclamation" ></i>
+					</small>
+				</span>
+			</a>
+		</li>
+		<li class="header" ng-if="isVisibleTitle">HISTOGRAMS</li>
+         <li ng-repeat="(name,p) in pageList.Histograms" ng-class="{active: p.isActive}">
+			<a    href="#!{{p.url}}" ng-if="p.isVisible">
+				<i class="fa {{p.ico}}"></i> <span>{{name}}</span>
+			</a>
+		</li> 
+		<li class="header">ADDONS</li>
+        <li ng-repeat="(name,p) in pageList.Addons" ng-class="{active: p.isActive}">
+			<a  ng-click="setActive(name)"  href="#!{{p.url}}">
+				<i class="fa {{p.ico}}"></i> 
+				<span>
+					{{name}}  
+				</span>
+			</a>
+		</li>
+		   
+       	
+     </ul><!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+</div>
+  

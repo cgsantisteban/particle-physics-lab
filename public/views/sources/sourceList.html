@@ -1,0 +1,154 @@
+<section>
+ 	<div class="content-header">
+ 	 <h1>
+       Sources
+       <small>Particles, isotopes and GAMOS isotopes.</small>
+     </h1>
+     <ol class="breadcrumb">
+       <li><a href="#!/particlelab"><i class="fa fa-home"></i> Lab Home</a></li>
+       <li class="active">Sources</li>
+   </ol>
+ 	</div>
+   
+</section>
+
+<section class="content">
+<div class="box  box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Source list</h3>
+        </div>
+        <div class="box-body">
+         	<div class="row">
+         		<div class="col-md-12">
+		 			<div ng-if="experiment.sourceList.length<=0">
+		                 <h4 class="text-red">There are no defined sources. You must define at least one source.</h4>
+		            </div>
+		             
+		 			<table class="table table-bordered table-hover table-responsive" 
+		 					ng-if="experiment.sourceList.length>0">
+		 				<thead>
+		 					<tr>
+			           		   <th style="width: 2%;"></th>
+			           		   <th style="width: 18%;">Name</th>
+			                   <th style="width: 15%;">Source</th>
+			                   <th style="width: 15%;">Energy</th>
+			                   <th style="width: 20%;">Position</th>
+			                   <th style="width: 15%;">Direction</th>
+			                   <th style="width: 15%;">Time</th>
+			                </tr>
+		 				</thead>
+		           		<tfoot>
+						    <tr>
+						      <td colspan="7" ng-show="isValidExperiment.isValidSources && sourceCommands.length>0">
+						      	
+						      	<button class="btn btn-info btn-flat btn-xs" type="button" data-toggle="collapse" 
+								  		data-target="#collapseSourceData" 
+										aria-expanded="false" 
+										aria-controls="collapseData"
+										ng-click="isViewSourceCommand = !isViewSourceCommand">
+									<span ng-show="isViewSourceCommand"><i class="fa fa-code"></i> Show GAMOS instructions</span> 
+									<span ng-show="!isViewSourceCommand"><i class="fa fa-code"></i> Hide GAMOS instructions</span>
+								</button>
+								
+								<hr />
+						      	<div  class="collapse box box-primary box-solid" id="collapseSourceData">
+					      			<div class="box-body">
+										<p ng-repeat="line in sourceCommands track by $index">
+							      			<code>{{line}}</code>
+							      		</p>
+									</div>
+								</div>
+						      </td>
+						      
+						    </tr>
+						   
+						</tfoot>
+		                <tr ng-repeat="(id, source) in experiment.sourceList track by $index">
+		                   <td>
+		                   	<div class="btn-group" uib-dropdown>
+						      <button id="split-button" type="button" class="btn btn-default btn-sm btn-flat" uib-dropdown-toggle>
+						      		<i class="fa fa-gear"> </i><span class="caret"> </span>
+						      </button>
+						      <ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+						        <li role="menuitem"><a ng-click="addSource('lg',id)"><i class="fa fa-edit"></i> Edit</a></li>
+						        <li role="menuitem"><a ng-click="delSource(id)"><i class="fa fa-trash"></i> Delete</a></li>
+						      </ul>
+						    </div>
+		                   </td>
+		                   <td>{{source.name}}</td>
+		                   <td>
+			                   <sup ng-if="source.type==='isotopes'">{{source.particle.parameters['Mass number'].value}}</sup>
+			                   <span ng-bind-html="source.particle.particleName"></span>
+			                   <span ng-if="source.type==='isotopes'">
+			                    	[{{source.particle.parameters['Excitation energy'].value}} {{source.particle.parameters['Excitation energy'].units}}]
+			                   </span>
+			                   <span ng-if="source.type === 'GAMOS isotopes' "> (GAMOS)</span>
+			                   <div ng-if="source.type === 'GAMOS isotopes' ">
+			                   		 <span>Activity: {{source.particle.parameters['activity'].value.toExponential()}} {{source.particle.parameters['activity'].units}}</span>
+			                   </div>
+		                   </td>
+		                   <td >
+		                   		<div ng-if="source.distributions.Energy !=null">
+		                   			{{source.distributions.Energy.type}}<br>
+				                   	<div ng-repeat="(tp,p) in source.distributions.Energy.parameters track by $index">
+				                   		<em>{{tp}}:</em> {{p.value}} {{p.units}} 
+				                   	</div>
+		                   		</div>
+		                   		<div ng-if="source.distributions.Energy == null">
+		                   			<span>Not defined</span>
+		                   		</div>
+		                   </td>
+		                   <td>
+		                   		<div ng-if="source.distributions.Position !=null">
+		                   			{{source.distributions.Position.type}}<br>
+				                   	<div ng-repeat="(tp,p) in source.distributions.Position.parameters track by $index">
+				                   		<em>{{tp}}:</em> {{p.value}} {{p.units}} 
+				                   	</div>
+		                   		</div>
+		                   		<div ng-if="source.distributions.Position == null">
+		                   			<span>Not defined</span>
+		                   		</div>
+		                   </td>
+		                   <td >
+		                   		<div ng-if="source.distributions.Direction !=null">
+		                   			{{source.distributions.Direction.type}}<br>
+				                   	
+				                   	<div ng-repeat="(tp,p) in source.distributions.Direction.parameters track by $index">
+				                   		<em>{{tp}}:</em> {{p.value}} {{p.units}} 
+				                   	</div>
+		                   		</div>
+		                   		<div ng-if="source.distributions.Direction == null">
+		                   			<span>Not defined</span>
+		                   		</div>
+		                   </td>
+		                   <td>
+		                   		<div ng-if="source.distributions.Time !=null">
+		                   			{{source.distributions.Time.type}}<br>
+				                   	
+				                   	<div ng-repeat="(tp,p) in source.distributions.Time.parameters track by $index">
+				                   		<em>{{tp}}:</em> {{p.value}} {{p.units}} 
+				                   	</div>
+		                   		</div>
+		                   		<div ng-if="source.distributions.Time == null">
+		                   			<span>Not defined</span>
+		                   		</div>
+		                   </td>
+		                 </tr>
+		           	 </table>
+		            
+		            
+		 		</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					
+		    		<button class="btn btn-primary btn-flat"
+		           		    ng-click="addSource('lg',-1)">
+							New source
+					</button>
+						    	
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,15 @@
+{
+			"command": "units", 
+			"description": "Available units.",
+			"children": [
+				{
+					"command": "list",
+					"route": "/units/",
+					"type": "command",
+					"argList": [],
+					"description": "full list of available units.",
+					"available": ["PreInit","Idle"]
+				}
+			],
+			"collapsed":true
+}

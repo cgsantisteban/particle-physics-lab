@@ -1,0 +1,1612 @@
+[	
+			{
+				"particleName": "H",
+				"gamosName": "H",
+				"parameters": {
+					"Atomic number": {
+						"value": 1
+					},
+					"Mass number": {
+						"value": 1,
+						"units": null,
+						"type": "Mass number"
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"	,
+						"type": "Energy"			
+					}	
+				}
+			},
+			{
+				"particleName": "He",
+				"gamosName": "He",
+				"parameters": {
+					"Atomic number": {
+						"value": 2
+					},
+					"Mass number": {
+						"value": 4,
+						"type": "Mass number"
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV",
+						"type": "Energy"				
+					}	
+				}
+				
+			},
+			{
+				"particleName": "Li",
+				"gamosName": "Li",
+				"parameters": {
+					"Atomic number": {
+						"value": 3
+					},
+					"Mass number": {
+						"value": 7,
+						"type": "Mass number"
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV",
+						"type": "Energy"				
+					}	
+				}
+				 
+			},
+			{
+				"particleName": "Be",
+				"gamosName": "Be",
+				"parameters": {
+					"Atomic number": {
+						"value": 4
+					},
+					"Mass number": {
+						"value": 9
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "B",
+				"gamosName": "B",
+				"parameters": {
+					"Atomic number": {
+						"value": 5
+					},
+					"Mass number": {
+						"value": 11
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "C",
+				"gamosName": "C",
+				"parameters": {
+					"Atomic number": {
+						"value": 6
+					},
+					"Mass number": {
+						"value": 12
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "N",
+				"gamosName": "N",
+				"parameters": {
+					"Atomic number": {
+						"value": 7
+					},
+					"Mass number": {
+						"value": 14
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "O",
+				"gamosName": "O",
+				"parameters": {
+					"Atomic number": {
+						"value": 8
+					},
+					"Mass number": {
+						"value": 16
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "F",
+				"gamosName": "F",
+				"parameters": {
+					"Atomic number": {
+						"value": 9
+					},
+					"Mass number": {
+						"value": 19
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ne",
+				"gamosName": "Ne",
+				"parameters": {
+					"Atomic number": {
+						"value": 10
+					},
+					"Mass number": {
+						"value": 20
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Na",
+				"gamosName": "Na",
+				"parameters": {
+					"Atomic number": {
+						"value": 11
+					},
+					"Mass number": {
+						"value": 23
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Mg",
+				"gamosName": "Mg",
+				"parameters": {
+					"Atomic number": {
+						"value": 12
+					},
+					"Mass number": {
+						"value": 24
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Al",
+				"gamosName": "Al",
+				"parameters": {
+					"Atomic number": {
+						"value": 13
+					},
+					"Mass number": {
+						"value": 27
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Si",
+				"gamosName": "Si",
+				"parameters": {
+					"Atomic number": {
+						"value": 14
+					},
+					"Mass number": {
+						"value": 28
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "P",
+				"gamosName": "P",
+				"parameters": {
+					"Atomic number": {
+						"value": 15
+					},
+					"Mass number": {
+						"value": 31
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "S",
+				"gamosName": "S",
+				"parameters": {
+					"Atomic number": {
+						"value": 16 
+					},
+					"Mass number": {
+						"value": 32
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Cl",
+				"gamosName": "Cl",
+				"parameters": {
+					"Atomic number": {
+						"value": 17
+					},
+					"Mass number": {
+						"value": 35
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ar",
+				"gamosName": "Ar",
+				"parameters": {
+					"Atomic number": {
+						"value": 18
+					},
+					"Mass number": {
+						"value": 40
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "K",
+				"gamosName": "K",
+				"parameters": {
+					"Atomic number": {
+						"value": 19
+					},
+					"Mass number": {
+						"value": 39
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ca",
+				"gamosName": "Ca",
+				"parameters": {
+					"Atomic number": {
+						"value": 20
+					},
+					"Mass number": {
+						"value": 40
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Sc",
+				"gamosName": "Sc",
+				"parameters": {
+					"Atomic number": {
+						"value": 21
+					},
+					"Mass number": {
+						"value": 45
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ti",
+				"gamosName": "Ti",
+				"parameters": {
+					"Atomic number": {
+						"value": 22
+					},
+					"Mass number": {
+						"value": 48
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "V",
+				"gamosName": "V",
+				"parameters": {
+					"Atomic number": {
+						"value": 23
+					},
+					"Mass number": {
+						"value": 51
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Cr",
+				"gamosName": "Cr",
+				"parameters": {
+					"Atomic number": {
+						"value": 24
+					},
+					"Mass number": {
+						"value": 52
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Mn",
+				"gamosName": "Mn",
+				"parameters": {
+					"Atomic number": {
+						"value": 25
+					},
+					"Mass number": {
+						"value": 55
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Fe",
+				"gamosName": "Fe",
+				"parameters": {
+					"Atomic number": {
+						"value": 26
+					},
+					"Mass number": {
+						"value": 59
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Co",
+				"gamosName": "Co",
+				"parameters": {
+					"Atomic number": {
+						"value": 27
+					},
+					"Mass number": {
+						"value": 59
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ni",
+				"gamosName": "Ni",
+				"parameters": {
+					"Atomic number": {
+						"value": 28
+					},
+					"Mass number": {
+						"value": 59
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Cu",
+				"gamosName": "Cu",
+				"parameters": {
+					"Atomic number": {
+						"value": 29
+					},
+					"Mass number": {
+						"value": 64
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Zn",
+				"gamosName": "Zn",
+				"parameters": {
+					"Atomic number": {
+						"value": 30
+					},
+					"Mass number": {
+						"value": 65
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ga",
+				"gamosName": "Ga",
+				"parameters": {
+					"Atomic number": {
+						"value": 31
+					},
+					"Mass number": {
+						"value": 70
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ge",
+				"gamosName": "Ge",
+				"parameters": {
+					"Atomic number": {
+						"value": 32
+					},
+					"Mass number": {
+						"value": 73
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "As",
+				"gamosName": "As",
+				"parameters": {
+					"Atomic number": {
+						"value": 33
+					},
+					"Mass number": {
+						"value": 75
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Se",
+				"gamosName": "Se",
+				"parameters": {
+					"Atomic number": {
+						"value": 34
+					},
+					"Mass number": {
+						"value": 79
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Br",
+				"gamosName": "Br",
+				"parameters": {
+					"Atomic number": {
+						"value": 35
+					},
+					"Mass number": {
+						"value": 80
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Kr",
+				"gamosName": "Kr",
+				"parameters": {
+					"Atomic number": {
+						"value": 36
+					},
+					"Mass number": {
+						"value": 84
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Rb",
+				"gamosName": "Rb",
+				"parameters": {
+					"Atomic number": {
+						"value": 37
+					},
+					"Mass number": {
+						"value": 85
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Sr",
+				"gamosName": "Sr",
+				"parameters": {
+					"Atomic number": {
+						"value": 38
+					},
+					"Mass number": {
+						"value": 88
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Y",
+				"gamosName": "Y",
+				"parameters": {
+					"Atomic number": {
+						"value": 39
+					},
+					"Mass number": {
+						"value": 89
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Zr",
+				"gamosName": "Zr",
+				"parameters": {
+					"Atomic number": {
+						"value": 40
+					},
+					"Mass number": {
+						"value": 91
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Nb",
+				"gamosName": "Nb",
+				"parameters": {
+					"Atomic number": {
+						"value": 41
+					},
+					"Mass number": {
+						"value": 93
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Mo",
+				"gamosName": "Mo",
+				"parameters": {
+					"Atomic number": {
+						"value": 42
+					},
+					"Mass number": {
+						"value": 96
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Tc",
+				"gamosName": "Tc",
+				"parameters": {
+					"Atomic number": {
+						"value": 43
+					},
+					"Mass number": {
+						"value": 98
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ru",
+				"gamosName": "Ru",
+				"parameters": {
+					"Atomic number": {
+						"value": 44
+					},
+					"Mass number": {
+						"value": 101
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Rh",
+				"gamosName": "Rh",
+				"parameters": {
+					"Atomic number": {
+						"value": 45
+					},
+					"Mass number": {
+						"value": 103
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Pd",
+				"gamosName": "Pd",
+				"parameters": {
+					"Atomic number": {
+						"value": 46
+					},
+					"Mass number": {
+						"value": 106
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ag",
+				"gamosName": "Ag",
+				"parameters": {
+					"Atomic number": {
+						"value": 47
+					},
+					"Mass number": {
+						"value": 108
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Cd",
+				"gamosName": "Cd",
+				"parameters": {
+					"Atomic number": {
+						"value": 48
+					},
+					"Mass number": {
+						"value": 112
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "In",
+				"gamosName": "In",
+				"parameters": {
+					"Atomic number": {
+						"value": 49
+					},
+					"Mass number": {
+						"value": 115
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Sn",
+				"gamosName": "Sn",
+				"parameters": {
+					"Atomic number": {
+						"value": 50
+					},
+					"Mass number": {
+						"value": 119
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Sb",
+				"gamosName": "Sb",
+				"parameters": {
+					"Atomic number": {
+						"value": 51
+					},
+					"Mass number": {
+						"value": 122
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Te",
+				"gamosName": "Te",
+				"parameters": {
+					"Atomic number": {
+						"value": 52
+					},
+					"Mass number": {
+						"value": 128
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "I",
+				"gamosName": "I",
+				"parameters": {
+					"Atomic number": {
+						"value": 53
+					},
+					"Mass number": {
+						"value": 127
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Xe",
+				"gamosName": "Xe",
+				"parameters": {
+					"Atomic number": {
+						"value": 54
+					},
+					"Mass number": {
+						"value": 131
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Cs",
+				"gamosName": "Cs",
+				"parameters": {
+					"Atomic number": {
+						"value": 55
+					},
+					"Mass number": {
+						"value": 133
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ba",
+				"gamosName": "Ba",
+				"parameters": {
+					"Atomic number": {
+						"value": 56
+					},
+					"Mass number": {
+						"value": 137
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "La",
+				"gamosName": "La",
+				"parameters": {
+					"Atomic number": {
+						"value": 57
+					},
+					"Mass number": {
+						"value": 139
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ce",
+				"gamosName": "Ce",
+				"parameters": {
+					"Atomic number": {
+						"value": 58
+					},
+					"Mass number": {
+						"value": 140
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Pr",
+				"gamosName": "Pr",
+				"parameters": {
+					"Atomic number": {
+						"value": 59
+					},
+					"Mass number": {
+						"value": 141
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Nd",
+				"gamosName": "Nd",
+				"parameters": {
+					"Atomic number": {
+						"value": 60
+					},
+					"Mass number": {
+						"value": 144
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Pm",
+				"gamosName": "Pm",
+				"parameters": {
+					"Atomic number": {
+						"value": 61
+					},
+					"Mass number": {
+						"value": 145
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Sm",
+				"gamosName": "Sm",
+				"parameters": {
+					"Atomic number": {
+						"value": 62
+					},
+					"Mass number": {
+						"value": 150
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Eu",
+				"gamosName": "Eu",
+				"parameters": {
+					"Atomic number": {
+						"value": 63
+					},
+					"Mass number": {
+						"value": 152
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Gd",
+				"gamosName": "Gd",
+				"parameters": {
+					"Atomic number": {
+						"value": 64
+					},
+					"Mass number": {
+						"value": 157
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Tb",
+				"gamosName": "Tb",
+				"parameters": {
+					"Atomic number": {
+						"value": 65
+					},
+					"Mass number": {
+						"value": 159
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Dy",
+				"gamosName": "Dy",
+				"parameters": {
+					"Atomic number": {
+						"value": 66
+					},
+					"Mass number": {
+						"value": 163
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ho",
+				"gamosName": "Ho",
+				"parameters": {
+					"Atomic number": {
+						"value": 67
+					},
+					"Mass number": {
+						"value": 165
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Er",
+				"gamosName": "Er",
+				"parameters": {
+					"Atomic number": {
+						"value": 68
+					},
+					"Mass number": {
+						"value": 167
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Tm",
+				"gamosName": "Tm",
+				"parameters": {
+					"Atomic number": {
+						"value": 69
+					},
+					"Mass number": {
+						"value": 169
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Yb",
+				"gamosName": "Yb",
+				"parameters": {
+					"Atomic number": {
+						"value": 70
+					},
+					"Mass number": {
+						"value": 173
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Lu",
+				"gamosName": "Lu",
+				"parameters": {
+					"Atomic number": {
+						"value": 71
+					},
+					"Mass number": {
+						"value": 175
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Hf",
+				"gamosName": "Hf",
+				"parameters": {
+					"Atomic number": {
+						"value": 72
+					},
+					"Mass number": {
+						"value": 178
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ta",
+				"gamosName": "Ta",
+				"parameters": {
+					"Atomic number": {
+						"value": 73
+					},
+					"Mass number": {
+						"value": 181
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "W",
+				"gamosName": "W",
+				"parameters": {
+					"Atomic number": {
+						"value": 74
+					},
+					"Mass number": {
+						"value": 183
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Re",
+				"gamosName": "Re",
+				"parameters": {
+					"Atomic number": {
+						"value": 75
+					},
+					"Mass number": {
+						"value": 186
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Os",
+				"gamosName": "Os",
+				"parameters": {
+					"Atomic number": {
+						"value": 76
+					},
+					"Mass number": {
+						"value": 190
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ir",
+				"gamosName": "Ir",
+				"parameters": {
+					"Atomic number": {
+						"value": 77
+					},
+					"Mass number": {
+						"value": 195
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Pt",
+				"gamosName": "Pt",
+				"parameters": {
+					"Atomic number": {
+						"value": 78
+					},
+					"Mass number": {
+						"value": 195
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Au",
+				"gamosName": "Au",
+				"parameters": {
+					"Atomic number": {
+						"value": 79
+					},
+					"Mass number": {
+						"value": 197
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Hg",
+				"gamosName": "Hg",
+				"parameters": {
+					"Atomic number": {
+						"value": 80
+					},
+					"Mass number": {
+						"value": 201
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Tl",
+				"gamosName": "Tl",
+				"parameters": {
+					"Atomic number": {
+						"value": 81
+					},
+					"Mass number": {
+						"value": 204
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Pb",
+				"gamosName": "Pb",
+				"parameters": {
+					"Atomic number": {
+						"value": 82
+					},
+					"Mass number": {
+						"value": 207
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Bi",
+				"gamosName": "Bi",
+				"parameters": {
+					"Atomic number": {
+						"value": 83
+					},
+					"Mass number": {
+						"value": 209
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Po",
+				"gamosName": "Po",
+				"parameters": {
+					"Atomic number": {
+						"value": 84
+					},
+					"Mass number": {
+						"value": 209
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "At",
+				"gamosName": "At",
+				"parameters": {
+					"Atomic number": {
+						"value": 85
+					},
+					"Mass number": {
+						"value": 210
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Rn",
+				"gamosName": "Rn",
+				"parameters": {
+					"Atomic number": {
+						"value": 86
+					},
+					"Mass number": {
+						"value": 222
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Fr",
+				"gamosName": "Fr",
+				"parameters": {
+					"Atomic number": {
+						"value": 87
+					},
+					"Mass number": {
+						"value": 223
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ra",
+				"gamosName": "Ra",
+				"parameters": {
+					"Atomic number": {
+						"value": 88
+					},
+					"Mass number": {
+						"value": 226
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Ac",
+				"gamosName": "Ac",
+				"parameters": {
+					"Atomic number": {
+						"value": 89
+					},
+					"Mass number": {
+						"value": 227
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Th",
+				"gamosName": "Th",
+				"parameters": {
+					"Atomic number": {
+						"value": 90
+					},
+					"Mass number": {
+						"value": 232
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Pa",
+				"gamosName": "Pa",
+				"parameters": {
+					"Atomic number": {
+						"value": 91
+					},
+					"Mass number": {
+						"value": 231
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "U",
+				"gamosName": "U",
+				"parameters": {
+					"Atomic number": {
+						"value": 92
+					},
+					"Mass number": {
+						"value": 238
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Np",
+				"gamosName": "Np",
+				"parameters": {
+					"Atomic number": {
+						"value": 93
+					},
+					"Mass number": {
+						"value": 237
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Pu",
+				"gamosName": "Pu",
+				"parameters": {
+					"Atomic number": {
+						"value": 94
+					},
+					"Mass number": {
+						"value": 237
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Am",
+				"gamosName": "Am",
+				"parameters": {
+					"Atomic number": {
+						"value": 95
+					},
+					"Mass number": {
+						"value": 243
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Cm",
+				"gamosName": "Cm",
+				"parameters": {
+					"Atomic number": {
+						"value": 96
+					},
+					"Mass number": {
+						"value": 247
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Bk",
+				"gamosName": "Bk",
+				"parameters": {
+					"Atomic number": {
+						"value": 97
+					},
+					"Mass number": {
+						"value": 247
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Cf",
+				"gamosName": "Cf",
+				"parameters": {
+					"Atomic number": {
+						"value": 98
+					},
+					"Mass number": {
+						"value": 251
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Es",
+				"gamosName": "Es",
+				"parameters": {
+					"Atomic number": {
+						"value": 99
+					},
+					"Mass number": {
+						"value": 252
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			},
+			{
+				"particleName": "Fm",
+				"gamosName": "Fm",
+				"parameters": {
+					"Atomic number": {
+						"value": 100
+					},
+					"Mass number": {
+						"value": 257
+					},
+					"Excitation energy": {
+						"value": 0,
+						"units": "MeV"				
+					}	
+				}
+			}
+]
+

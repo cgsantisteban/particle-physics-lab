@@ -1,0 +1,697 @@
+{
+	"command": "control",
+	"description": "UI control commands",
+	"collapsed":true,
+	"children":[
+		{
+			"command": "macroPath",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "path",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}],
+			"description": "Set macro search pathwith colon-separated list.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "execute",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "fileName",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}],
+			"description": "Execute a macro file.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "loop",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "macroFile",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "counterName",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "initialValue",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "finalValue",
+					"optional": false,
+					"type": "double",
+					"default": 1
+				},
+				{
+					"arg": "stepSize",
+					"optional": true,
+					"type": "double",
+					"default": 1
+				}
+				],
+			"description": "Execute a macro file more than once.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "foreach",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "macroFile",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "counterName",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "valueList",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"description": "Execute a macro file more than once.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "suppressAbortion",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "level",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				}],
+			"description": "Suppress the program abortion caused by G4Exception.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "verbose",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "switch",
+					"optional": true,
+					"type": "int",
+					"default": 2
+				}],
+			"description": "Applied command will also be shown on screen.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "saveHistory",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "fileName",
+					"optional": true,
+					"type": "string",
+					"default": "G4History.macro"
+				}],
+			"description": "Store command history to a file.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "alias",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "aliasName",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "aliasValue",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"description": "Set an alias.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "unalias",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "aliasName",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"description": "Remove an alias.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "listAlias",
+			"route": "/control/",
+			"type": "command",
+			"argList": [],
+			"description": "Stop saving history file.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "getEnv",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "envVariable",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"description": "Get a shell environment variable and define it as an alias.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "getVal",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "alias_name",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "UI_command",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"description": "Get the current value of the UI command and define it as an alias.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "echo",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "aliased_value",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"description": "Display the aliased value.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "manual",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "dirPath",
+					"optional": true,
+					"type": "string",
+					"default": "/"
+				}
+			],
+			"description": "Display all of sub-directories and commands.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "createHTML",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "dirPath",
+					"optional": true,
+					"type": "string",
+					"default": "/"
+				}
+			],
+			"description": "Generate HTML files for all of sub-directories and commands.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "maximumStoredHistory",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "max",
+					"optional": true,
+					"type": "int",
+					"default": 20
+				}
+			],
+			"description": "Set maximum number of stored UI commands.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "if",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "left",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "comp",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "right",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "aliasValue",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"description": "Execute a macro file if the expression is true.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "doif",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "left",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "comp",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "right",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "UI_command",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				}
+			],
+			"description": "Execute a macro file if the expression is true.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "add",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "new_alias",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "value1",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "value2",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				}
+			],
+			"description": "Define a new alias as the sum of two values.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "subtract",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "new_alias",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "value1",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "value2",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				}
+			],
+			"description": "Define a new alias as the subtraction of two values.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "multiply",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "new_alias",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "value1",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "value2",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				}
+			],
+			"description": "Define a new alias as the multiplification of two values.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "divide",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "new_alias",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "value1",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				},
+				{
+					"arg": "value2",
+					"optional": false,
+					"type": "double",
+					"default": 0
+				}
+			],
+			"description": "Define a new alias as the division of two values.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "remainder",
+			"route": "/control/",
+			"type": "command",
+			"argList": [
+				{
+					"arg": "new_alias",
+					"optional": false,
+					"type": "string",
+					"default": ""
+				},
+				{
+					"arg": "value1",
+					"optional": false,
+					"type": "int",
+					"default": 0
+				},
+				{
+					"arg": "value2",
+					"optional": false,
+					"type": "int",
+					"default": 0
+				}
+			],
+			"description": "Define a new alias as the remainder of two values.",
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "out",
+			"description": "Control cout/cerr for local thread.",
+			"collapsed":true,
+			"children": [
+				{
+					"command": "setCoutFile",
+					"route": "/control/out/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "fileName",
+							"optional": true,
+							"type": "string",
+							"default": "**Screen**"
+						},
+						{
+							"arg": "append",
+							"optional": true,
+							"type": "boolean",
+							"default": true
+						}],
+					"description": "Send G4cout stream to a file dedicated to a thread",
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "setCerrFile",
+					"route": "/control/out/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "fileName",
+							"optional": true,
+							"type": "string",
+							"default": "**Screen**"
+						},
+						{
+							"arg": "append",
+							"optional": true,
+							"type": "boolean",
+							"default": true
+						}],
+					"description": "Send G4cerr stream to a file dedicated to a thread.",
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "useBuffer",
+					"route": "/control/out/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "flag",
+							"optional": true,
+							"type": "boolean",
+							"default": true
+						}],
+					"description": "Send cout and/or cerr stream to a buffer.",
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "prefixString",
+					"route": "/control/out/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "prefix",
+							"optional": true,
+							"type": "string",
+							"default": "G4WT"
+						}],
+					"description": "Set the prefix string for each cout/cerr line from a thread.",
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "ignoreThreadsExcept",
+					"route": "/control/out/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "treadID",
+							"optional": true,
+							"type": "int",
+							"default": 0
+						}],
+					"description": "Omit cout from threads except the specified one.",
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "ignoreInitializationCout",
+					"route": "/control/out/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "IgnoreInit",
+							"optional": true,
+							"type": "boolean",
+							"default": true
+						}],
+					"description": "Omit cout from threads during initialization, as they should be identical to the masther thread.",
+					"available": ["PreInit","Idle"]
+				}
+		
+			]
+		},
+		{
+			"command": "matScan",
+			"collapsed":true,
+			"description": "Material scanner commands.",
+			"children": [
+				{
+					"command": "scan",
+					"route": "/control/matScan/",
+					"type": "command",
+					"argList": [],
+					"description": "Start material scanning.",
+					"available": ["Idle"]
+				},
+				{
+					"command": "theta",
+					"route": "/control/matScan/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "nbin",
+							"optional": false,
+							"type": "int",
+							"default": 1
+						},
+						{
+							"arg": "thetaMin",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "thetaSpan",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "deg"
+						}
+					],
+					"description": "Define theta range.",
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "phi",
+					"route": "/control/matScan/",
+					"type": "command",
+					"argList": [
+						{
+							"arg": "nbin",
+							"optional": false,
+							"type": "int",
+							"default": 1
+						},
+						{
+							"arg": "phiMin",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "phiSpan",
+							"optional": true,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "deg"
+						} 
+					],
+					"description": "Define phi range.",
+					"available": ["PreInit","Idle"]
+				},
+				{
+					"command": "singleMessure",
+					"route": "/control/matScan/",
+					"type": "command",
+					"argv": ["[theta]","[phi]","[unit]"],
+					"argList": [
+						{
+							"arg": "theta",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "phi",
+							"optional": false,
+							"type": "double",
+							"default": 0
+						},
+						{
+							"arg": "unit",
+							"optional": true,
+							"type": "string",
+							"default": "deg"
+						}
+					],
+					"description": "Measure thickness for one particular direction.",
+					"available": ["Idle"]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"command": "tracking",
+	"description": "TrackingManager and SteppingManager control commands.",
+	"collapsed": true,
+	"children": [
+		{
+			"command": "abort",
+			"route": "/tracking/",
+			"type": "command",
+			"description": "Abort current G4Track processing.",
+			"argList": [],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "resume",
+			"route": "/tracking/",
+			"type": "command",
+			"description": "Resume current G4Track processing.",
+			"argList": [],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "storeTrajectory",
+			"route": "/tracking/",
+			"type": "command",
+			"description": "Store trajectories or not.",
+			"argList": [
+				{
+					"arg": "Store",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				}
+			
+			],
+			"available": ["PreInit","Idle"]
+		},
+		{
+			"command": "verbose",
+			"route": "/tracking/",
+			"type": "command",
+			"description": "Set Verbose level of tracking category.",
+			"argList": [
+				{
+					"arg": "verbose_level",
+					"optional": true,
+					"type": "int",
+					"default": 0
+				}
+			
+			],
+			"available": ["PreInit","Idle"]
+		}
+	]
+}

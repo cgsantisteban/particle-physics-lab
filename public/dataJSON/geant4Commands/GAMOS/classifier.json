@@ -1,0 +1,22 @@
+{
+	"command": "classifier",
+	"description": "...Title not available...",
+	"collapsed":true,
+	"children": [
+		{
+			"command": "setIndices",
+			"route": "/gamos/classifier/",
+			"type": "command",
+			"description": "Set indices for a classifier",
+			"argList": [
+					{
+						"arg": "choice",
+						"optional": true,
+						"type": "string",
+						"default": "" 
+					}
+				],
+			"available": ["PreInit","Idle"]
+		}
+	]
+}
